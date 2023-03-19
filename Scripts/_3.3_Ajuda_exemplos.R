@@ -16,27 +16,24 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo se o tópico a ser procurado é uma string de caracteres
+#Como string de caracteres
+
+  example("log", character.only = FALSE) 
 
   example("log", character.only = TRUE) 
-
+  
+#Agora como nome de função
+  
+  example(log, character.only = FALSE) 
+  
+  example(log, character.only = TRUE)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Informar o pacote ao qual a função de exemplo pertence
 
   example("log", package = "base")
   
   example("log", package = "ggplot2")
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Vetor de diretórios ou de 'libraries' (ou bibliotecas) onde procurar
-#Com um vetor de diretórios
-  
-  caminhos <- c("C:\\Program Files\\R\\R-4.2.2\\library", "C:\\Users\\Leandro Luz\\Desktop\\R\\lib1")
-  
-  example("cos", lib.loc = caminhos) 
-  
-#Ou diretamente colocando o vetor no argumento da função
-
-  example("cos", lib.loc = c("C:\\Program Files\\R\\R-4.2.2\\library", "C:\\Users\\Leandro Luz\\Desktop\\R\\lib1"))
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Onde mostrar o exemplo
@@ -55,6 +52,4 @@
   
   example("log", echo = TRUE) 
 
-
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

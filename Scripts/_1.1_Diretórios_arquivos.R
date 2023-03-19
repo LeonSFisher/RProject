@@ -17,11 +17,11 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Verificar os arquivos de um diretório especificado
 
-  list.files("C:\\Users\\Leandro Luz\\Desktop\\RProject")
+  list.files("E:\\GITHUB\\RProject\\Subdiretorios")
 
 #Ou como uma variável intermediária
 
-  caminho <- "C:\\Users\\Leandro Luz\\Desktop\\RProject"
+  caminho <- "E:\\GITHUB\\RProject\\Subdiretorios"
   
   list.files(caminho)
 
@@ -47,7 +47,7 @@
   
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Lista recursiva. Se FALSE, mostra apenas os arquivos e subdiretórios do diretório atual
-#Se TRUE, mostra todos os arquivos e todos os arquivos dos subdiretórios do diretório atual
+#Se TRUE, mostra todos os arquivos e subdiretórios e todos os arquivos dos subdiretórios do diretório atual
   
   list.files(caminho, recursive = FALSE)
   

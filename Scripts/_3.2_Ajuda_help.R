@@ -38,7 +38,7 @@
   ?help
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Definindo o pacote em que procurar a documentação (procurar ajuda para cosseno no pacote base)
+#Definindo o pacote no qual procurar a documentação (procurar ajuda para cosseno no pacote base)
 
   help("cos", package = "base")
   

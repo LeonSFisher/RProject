@@ -8,21 +8,6 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#DEFINIÇÕES
-
-#Pacotes são coleções de funções, dados e códigos compilados em um formato bem definido
-#Uma biblioteca é o diretório onde os pacotes são armazenados
-
-#Os pacotes podem ser de três tipos:
-
-# (1) Pacotes que vêm instalados com o R e são carregados automaticamente
-# (2) Pacotes que vêm instalados com o R, mas não são carregados automaticamente e precisam ser carregados
-# (3) Pacotes que não vêm instalados com o R, e precisam ser instalados e depois carregados
-
-#Para os pacotes que vêm instalados com o R e são carregados automaticamente, nada precisa ser feito (Exemplo: pacote base)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #VERIFICAÇÃO
 
 #Verificar todos os pacotes disponíveis na nossa biblioteca
@@ -39,7 +24,6 @@
 #CARREGAMENTO
 
 #Para os pacotes que vêm instalados com o R, mas não são carregados automaticamente, é necessário fazê-lo
-#Pode ser feito de duas formas: com library() e com require()
 #Carregar um pacote específico
 
   library(graphics)
@@ -98,7 +82,7 @@
   
   library(pacotes)
   
-#Vemos que ao introduzir o vetor diretamente na função, temos um aviso de que o comprimento do mesmo deve ser 1
+#Vemos que ao introduzir o vetor diretamente na função, temos um aviso dizendo que o comprimento do mesmo deve ser 1
   
   library(c("dplyr", "ggplot2", "e1071"))
 
@@ -118,10 +102,13 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #A função require() possui alguns argumentos semelhantes aos da função library()
 #Exigir que o nome seja em caracteres
+#Nomes fornecidos como caracteres
   
   require("ggplot2", character.only = TRUE)
   
   require("ggplot2", character.only = FALSE)
+  
+#Nomes fornecidos como nomes de pacotes normalmente
   
   require(ggplot2, character.only = TRUE)
   
@@ -147,8 +134,6 @@
   library(agricolae)
   
   skewness(mtcars$hp)
-  
-  
   
   
   

@@ -86,8 +86,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OBSERVAÇÃO
 
-#Na matemática, todo valor real, é complexo com parte imaginária 0
-#No entanto, se não houver parte imaginária explícita, o R não diz que o valor é do tipo complex
+#Na matemática, todo valor real, é complexo com parte imaginária 0i
+#No entanto, se não houver parte imaginária explícita, o R não dirá que o valor é do tipo complex, mas do tipo real
 
   
   

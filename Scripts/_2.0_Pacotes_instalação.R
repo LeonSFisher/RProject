@@ -8,9 +8,22 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#DEFINIÇÕES
+
+#Pacotes são coleções de funções, dados e códigos compilados em um formato bem definido
+#Uma biblioteca é o diretório onde os pacotes são armazenados
+
+#Os pacotes podem ser de três tipos:
+
+# (1) Pacotes que vêm instalados com o R e são carregados automaticamente. Exemplo: pacote 'base'
+# (2) Pacotes que vêm instalados com o R, mas não são carregados automaticamente e precisam ser carregados
+# (3) Pacotes que não vêm instalados com o R, e precisam ser instalados e depois carregados
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #INSTALAÇÃO DE PACOTES JÁ BAIXADOS
 
-#Pacotes que não vêm istalados com o R precisam ser instalados, por óbvio. (Obrigatório como string)
+#Pacotes que não vêm instalados com o R precisam ser instalados, por óbvio. (Obrigatório como string)
 #Instalar o pacote na pasta padrão
 
   install.packages("dplyr")
@@ -55,11 +68,11 @@
 #Definindo para onde baixar os pacotes
 #Criar as pastas no PC antes de proceder
 
-  dir1 <- "C:\\Users\\Leandro Luz\\Desktop\\RProject\\Subdiretorios\\dir1"
+  dir1 <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir1"
   
-  dir2 <- "C:\\Users\\Leandro Luz\\Desktop\\RProject\\Subdiretorios\\dir2"
+  dir2 <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir2"
   
-  dir3 <- "C:\\Users\\Leandro Luz\\Desktop\\RProject\\Subdiretorios\\dir3"
+  dir3 <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir3"
 
 #Instalar o mesmo pacote em mais de uma pasta
   
@@ -74,7 +87,7 @@
 #Se não for informado, será baixado para a pasta de arquivo temporário e apagado depois de instalado
 #Criar as pastas antes senão haverá um erro
   
-  arquivo_compactado <- "C:\\Users\\Leandro Luz\\Desktop\\RProject\\Subdiretorios\\dir4"
+  arquivo_compactado <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir4"
   
   install.packages(c("dplyr", "ggplot2"), destdir = arquivo_compactado)
 
@@ -102,9 +115,11 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #PROCESSAMENTO PARALELO  
   
-#Instalação com processamento paralelo (processos paralelos)
+#Instalação com processamento paralelo
   
   install.packages(c("dplyr", "ggplot2"), Ncpus = 4)
 
  
+  
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -23,14 +23,14 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Alterar o diretório
 #Se não funcionar, retorna um erro
-#O caminho deve ser colocado com \\ para que a \ simples não seja confundida com uma sequência de escape
+#O caminho deve ser colocado com \\ para que a \ simples junto com a letra seguinte não seja confundida com uma sequência de escape
 #Informando o diretório para a função diretamente
 
-  setwd("C:\\Users\\Leandro Luz\\Desktop\\RProject\\Scripts")
+  setwd("E:\\GITHUB\\RProject")
 
 #Ou usando uma variável para armazenar o diretório
 
-  caminho <- "C:\\Users\\Leandro Luz\\Desktop\\RProject\\Scripts"
+  caminho <- "E:\\GITHUB\\RProject"
   
   setwd(caminho)
 
@@ -41,7 +41,7 @@
   
 #Podemos escolher que pasta abrir inicialmente (Para facilitar) - No windows só abre na pasta 'Meu Computador'
   
-  choose.dir(default = "C:\\Users\\Leandro Luz\\Desktop")
+  choose.dir(default = "E:\\GITHUB")
   
 #Dar um título para a janela (Evitar confusão)  
   

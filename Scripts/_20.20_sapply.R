@@ -16,7 +16,25 @@
 #Tenta reduzir o objeto de output para o formato mais simples possível
 #Ou seja, simplifica um vetor para vetor, uma lista para lista e um dataframe para matriz
 
-sapply(mtcars, FUN = sum)  
+  vetor <- c(3, 3, 6, 7, 9)
+  
+  
+  s_vetor <- lapply(vetor, FUN = sqrt)
+  
+  typeof(s_vetor)
+  
+  
+  
+  lista <- c("a", 5, TRUE)
+  
+  s_lista <- lapply(lista, FUN = sqrt)
+  
+  
+  nomes <- c("hugo", "rico", "fred")
+  
+  notas <- c(3, 7, 9)
+  
+  data.frame(nomes, notas)
 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

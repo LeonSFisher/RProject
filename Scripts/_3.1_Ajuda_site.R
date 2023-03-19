@@ -20,7 +20,7 @@
   RSiteSearch("cosine sine")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Para definir que as palavras devem ser buscadas obrigatoriamente organizadas como frases
+#Para definir que as palavras devam ser buscadas obrigatoriamente organizadas como frases
 #Para mais de uma frase numa mesma string, elas devem estar separadas por chaves {} ou \" 
 #Uma só frase
 

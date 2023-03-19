@@ -40,7 +40,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Vetor de diretórios ou de 'libraries' (ou bibliotecas) onde procurar as demonstrações
 
-  demo("graphics", lib.loc = c("C:\\Program Files\\R\\R-4.2.2\\library", "C:\\Users\\Leandro Luz\\Desktop\\RProject\\Subdiretorios\\dir5"))   
+  demo("graphics", lib.loc = c("C:\\Program Files\\R\\R-4.2.2\\library", "E:\\GITHUB\\RProject\\Subdiretorios\\dir5")) 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Onde mostrar o exemplo da demonstração
