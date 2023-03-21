@@ -91,15 +91,15 @@
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Concatena e cria um arquivo com os valores dentro dele
   
-  cat("Estou","vendo", "uma linda", "nuvem", file = "C:\\Users\\Leandro Luz\\Desktop\\bizu.txt", append = TRUE)
+  cat("Estou","vendo", "uma linda", "nuvem", file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt", append = TRUE)
   
-  cat("O valor é:", 155, ", bocó!", file = "C:\\Users\\Leandro Luz\\Desktop\\bizu.txt", append = FALSE)
+  cat("O valor é:", 155, ", bocó!", file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt", append = FALSE)
   
 #Dando uma organização do arquivo em linhas
   
-  cat("Estou","vendo", "uma linda", "nuvem", "\n", file = "C:\\Users\\Leandro Luz\\Desktop\\bizu.txt", append = FALSE)
+  cat("Estou","vendo", "uma linda", "nuvem", "\n", file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt", append = FALSE)
   
-  cat("O valor é:", 155, ", bocó!", file = "C:\\Users\\Leandro Luz\\Desktop\\bizu.txt", append = TRUE)
+  cat("O valor é:", 155, ", bocó!", file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt", append = TRUE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #concatenando várias variáveis  

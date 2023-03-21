@@ -58,6 +58,7 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Criação de vetores por composição não repetida de outros vetores
+#É o mesmo que "repetir" os vetores uma só vez
   
   vetor6 <- c(-1, 2, -7, 11)
   
@@ -74,7 +75,6 @@
 #Como tudo no R são vetores, inclusive valores simples, podemos concatená-los da mesma forma anterior
   
   vetor1 <- c(0, 1, 0, 3, c(-1, -2, -9))  
-  
   
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

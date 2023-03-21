@@ -55,7 +55,6 @@
 #BUILT-IN R CONSTANTS
   
 #São constantes embutinas no pacote base do R  
-  
 #Para produzir as letras do alfabeto (Maiúsculas)
   
   LETTERS
@@ -101,5 +100,6 @@
   
   PI
   
+
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

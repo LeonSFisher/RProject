@@ -19,7 +19,7 @@
 #Imprimindo uma barra invertida 'backslash' 
 #Uma barra invertida pode ser mal interpretada como uma sequência de escape. Para representar a barra invertida, usamos \\
 
-  cat("C:\\Users\\Leandro Luz\\Desktop\\RProject\\Scripts")  
+  cat("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt")  
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Pulando linhas

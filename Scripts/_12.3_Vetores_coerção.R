@@ -11,7 +11,7 @@
 #COERÇÃO EM VETORES
 
 #Coerção é o processo de converter tipos de dados para manter a homegeneidade de estruturas de dados homogêneas
-#A corção segue a seguinte hierarquia: character > complex > numeric > integer > logical 
+#A coerção segue a seguinte hierarquia: character > complex > numeric > integer > logical 
 
   vetor1 <- c("a", 2.2, 3L, TRUE)
   

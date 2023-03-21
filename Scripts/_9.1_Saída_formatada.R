@@ -57,7 +57,7 @@
 
   format("Olá, mundo!", width = 20, justify = "c")
 
-#Justificando texto ao centro (none)  
+#Sem justificação (none)  
 
   format("Olá, mundo!", width = 20, justify = "n")
 

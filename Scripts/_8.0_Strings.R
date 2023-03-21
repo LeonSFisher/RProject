@@ -29,7 +29,7 @@
 #CONCATENAÇÃO
 
 #Para concatenar, usamos a função paste() 
-#A concatenação com paste() insere automaticamente um espaço em branco entre os abjetos concatenados
+#A concatenação com paste() insere automaticamente um espaço em branco entre os objetos concatenados
   
   paste("Está um dia", "muito chuvoso")
   
@@ -78,11 +78,12 @@
   
   nchar(texto, type = "chars")
   
-#O tamanho do objeto em bytes
+#O tamanho do objeto em bytes necessários para armazenar a string
   
   nchar(texto, type = "bytes")
   
-#Comprimento do objeto
+#Comprimento do objeto. O número de colunas 'cat' utiliza para imprimir a string com caracteres monoespaçados
+#Na maior parte das vezes, será igual à opção 'char'
   
   nchar(texto, type = "width")
    
@@ -105,6 +106,5 @@
   texto <- "Olá, mundo!"
   
   substring(texto, 6, nchar(texto))
-  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

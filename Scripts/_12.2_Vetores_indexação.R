@@ -134,13 +134,17 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #EXCLUINDO VALORES DE VETORES  
   
-#Através de valores negativos
-  
   vetor7 <- c(-1, -4, 3, 4, 9, 7, 99, -15)
-
+  
+#Através de valores negativos dentro do indexador
+  
   vetor7[c(-1, -3)]
   
+#Ou colocando o sinal de menos em evidência
+  
   vetor7[-c(1, 3)]
+  
+#Ou multiplicando o vetor por menos um
   
   vetor7[-1*c(1, 3)]
 
@@ -175,6 +179,7 @@
 #Adicionando valores em posições distantes do vetor (NA's são introduzidos)
   
   vetor7[15] <- 77
+  
   
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
