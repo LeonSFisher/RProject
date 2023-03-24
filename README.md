@@ -8,5 +8,5 @@ English
   
 Portuguese
 
-  Este é um projeto que pretende ser um curso completo de R baseado em scripts
+  Este é um projeto que pretende ser um curso completo de R baseado em scripts.
   Ainda está em português, mas eu tenho planos em traduzi-lo para o inglês assim que estiver pronto.
