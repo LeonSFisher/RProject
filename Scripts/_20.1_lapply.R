@@ -1,7 +1,7 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#FAMÍLIA APPLY() - apply()
+#FAMÍLIA APPLY() - lapply()
 
 ######################################################################################################################################################
 ######################################################################################################################################################
@@ -9,42 +9,37 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#apply()
+#lapply()
 
-#Recebe um dataframe, matriz ou array multidimensional
-#Dependendo do input, retorna um vetor, lista, matriz ou array
-#No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos
+#Recebe um vetor, uma lista ou um dataframe
+#Sempre devolve uma lista. O 'l' no início significa lista
+#Criando um vetor de exemplo
 
-#Usando uma matriz de input
-
-  matriz <- matrix((1:12), nrow=3)
-
-#Aplicar a função às linhas. Queremos o máximo de cada linha
-
-  apply(matriz, 1, FUN = max)
-
-#Aplicar a função às colunas. Queremos o máximo de  cada coluna
-
-  apply(matriz, 2, FUN = max)
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Nos exemplos acima, a entrada foi um matriz e saída um vetor
-#Vejamos agora uma matriz de entrada resultando numa matriz de saída
+  vetor1 <- c(1, 1, 3, 5, 6)
   
-#Soma acumulada das colunas
+#Aplicando a função raiz quadarada
   
-  apply(matriz, 2, FUN = cumsum)  
-  
-#Soma acumulada das linhas
-  
-  apply(matriz, 1, FUN = cumsum)   
-  
-#A matriz não precisa ser do mesmo tamanho que a original
-  
-  apply(matriz, 2, range)
-  
-  
+  lapply(vetor1, FUN = sqrt)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Agora aplicaremos a uma lista
+#Criando uma lista de exemplo
+  
+  lista1 <- list(TRUE, 1:3, 3i)
+  
+#Aplicando a raiz quadrada
+  
+  lapply(lista1, sqrt)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Aplicando agora a um dataframe
+#Criando um dataframe de exemplo
+  
+  df <- data.frame(a=1:3, b=4:6, c=7:9, d=10:12)
+
+#Aplicando a raiz quadrada
+  
+  lapply(df, sqrt)
   
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

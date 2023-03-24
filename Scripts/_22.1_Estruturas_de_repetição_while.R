@@ -1,7 +1,7 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#FAMÍLIA APPLY() - sapply()
+#ESTRUTURAS DE REPETIÇÃO - while
 
 ######################################################################################################################################################
 ######################################################################################################################################################
@@ -9,51 +9,62 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#sapply()  
+#LAÇO while
 
-#É uma forma simplificada de lapply()
-#Tem a mesma sintaxe da função aplly(). Recebe um vetor, uma lista ou um dataframe
-#Tenta reduzir o objeto de output para o formato mais simples possível
-#Ou seja, simplifica um vetor para vetor, uma lista para lista e um dataframe para matriz
-#Aplicando a um vetor
+#Estruturas de repetição (while)
+#Serve para quando não sabemos o número exato de vezes que precisaremos rodar o código
+#É necessário colocar um incrementador
 
-  vetor <- c(3, 3, 6, 7, 9)
+  x = 4
   
-  sapply(vetor, sqrt)
+  while (x < 10) {
+    
+    print(x)
+    
+    x = x + 1
+    
+  }
   
-#Aplicando a uma lista  
-  
-  lista <- list(4, 5, TRUE, FALSE, 16)
-  
-  sapply(lista, sqrt)
-  
-#Aplicado a um dataframe
-  
-  df <- data.frame(vetor, vetor*5)
-  
-  sapply(df, sqrt)
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Uso do BREAK e do NEXT
+#Uso do BREAK dentro do while
+#O BREAK interrompe o laço sempre que é encontrado e o código prossegue
+  
+  x = 4
+  
+  while (x < 10) {
+    
+    print(x)
+    
+    x <- x + 1
+    
+    if(x > 7){
+      
+      break
+    }
+  }
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Uso do NEXT dentro do while
+#NEXT faz o laço rodar novamente do começo sempre que é encontrado
+#No código abiaxo, sempre que se chega em 11, o while roda de novo do começo e nunca sai de 11 pois nunca se chega na linha de incremento
+  
+  x = 4
+  
+  while (x < 30) {
+    
+    print(x)
+    
+    if(x > 10){
+      
+      next
+    }
+    
+    x <- x + 1
+    
+  }
+
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
