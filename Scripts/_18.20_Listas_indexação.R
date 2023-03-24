@@ -50,11 +50,11 @@
 
   lista2[[2]][1]  
 
-#Acessandoa a terceira coluna do segundo dataframe da lista anterior
+#Acessandoa todas as linhas e a terceira coluna do segundo dataframe da lista anterior
 
   lista2[[5]][,3]
 
-#Acessando a quarta linha do segundo dataframe da lista anterior
+#Acessando a quarta linha e todas as colunas do segundo dataframe da lista anterior
 
   lista2[[5]][4,]
 

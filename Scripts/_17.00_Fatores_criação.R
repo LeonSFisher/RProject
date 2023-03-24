@@ -34,7 +34,7 @@
 #CRIAÇÃO DE FATORES
 
 #Resultado da rotulação - cada valor na pesquisa (vetor valores) terá seu nível substituído pelo seu rótulo respectivo
-#O parâmetro ordered como FALSE considerará ue não existe relação de ordem por detrás (para categóricas ordinais)
+#O parâmetro ordered como FALSE considerará que não existe relação de ordem por detrás (para categóricas ordinais)
 
   resultado <- factor(valores, labels = rotulos, ordered = FALSE, levels = niveis)
 
@@ -134,9 +134,9 @@
   
   dados1 <- factor(mtcars$gear)
   
-  is.factor(dados)
+  is.factor(dados1)
   
-  class(dados)
+  class(dados1)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Convertendo para fator com uma função de coerção

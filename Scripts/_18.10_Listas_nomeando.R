@@ -39,7 +39,8 @@
   
   rownames(lista2[[3]]) <- valores_linhas
 
-#Nomenado um elemnto da lista só verificamos o seu nome chamando o elemento diretamente na lista e não a matriz em si
+#Nomenado um elemento da lista só verificamos o seu nome chamando o elemento diretamente na lista e não a matriz em si
+#A matriz de fora não foi nomeada, mas sim a que está dentro da lista que é idêntica à de fora
   
   lista2[[3]]
   
@@ -50,6 +51,5 @@
   colnames(matriz) <- valores_colunas
   
   rownames(matriz) <- valores_linhas  
-
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

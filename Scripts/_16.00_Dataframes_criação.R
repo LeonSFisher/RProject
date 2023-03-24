@@ -18,7 +18,7 @@
   objetos = c("carro", "casa", "faca", "bola", "foice")
   salario = c(500, 550, 600, 900, 630)
   valores = c(1.2, 2.5, 6.7, 4.4, 9.0)
-  classes = as.factor(c(3, 3, 4, 3, 5))
+  classes = c(3, 3, 4, 3, 5)
   
 #Gerando o dataframe
   
@@ -41,7 +41,7 @@
   
 #Com a função cbind
   
-  cbind(tabela,tabela)
+  cbind(tabela, tabela)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Adicionando outro dataframe nas linhas abaixo

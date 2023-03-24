@@ -37,7 +37,7 @@
   resultado[c(1, 2), c(2, 3), c(2, 3)]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Excluindo elementos (removendo primeira e segundas linhas e terceira coluna da segunda e terceira folha)
+#Excluindo elementos (removendo primeira linha, terceira coluna e removendo a primeira, segunda e terceira folha)
 
   resultado[-1, -3, c(-1, -2, -3)]
 
