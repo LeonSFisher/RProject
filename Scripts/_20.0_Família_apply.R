@@ -10,6 +10,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #apply()
 
+#As funçõs da família apply() servem para substituir operações onde seriam necessárias laços de repetição
 #Recebe um dataframe, matriz ou array multidimensional
 #Dependendo do input, retorna um vetor, lista, matriz ou array
 #No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos
@@ -45,6 +46,5 @@
   
   
 
-  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

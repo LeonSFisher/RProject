@@ -1,65 +1,50 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#SEQUÊNCIAS
+#EXPORTAÇÃO DE ARQUIVOS
 
 ######################################################################################################################################################
 ######################################################################################################################################################
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#CRIAÇÃO DE SEQUÊNCIA
+#USANDO O PACOTE base
 
-#Em R podemos utilizar o operador ':' para definir sequências
-#Sequências de inteiros positivos
-#Crescentes
+#O primeiro argumento é o objeto a ser exportado.
+#O segundo argumento é nome do arquivo.
+#O terceiro argumento é o tipo de delimitador - \t (tabulação).
+#O quarto argumento significa que as linhas desse objeto não tem nome e assim previne o R de colocar números como nome.
+#O quinto argumento indica ao R que as variáveis do tipo caracter devem ser exportadas sem estar entre aspas.
 
-  1:10
+  nomes <- c("carlos", "mathias", "ana")
+  
+  carros <- c(1, 3, 6)
+  
+  idade <- c(25, 33, 38)
 
-  -3:5
+  chefes <- data.frame(nomes, carros, idade)
+
+#Primeira forma com write.table (formato .dat)
+
+  write.table(chefes, file = "chefesteste.dat", sep = "\t", row.names = FALSE, quote = FALSE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Decrescentes
+#Segunda forma com write.csv (formato .csv)
 
-  10:-3
-
-  -3:-11    
+  write.csv(chefes, file = "chefesteste.csv", row.names = F, quote = F)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Intervalos não inteiros funcionam até a menor decimal igual do extremo do intervalo
+#Terceira forma com write.csv2 (formato .csv)
   
-  vetor4 = 1.1:5.5
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Se as decimais coincidirem, temos todos os valores corretamente incluindo os extremos
-  
-  vetor5 <- 1.3:7.3
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Sequências podem também serem criadas pela função seq()
-  
-  seq(from = 1, to = 10, by = 2)
-  
-#Ou omitindo os parâmteros
-  
-  seq(1, 10, 2)
-  
-#Se não informarmos o parâmetro 'by', a sequência será criada de 1 em 1
-  
-  seq(1, 15)
-  
-#criando uma sequência com números de valores fixos
-  
-  seq(1, 30, length.out = 10) 
+  write.csv2(chefes, file = "chefesteste2.csv", row.names = F, quote = F)
 
-#Criando uama sequência do mesmo tamanho que um outro objeto
+#Informando o caminho do diretório que você deseja exportar o arquivo.
+
+  caminho <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir7\\chefes.csv"
   
-  vetor <- c(2, 3, 5, -1)
-  
-  seq(1, 30, along.with = vetor) 
-  
+  write.csv2(chefes, file = caminho, row.names = F, quote = F)
+
 
   
-
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

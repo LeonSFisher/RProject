@@ -19,30 +19,17 @@ data()
 data(package = "dplyr")
 
 #FUNÇÕES PARA REALIZAR OPERAÇÕES DE CASTING
-
 #converte caractere para inteiro ASCII
 charToRaw()
 
-#permite ver o dado na janela
-View()
-
 #Mostra a estrutura interna de um objeto
 str()
-
-#verifica os nomes associados a um objeto
-names()
-
-#verificar o tamanho de um objeto
-length()
 
 #verificar se é um vetor
 unique()
 
 #mostra um resumo de um conjunto de dados
 summary()
-
-#verifica os atributos de nível de uma variável
-levels()
 
 ################################################################################
 ################################################################################
@@ -65,27 +52,20 @@ arquivos = dir()
 
 print(arquivos)
 
-#abrir caminho de arquivo sem precisar digitar
-file.choose()
-
 ################################################################################
 ################################################################################
 #BUSCA
 dev.off()
 
 #FUNÇÕES PARA ARQUIVOS
-#mostra as dimensões do arquivo
-dim()
 
 #data
 date()
-
 
 #Verificando instalação
 
 any(grep('xlsx', install.packages()))
 
-
 #somacumulativa
 
-  cumsum(c(1, 2, 5, 6, 7))
+cumsum(c(1, 2, 5, 6, 7))

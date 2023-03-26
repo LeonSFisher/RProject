@@ -10,11 +10,21 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #tapply()  
 
-#O mesmo que lapply(), mas paresenta o resultado de formamais amigável
-#Aplica a função às colunas  
+#A função tapply é utilizada para aplicar um procedimento a diferentes partes dos dados dentro de um array, matriz ou data frame.
+#Ela difere das outras por exigir a existência de uma variável categórica a qual servirá para agrupar os dados aos diferentes níveis.
 
-#Média de preço praticado para cada fornecedor
+#cria o vetor de resposta
 
-tapply(dataset_loja[,c("preco")], dataset_loja[,ncol(dataset_loja)], mean)  
+  consumo <- c(13.10,15.20,16.10,14.75,15.35,16.20) 
+  
+#cria vetor de fatores indicando o grupo experimental
+  
+  grupo<-as.factor(c("15%PB","18%PB","18%PB","15%PB","15%PB","18%PB"))
+  
+#Obtêm a média de consumo em função do grupo
+  
+  tapply(consumo, grupo, mean)
+  
+  
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

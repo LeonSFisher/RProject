@@ -18,18 +18,28 @@
 
   vetor <- c(3, 3, 6, 7, 9)
   
-  sapply(vetor, sqrt)
+  x <- sapply(vetor, sqrt)
+  
+  is.vector(x)
   
 #Aplicando a uma lista  
   
   lista <- list(4, 5, TRUE, FALSE, 16)
   
-  sapply(lista, sqrt)
+  x <- sapply(lista, sqrt)
+  
+  is.list(x)
+  
+  is.vector(x)
   
 #Aplicado a um dataframe
   
   df <- data.frame(vetor, vetor*5)
   
-  sapply(df, sqrt)
+  x <- sapply(df, sqrt)
+  
+  is.data.frame(x)
+  
+  is.matrix(x)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#FAMÍLIA APPLY() - tapply()
+#FAMÍLIA APPLY() - mapply()
 
 ######################################################################################################################################################
 ######################################################################################################################################################
@@ -10,9 +10,19 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #mapply()  
 
-#Uma função passada como argumento é aplicada aos primeiros elementos de cada argumento de forma sequencial. É uma versão multivariada do sapply().
+#A função mapply é uma versão multivariada da função lapply e sapply. 
+#As funções lapply e sapply atuam somente sobre os elementos de uma única lista. 
+#É aplicada sobre o primeiro elemento de cada um dos argumentos, em seguida ao segundo elemento, seguindo ao terceiro, e assim por diante. 
+#Os argumentos podem ser listas ou vetores.
 
-mapply(FUN = function(x, y, z){(x*y) + z}, dataset_loja[,c("preco")], dataset_loja[,c("total_estoque")], dataset_loja[,c("total_vendas")])
+  L1 <- list(a = LETTERS[c(4,6,12,6)], b = LETTERS[c(1,5,21,1)])
+  
+  L2 <- list(c = LETTERS[c(4,14,22,20)], d = LETTERS[c(15,15,1,15)])
+  
+#Une as letras, contidas na mesma posição de cada vetor da lista L1 e L2 para escrever as palavras DADO, FENO,LUVA e FATO
+  
+  mapply(paste, L1$a, L1$b, L2$c, L2$d)
+
 
 
 
