@@ -11,6 +11,7 @@
 #CRIAÇÃO DE VETORES
 
 #Tudo no R é um vetor, até mesmo simples variáveis
+#Vetores são estruturas de dados homogêneas onde todos elementos possuem o mesmo 'mode'
 #Verificando se um objeto é um vetor
   
   is.vector(2-3i)
@@ -75,6 +76,5 @@
 #Como tudo no R são vetores, inclusive valores simples, podemos concatená-los da mesma forma anterior
   
   vetor1 <- c(0, 1, 0, 3, c(-1, -2, -9))  
-  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -117,11 +117,15 @@
   
   (x <- 15)
   
-#Que equivale a 
+#Que equivale a duas declarações separadas
   
   x <- 15
   
   print(x)
+  
+#Ou equivalente a usar a forma diretamente no argumento da função
+  
+  print(x <- 15)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,5 +135,31 @@
   
   .valor <- 100
   
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#FORMA ALTERNATIVA DE DECLARAR IDENTIFICADORES
+  
+#Caso o identificador necessite espaço em branco,ele precisa ser envolvido por aspas simples ou duplas
+  
+  `turma do barulho` <- "A3"
+  
+  `turma do barulho`
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Também podemos usar apóstrofos como aspas, mas, nesse caso, não podemos usar essa forma para chamar a variável
+#Se chamarmos a variável com apóstrofos como aspas simples ou duplas, eles serão confundidos com strings
+  
+  'numero bom' <- 7
+  
+  'numero bom'
+  
+  "numero ruim" <- 13
+  
+  "numero ruim"
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#No entanto, após nomeá-las com apóstrofo, podemos chamá-las com aspas
+    
+  `numero bom` * `numero ruim`
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
