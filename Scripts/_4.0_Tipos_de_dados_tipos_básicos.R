@@ -62,6 +62,18 @@
   T   #Equivale a TRUE
   
   F   #Equivale a FALSE
+  
+#Recomenda-se evitar o uso das formas abreviadas, pois TRUE e FALSE são palavras reservadas e R não permitirá atribuições a elas.
+#Portanto podemos fazer assim:
+  
+  T <- 7
+  
+  c(T, T, T)
+  
+#Como podemos ver, o vetor acima não armazena c(TRUE, TRUE, TRUE), mas c(7, 7, 7)
+#Para evitar isso fazemos
+  
+  c(TRUE, TRUE, TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Operações com o tipo lógico 
@@ -119,7 +131,5 @@
   1i
   
   typeof(1i)
-  
-
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------   

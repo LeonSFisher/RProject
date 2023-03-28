@@ -105,6 +105,26 @@
   
   is.nan(0/0)
 
-  
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#DISTINGUINDO NA, NaN e INF
+  
+  valores <- c(NA, 0 / 0, Inf - Inf, Inf, 5)
+  
+#Com a função is.na() os valores NA e NaN são identificados como NA, assim como INF - INF
+  
+  is.na(valores)
+  
+#A função is.nan() distingue NA's de NaN's e interpreta INF - INF como NaN
+  
+  is.nan(valores)
+  
+#INF - INF é identificado como infinito com a função is.finite()
+  
+  is.finite(valores)
+  
+#Mas é identificado como finito com a função is.infinite()
+  
+  is.infinite(valores)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  

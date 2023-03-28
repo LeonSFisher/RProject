@@ -121,14 +121,23 @@
   vetor3 = vetor1 - vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Se as dimensões dos vetores não forem múltiplos, não funciona
+#Se as dimensões dos vetores não forem múltiplos, funciona, mas o R reclama.
+#R irá repetir os valores do vetor menor até completar o tamanho do vetor maior.
 
   vetor1 <- c(1, 2, 3) 
   
   vetor2 <- c(-1, 3)
   
   vetor3 = vetor1 * vetor2
-
+  
+#O mesmo acontece se for o primeiro vetor o menor. Nesse caso, seu tamanho será extendido ciclando seus valores.
+  
+  vetor1 <- c(-1, 3)
+  
+  vetor2 <- c(1, 2, 3, -4, 7) 
+  
+  vetor3 <- vetor2/vetor1
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OUTRAS OPERAÇÕES SOBRE VETORES
@@ -146,5 +155,6 @@
 
   vetor3 <- NULL
 
+  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

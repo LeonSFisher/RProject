@@ -45,6 +45,6 @@
 #O nome da variável vem primeiro e depois o vetor correspondente que possui os valores
   
   tabela = data.frame(num = numeros, obj = objetos, sal = salario, val = valores, class = classes)
-  
-  
+ 
+   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

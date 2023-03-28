@@ -21,6 +21,54 @@
   is.vector(TRUE)
   
   is.vector("Olá, meu nobre!")
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Criação de vetores vazios
+#Por concatenação
+  
+  vetor <- c()
+  
+#Com a função vetor
+  
+  vetor <- vector()
+  
+#Para criar um vetor vazio deum certo tipo de mode, usamos o mode como uma função
+#Podemos também da um tamanho para o vetor
+#Vetor de caracteres
+  
+  vetor <- character()
+  
+  vetor <- character(length = 10)
+  
+#Vetor de lógicos
+  
+  vetor <- logical()
+  
+  vetor <- logical(length = 10)  
+  
+#Vetor de double
+  
+  vetor <- double()
+  
+  vetor <- double(length = 10)  
+  
+#Vetor de inteiros
+  
+  vetor <- integer()
+  
+  vetor <- integer(length = 10)
+  
+#Vetor de complexos
+  
+  vetor <- complex()
+  
+  vetor <- complex(length = 10)
+  
+#Vetor de dados 'raw'
+  
+  vetor <- raw()
+  
+  vetor <- raw(length = 10)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Criação de vetor por concatenação de elementos com a função combine c()
@@ -75,6 +123,8 @@
 #Concatenando vetores e valores simples
 #Como tudo no R são vetores, inclusive valores simples, podemos concatená-los da mesma forma anterior
   
-  vetor1 <- c(0, 1, 0, 3, c(-1, -2, -9))  
+  vetor1 <- c(0, 1, 0, 3, c(-1, -2, -9)) 
+  
+  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
