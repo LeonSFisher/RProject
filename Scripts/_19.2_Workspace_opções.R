@@ -29,7 +29,7 @@
 #Se quisermos utilizar essa customização sempre que rodarmos o R, precisamos colocar o código no arquivo Rprofile  
 #Esse arquivo reside no subdiretório 'etc' na pasta de instalação do R 
 
-  options(prompt = 'leo>', continue = ">>")
+  options(prompt = 'leo> ', continue = ">>")
   
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
