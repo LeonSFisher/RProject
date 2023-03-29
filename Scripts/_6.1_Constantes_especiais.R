@@ -35,6 +35,17 @@
   is.na(2)
   
   is.na(NA)
+  
+#NA's também podem ser gerados quando tentamosinverter a hierarquia de coerção
+#Por exemplo, podemos converter um dado numérico para character, mas não podemos converter um character não numérico para numeric
+  
+  palavra <- "casa"
+  
+  variavel <- as.numeric(palavra)
+  
+  variavel <- as.integer(palavra)
+  
+  variavel <- as.double(palavra)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Infinitos
@@ -126,5 +137,9 @@
 #Mas é identificado como finito com a função is.infinite()
   
   is.infinite(valores)
+  
+  
+  
+  
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  

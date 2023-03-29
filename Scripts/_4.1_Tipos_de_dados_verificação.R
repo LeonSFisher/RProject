@@ -9,10 +9,8 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #VALORES PARA EXEMPLO
-
-#integer -> numeric -> double
   
-  x <- 2L         #integer / numeric
+  x <- 2L         #numeric / integer
   y <- 5.7        #numeric / double   
   z <- "casa"     #caracter
   w <- TRUE       #logical
@@ -23,6 +21,16 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #FUNÇÕES PARA VERIFICAR O TIPO DE DADO
   
+#Além das funções mode() e type() podemos usar outres que verificam o mode ou o type de um objeto
+#Se é um valor do tipo numeric (funcionará tanto com double quanto com integer)
+  
+  is.numeric(x)
+  is.numeric(y)
+  is.numeric(z)
+  is.numeric(w)
+  is.numeric(m)
+  is.numeric(n)  
+  
 #Se é um valor do tipo inteiro 
   
   is.integer(x)
@@ -32,15 +40,14 @@
   is.integer(m)
   is.integer(n)
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Se é um valor do tipo numeric
-
-  is.numeric(x)
-  is.numeric(y)
-  is.numeric(z)
-  is.numeric(w)
-  is.numeric(m)
-  is.numeric(n)
+#Se é um valor do tipo double
+  
+  is.double(x)
+  is.double(y)
+  is.double(z)
+  is.double(w)
+  is.double(m)
+  is.double(n)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------    
 #Se é um valor do tipo character
@@ -62,16 +69,6 @@
   is.logical(m)
   is.logical(n)
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------    
-#Se é um valor do tipo double
-
-  is.double(x)
-  is.double(y)
-  is.double(z)
-  is.double(w)
-  is.double(m)
-  is.double(n)
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Se é um valor do tipo complex
 
@@ -89,7 +86,5 @@
 #Na matemática, todo valor real, é complexo com parte imaginária 0i
 #No entanto, se não houver parte imaginária explícita, o R não dirá que o valor é do tipo complex, mas do tipo real
 
-  
-  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

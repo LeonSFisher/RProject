@@ -10,8 +10,6 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #VALORES PARA EXEMPLO
 
-#integer -> numeric -> double
-
   x <- 2L         #integer / numeric
   y <- 5.7        #numeric / double   
   z <- "casa"     #caracter
@@ -22,7 +20,9 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #FUNÇÕES PARA CONVERTER O TIPO DE DADO
-
+  
+#Para converter um tipo de dado para outro, podemos usar as chamadas funções de coerção
+#A coerção obedece a sequinte hierarquia: character > complex > numeric > integer > logical 
 #Converter para inteiro
 
   as.integer(x)
@@ -86,5 +86,20 @@
     n <- 0-0i
     n <- 3-0i
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#PERDA DE PRECISÃO NA CONVERSÃO
+    
+#Algumas vezes vamos requerer converter um dado numérico para caractere
+#Nessa conversão, a string resultante não será representada com toda a precisão interna do valor original
+#Isso significa que ao convertermos de volta a string numérica para um tipo numérico perderemos precisão
+#O dado terá a precisão representada anteriormente na string
+    
+  valor <- sqrt(pi/17)  
+
+  string <- as.character(valor)
   
+  valor <- as.numeric(string)
+    
+    
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
