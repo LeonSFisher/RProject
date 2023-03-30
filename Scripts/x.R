@@ -69,3 +69,5 @@ any(grep('xlsx', install.packages()))
 #somacumulativa
 
 cumsum(c(1, 2, 5, 6, 7))
+
+dev.copy()
