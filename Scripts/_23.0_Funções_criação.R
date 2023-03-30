@@ -62,8 +62,13 @@
   frase = nova("Olá,mundo!")
   
   print(frase)
-  
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Visualizando o código de funções
+#Digitando no prompt o nome da função sem os parênteses ou rodando-o sem os parênteses no script,podemos ver o código da função
+  
+  nova
+  
   
   
   
