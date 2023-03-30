@@ -20,6 +20,10 @@
 #Verificar as variáveis criadas
   
   ls()
+  
+#Outra possibilidade é:
+  
+  objects()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Verifica todas as variáveis criadas inclusive ocultas

@@ -70,6 +70,12 @@
   
   vetor <- raw(length = 10)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Criação de vetores por inputs sucessivos no teclado
+#Para finalizar o comando é só apertar ENTER de novo em vez de fornecer mais uma entrada
+  
+  vetor <- scan()
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Criação de vetor por concatenação de elementos com a função combine c()
 

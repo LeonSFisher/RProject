@@ -26,6 +26,23 @@
   
   sum(vetorNA[!is.na(vetorNA)])
   
+#Podemos criar uma sequência de 1 até o tamnho do vetor e usar um filtro lógico para achar os índices de não NA
+  
+  seq(along=vetorNA)[is.na(vetorNA)]
+  
+#Mas é mais fácil fazer
+  
+  which(is.na(vetorNA))
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Se os NA's precisam ser substituídos por 0
+  
+  vetorNA[is.na(vetorNA)] <- 0
+  
+#Ou usando ifelse
+  
+  ifelse(is.na(vetorNA), 0, vetorNA)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Outra opção é fazer:
   
