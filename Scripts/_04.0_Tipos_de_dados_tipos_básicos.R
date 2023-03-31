@@ -40,10 +40,9 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO NUMERIC
-  
-#É preciso notar que para garantir que um número seja tratado como inteiro, devemos utilizar o L depois do número  
-#Inteiro indentificado como double
-  
+ 
+#Por padrão, valores numéricos são armazenados com precisão dupla (double) 
+
   5
   
   mode(5)
@@ -51,7 +50,7 @@
   typeof(5)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Inteiro identificado como integer
+#É preciso notar que para garantir que um número seja tratado como inteiro, devemos utilizar o L depois do número  
   
   5L
   

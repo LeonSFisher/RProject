@@ -71,3 +71,6 @@ any(grep('xlsx', install.packages()))
 cumsum(c(1, 2, 5, 6, 7))
 
 dev.copy()
+
+
+attributes()

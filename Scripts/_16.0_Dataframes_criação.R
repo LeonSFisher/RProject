@@ -10,7 +10,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #CRIANDO DATAFRAMES
 
-#Criando dataframes a partir de vetores
+#Criando dataframes a partir de vetores (mesmo tamanho)
 #Criando os vetores
 
   numeros = c(1, 2, 3, -1, -4)
@@ -22,6 +22,27 @@
 #Gerando o dataframe
   
   tabela = data.frame(numeros, objetos, salario, valores, classes)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Detalhes sobre strings no dataframe
+#Algumas vezes pode haver a conversão automática de strings para fatores ao criarmos dataframes
+  
+  is.character(tabela[,2])
+  
+  is.factor(tabela[,2])
+  
+#Caso, indevidamente, tenha sido feita esta conversão, podemos reatribuir a coluna a ela mesma já convertida:
+  
+  tabela[,2] <- as.character(tabela[,2])
+  
+#Ou, para evitar esse trabalho, podemos alterar o comportamento do R ao trabalhar com strings em dataframes
+#Para evitar que haja conversão na seção de trabalho, podemos fazer:
+  
+  options(stringsAsFactors = FALSE)
+  
+#Ou, caso queiramos que sempre haja conversão de strings para fatores:
+  
+  options(stringsAsFactors = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -71,5 +92,19 @@
   fix(novo)
   
   novo[1,]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#DATAFRAMES INSTALADOS
+
+#Abre uma lista dos dataframes disponíveis
+  
+  data()
+  
+#Carrega um dataframe particular
+  
+   data("mtcars") 
+  
+  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

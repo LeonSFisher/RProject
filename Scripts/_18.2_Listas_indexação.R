@@ -25,11 +25,11 @@
   lista2 <- list(valor1, vetor1, matriz, dataf1, dataf2, lista1)
 
 #Acessando valores na lista pelo índice
-#Um só par de [] pode ser usado
+#Um só par de [] pode ser usados às vezes, mas os reservamos para os arrays
 
   lista2[6]
 
-#Normalmente usa-se índice entre [[]] 
+#Normalmente usa-se índices entre [[]] para listas
 
   lista2[[6]] 
 
