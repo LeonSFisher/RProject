@@ -13,7 +13,12 @@
 #USANDO O PACOTE utils
 
   install.packages("utils")
+
   library(utils)
+
+#Uma função comum para abrir arquivos no formato .txt
+
+  read.table()
 
 #Arquivos csv (comma separated value)
 #O parâmetro header determina se a tabela tem ou não um cabeçalho e sep é o separador utilizado
@@ -45,6 +50,7 @@
 #USANDO O PACOTE readr
 
   install.packages("readr")
+  
   library(readr)
 
 #Com esse pacote podemos abrir arquivos com qualquer tipo de separador
@@ -73,6 +79,7 @@
 #USANDO O PACOTE readxl 
 
   install.packages("readxl")
+  
   library(readxl)
 
 #Se o arquivo estiver na pasta de trabalho:
@@ -108,6 +115,7 @@
 #USANDO O PACOTE data.table
 
   install.packages("data.table")
+  
   library(data.table)
 
 #A função fread() é usada para importar grandes quantidades de dados
@@ -131,10 +139,15 @@
 #USANDO O PACOTE foreign 
   
   install.packages("foreign")
+  
   library(foreign)
 
 #Abrindo arquivo .arff
   
   read.arff(file.choose())
+  
+#Abrindo arquivo .dta
+  
+  read.dta(file.choose())
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

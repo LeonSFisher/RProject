@@ -25,6 +25,21 @@
   
   tapply(consumo, grupo, mean)
   
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Outro exemplo
   
+  mtcars
+  
+#Um vetor de médias
+  
+  tapply(mtcars$wt, mtcars$gear, mean)
+  
+#Uma matriz de médias
+  
+  tapply(mtcars$gear, list(mtcars$gear, mtcars$carb), mean)
+  
+#Um array de médias
+  
+  tapply(mtcars$gear, list(mtcars$gear, mtcars$carb, mtcars$cyl), mean)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
