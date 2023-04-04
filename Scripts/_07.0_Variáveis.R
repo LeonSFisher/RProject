@@ -41,6 +41,12 @@
   
   #.7tipo
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Assim como palavras reservadas, devemos evitar dar aos nossos objetos,nomes de funções em R
+#Para evitar isso, digitamos o nome do objeto no prompt.Por exemplo, existe a função c() para saber se podemos criar o objeto c, fazemos:
+  
+  c
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Camel case
 #Caso se queira evitar o uso de pontos e underscores nos identificadores compostos, uma alternativa é utilizar camel case
