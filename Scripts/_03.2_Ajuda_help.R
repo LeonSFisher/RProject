@@ -19,7 +19,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #AJUDA PELA FUNÇÃO HELP
 
-#Ajuda de uma função com a função help (nome da função, não o assunto). Pode ser entre aspas ou não
+#Ajuda de uma função com a função help (nome da função, não o assunto). Pode ser entre aspas ou não.
+#Perceba que R mostra a ajuda para função relacionadas: trigonométricas, no caso.
 
   help("cos")
   
