@@ -15,6 +15,8 @@
 
   example("log")
 
+  example(plot)
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo se o tópico a ser procurado é uma string de caracteres
 #Como string de caracteres
