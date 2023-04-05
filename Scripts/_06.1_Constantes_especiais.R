@@ -62,7 +62,6 @@
   TRUE/0
   TRUE/FALSE
   
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Representa infinito negativo
 
@@ -76,6 +75,25 @@
   -(2-2i)/0
   -TRUE/0
   -TRUE/FALSE
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Inf e -Inf são tratadios como números (números reais extendidos)
+  
+  is.numeric(Inf)
+  
+  is.numeric(-Inf)
+  
+#Não só isso como numéricos do tipo double
+  
+  is.double(Inf)
+  
+  is.double(-Inf)
+  
+#E não são inteiros
+  
+  is.integer(Inf)
+  
+  is.integer(-Inf)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Outros exemplos de operações envolvendo infinito

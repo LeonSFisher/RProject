@@ -10,6 +10,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #INDEXAÇÃO DE VETORES
 
+#Inteiros positivos,negativos,lógicos e caracteres
+
 #Indexação por posição 
 #O indexador [] retorna o valor da posição e [[]] retorna a estrutura da posição (Isto será mais útil em listas)
 
