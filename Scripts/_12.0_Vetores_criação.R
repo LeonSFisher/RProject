@@ -29,6 +29,7 @@
   vetor <- c()
   
 #Com a função vetor
+#Cria um vetor vazio como mode lógico
   
   vetor <- vector()
   
