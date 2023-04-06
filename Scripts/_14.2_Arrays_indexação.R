@@ -39,7 +39,9 @@
 #Excluindo elementos (removendo primeira linha, terceira coluna e removendo a primeira, segunda e terceira folha)
 
   resultado[-1, -3, c(-1, -2, -3)]
+  
+#O "comprimento" de um array. Na verdade, seu número total de elementos
 
-
+  length(resultado)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

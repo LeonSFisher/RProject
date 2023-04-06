@@ -35,6 +35,12 @@
     
   }
   
+#Para o caso de apenas uma declaração após cada if e else, podemos omitir as chaves {}, mas devemos colocá-las na mesma linha
+  
+  x <- 12
+  
+  if (x > 18) print("Maior de idade") else print("Menor de idade")
+    
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #if's sequenciais
   
