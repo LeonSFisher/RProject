@@ -10,6 +10,10 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #PARÂMETROS DE FUNÇÕES
 
+#Se não especificarmos um valor padrão, o parâmetro é requerido
+#Se especificarmos um valor padrão, o parâmetro é opcional e será usado seu valor padrão
+#Parâmtros sem valores padrão devem ser passados primeiro
+
 #Funções de um só parâmetro
 
   nova = function(string){
