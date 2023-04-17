@@ -92,7 +92,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #FUNÇÕES DE PLOTAGEM DE BAIXO NÏVEL
   
-#Usamos as funções de plotagem de baixo nível para acerscentar detalhes aos gráficos
+#Usamos as funções de plotagem de baixo nível para acrescentar detalhes aos gráficos
 #Função lines()
   
   lines(serie1, serie2)
@@ -108,7 +108,9 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#FUNÇÕES DE PLOTAGEM INTERATIVA   
+#FUNÇÕES DE PLOTAGEM INTERATIVA  
+  
+#Permite identificar dados na plotagem, adicioná-los ou removê-los e anotar na plotagem
   
 #Função locator()  
   
@@ -118,7 +120,8 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #PLOTAGEM DINÂMICA
-  
+
+#Permite, por exemplo, promover a rotação 3D de uma plotagem 
 #Necessário instalar as ferramentas do sistema XGobi em http://www.research.att.com/areas/stat/xgobi/.
 #Uma vez instaladas,elas podemser acessadas diretamente do R  
   
