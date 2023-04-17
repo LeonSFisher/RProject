@@ -46,6 +46,7 @@
 #Produzem gráficos completos 
 #Se uma janela de plotagem não estiver aberta, elas abrem uma. 
 #Se uma janela de plotagem já estiver aberta, elas apagam o que já estiver plotado e plotam na mesma
+  
 #Uma de suas principais funções é a função plot()
 #A forma de plotagem de plot() depende de que parâmetros informamos
 #Informando dois conjuntos de dados do mesmo tamanho, produz um scatter plot (gráfico de dispersão) com os dados
@@ -57,7 +58,7 @@
   
   plot(serie1, serie2)
   
-#Informando apaenas uma série de dados, produz um gráfico de dispersão com os índices em x e os valores em y
+#Informando apenas uma série de dados, produz um gráfico de dispersão com os índices em x e os valores em y
   
   serie3 <- mtcars$wt
   
@@ -65,9 +66,9 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Função pairs()
-#Produz todos os pares de uma matriz ou coluna de dataframe
+#Produz todos os pares de plotagem das colunas de uma matriz ou de um dataframe
 #Por exemplo, abaixo plotaremos x contra y e y contra x num mesmo gráfico
-#Comosão apenas duas colunas, produzirá apenas dois gráficos
+#Como são apenas duas colunas, produzirá apenas dois gráficos
   
   pairs(cbind(mtcars$hp, mtcars$wt))
   
@@ -125,5 +126,5 @@
 
 #Permite, por exemplo, promover a rotação 3D de uma plotagem 
 #Necessário instalar as ferramentas do sistema XGobi em http://www.research.att.com/areas/stat/xgobi/.
-#Uma vez instaladas,elas podemser acessadas diretamente do R  
+#Uma vez instaladas, elas podem ser acessadas diretamente do R  
   
