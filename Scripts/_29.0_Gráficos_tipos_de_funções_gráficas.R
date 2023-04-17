@@ -25,10 +25,10 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#TIPOS DE FUN"CÕES DE PLOTAGEM
+#TIPOS DE FUNÇÕES DE PLOTAGEM
 
 #Funções de plotagem de alto nível
-#Produzem gráficos completos através de dados passados como parâmetros para ela
+#Produzem gráficos completos através de dados passados como parâmetros para elas
   
 #Funções de plotagem de baixo nível
 #Permitem que adicionemaos informações aos gráficos como textos, introduzir linhas, pontos etc.
@@ -44,6 +44,8 @@
 #FUNÇÕES DE PLOTAGEM DE ALTO NÏVEL
   
 #Produzem gráficos completos 
+#Se uma janela de plotagem não estiver aberta, elas abrem uma. 
+#Se uma janela de plotagem já estiver aberta, elas apagam o que já estiver plotado e plotam na mesma
 #Uma de suas principais funções é a função plot()
 #A forma de plotagem de plot() depende de que parâmetros informamos
 #Informando dois conjuntos de dados do mesmo tamanho, produz um scatter plot (gráfico de dispersão) com os dados
