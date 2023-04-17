@@ -8,8 +8,14 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#VERIFICANDO OBJETOS
+#O WORKSPACE
 
+#O workspace nada mais é do que o conjunto de todos os objetos  
+#Assim que fechamaos a nossa sessão, o R perguntará se queremos salvar o nosso workspace
+#Caso a resposta seja afirmativa, nosso workspace será salvo no arquivo .RData
+#Se iniciarmos do diretório a partir de duplo clique sobre .RData, nosso workspace é restaurado
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Criando objetos para exemplo
 
   visivel <- c(2, -3, 5)
