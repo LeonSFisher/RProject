@@ -130,6 +130,7 @@
 
 #Depois de carregados, os pacotes podem ser usados normalmente 
 #No entanto, podemos buscar e usar funções de um pacote sem precisar carregá-lo diretamente
+#Este formato também serve para evitar ambiguidades quando mais de um pacote possuem funções com mesmo nome
   
   agricolae::skewness(mtcars$hp)
   
