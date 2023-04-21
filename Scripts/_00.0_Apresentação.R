@@ -10,8 +10,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #HISTÓRIA DO R
 
-#O R é um dialeto da linguagem S originalmente desenvolvida por John Chambers na Bell Telephone Laboratories, que fazia parte da AT&T Corp.
-#R também possui influência da linguagem Scheme. Assim, é muito similar em aparência com S, mas sua implementação e semântica é derivada de Scheme
+#O R é um dialeto da linguagem S que foi originalmente desenvolvida por John Chambers na Bell Telephone Laboratories que fazia parte da AT&T Corp.
+#R também possui influência da linguagem Scheme. Assim, é muito similar em aparência com S, mas sua implementação e semântica é derivada de Scheme.
 
 #John Chambers assim resumiu a linguagem S: 
 #“We wanted users to be able to begin in an interactive environment, where they did not consciously think of themselves as programming.
@@ -38,6 +38,8 @@
 
 #Grande comunidade
 
+#Facilidade de se encontrar material
+
 #Pode ser usado nos sistemas operacionais Windows, Linux e Mac OS
 
 #Amplamente utilizado no meio acadêmico.
@@ -56,13 +58,19 @@
 
 #É case-sensitive
 
+#É uma linguagem vetorial
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #FUNCIONAMENTO DO R
 
-#As funções do R podem tanto serem usadas como forma de consulta como de atribuição
+#Algumas funções do R podem tanto serem usadas como forma de consulta como de atribuição
+
+#Consulatndo os nomes de um objeto
 
   names(objeto)
+
+#Atribuindo nomes a objetos
 
   names(objeto) <- c("nome1","nome2")
 
@@ -70,7 +78,8 @@
 #Parâmetros das funções
   
 #As funções em R possuem parâmetros. Alguns são obrigatórios; outros não.
-#Os argumentos obrigatórios são chamados de argumentos não nomeados e os argumentos opcionais são os argumentos nomeados.
+  
+#Os parâmetros obrigatórios são chamados de parâmteros não nomeados e os argumentos opcionais são os argumentos nomeados.
 #Os argumentos não nomeados são mostrados sem valores na ajuda da função enquanto os nomeados mostram valores.
 #Os valores dos parâmetros nomeados mostrados na ajuda são os seus valores padrões. 
 #Caso não se informe os valores dos parâmetros nomeados, serão utilizados os valores padrões.
