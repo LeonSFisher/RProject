@@ -46,8 +46,10 @@
   list.files(caminho, all.files = TRUE, full.names = TRUE)
   
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Lista recursiva. Se FALSE, mostra apenas os arquivos e subdiretórios do diretório atual
-#Se TRUE, mostra todos os arquivos e subdiretórios e todos os arquivos dos subdiretórios do diretório atual
+#Lista recursiva
+  
+#Se FALSE, mostra apenas os arquivos e subdiretórios do diretório atual.
+#Se TRUE, mostra todos os arquivos e subdiretórios e todos os arquivos dos subdiretórios do diretório atual.
   
   list.files(caminho, recursive = FALSE)
   
@@ -57,7 +59,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #SUBDIRETÓRIOS
   
-#Verificar todos os subdiretórios do diretório atual  
+#Verificar todos os subdiretórios do diretório atual.  
   
   list.dirs(caminho)
   
@@ -69,7 +71,5 @@
   list.dirs(caminho, recursive = FALSE)
   
   
-  
-  
-  
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

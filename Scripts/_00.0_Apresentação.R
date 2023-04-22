@@ -64,6 +64,7 @@
 #FUNCIONAMENTO DO R
 
 #Nomes de objetos
+
 #Algumas funções do R podem tanto serem utilizadas como forma de consulta ou como meio de atribuição:
 
 #Consultando os nomes de um objeto
@@ -111,5 +112,9 @@
   x <- c(1, 2, 3); x
 
   y <- c(2, 3, 0); z <- c(-2, -3, 0); y + z
+  
+  
+  
+  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

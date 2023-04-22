@@ -11,6 +11,7 @@
 #OPERAÇÕES DE DIRETÓRIO
 
 #Verificar o diretório atual no formato de endereço
+
 #Se o diretório não estiver disponível, retorna NULL
 
   getwd()
@@ -22,8 +23,10 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Alterar o diretório
+  
 #Se não funcionar, retorna um erro
 #O caminho deve ser colocado com \\ para que a \ simples junto com a letra seguinte não seja confundida com uma sequência de escape
+  
 #Informando o diretório para a função diretamente
 
   setwd("E:\\GITHUB\\RProject")
@@ -49,12 +52,9 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Observação:
+  
 #Apesar de getwd() retornar o endereço com \ simples e setwd() requerer o endereço com \\, o seguinte funcionará:
 
   setwd(getwd())
 
-  
- 
-  
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
