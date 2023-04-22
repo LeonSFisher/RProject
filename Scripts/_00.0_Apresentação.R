@@ -18,9 +18,8 @@
 #Then as their needs became clearer and their sophistication increased, they should be able to slide gradually into programming, when the
 #language and system aspects would become more important.”
 
-#Um dos problemas de S é que ela estava limitada ao pacote comercial S-PLUS
-
-#Assim, R começou a ser desenvolvida por Robert Gentleman e Ross Ihaka (R & R) na Universidade de Aukland, Nova Zelândia em 1991.
+#Um dos problemas de S é que ela estava limitada ao pacote comercial S-PLUS. Assim, R começou a ser desenvolvida por dois pesuisadores
+#chamados Robert Gentleman e Ross Ihaka (R & R) na Universidade de Aukland, Nova Zelândia em 1991.
 
 #O primeiro relato da distribuição do R foi em 1993 no StatLib, um sistema de distribuição de softwares estatísticos.
 
@@ -34,39 +33,40 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #VANTAGENS DO R
 
-#Gratuito (Licença Pública Geral (GNU) da Free Software Foundation)
+#Gratuito (Licença Pública Geral (GNU) da Free Software Foundation).
 
-#Grande comunidade
+#Grande comunidade auxiliando o aprendizado de novos usuários.
 
-#Facilidade de se encontrar material
+#Facilidade de se encontrar material escrito ou digital.
 
-#Pode ser usado nos sistemas operacionais Windows, Linux e Mac OS
+#Multiplataforma - Pode ser usado nos sistemas operacionais Windows, Linux e Mac OS.
 
-#Amplamente utilizado no meio acadêmico.
+#Amplamente utilizado no meio acadêmico e se popularizando no mercado privado.
 
-#Possui uma vastidão de pacotes
+#Possui uma vastidão de pacotes que facilitam as tarefas.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #CARACTERÍSTICAS DO R
 
-#Linguagem interpretada
+#Linguagem interpretada, mas pode incorporar códigos compilados de outras linguagens.
 
-#Orientada a objetos
+#Multiparadigma - pode ser usada de forma orientada a objetos, estruturada, funcional etc.
 
-#Linguagem de script
+#Linguagem de script - permite que partes do código sejam executadas isoladamente.
 
-#É case-sensitive
+#É case-sensitive - diferencia letras maiúsculas das minúsculas.
 
-#É uma linguagem vetorial
+#É uma linguagem vetorial e este fato é importante para a compreensão de seu funcionamento.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #FUNCIONAMENTO DO R
 
-#Algumas funções do R podem tanto serem usadas como forma de consulta como de atribuição
+#Nomes de objetos
+#Algumas funções do R podem tanto serem utilizadas como forma de consulta ou como meio de atribuição:
 
-#Consulatndo os nomes de um objeto
+#Consultando os nomes de um objeto
 
   names(objeto)
 
@@ -79,28 +79,34 @@
   
 #As funções em R possuem parâmetros. Alguns são obrigatórios; outros não.
   
-#Os parâmetros obrigatórios são chamados de parâmteros não nomeados e os argumentos opcionais são os argumentos nomeados.
-#Os argumentos não nomeados são mostrados sem valores na ajuda da função enquanto os nomeados mostram valores.
-#Os valores dos parâmetros nomeados mostrados na ajuda são os seus valores padrões. 
-#Caso não se informe os valores dos parâmetros nomeados, serão utilizados os valores padrões.
+#Os parâmetros obrigatórios são chamados de parâmteros não nomeados. Isoocorre porque, na documentação da ajuda, eles não têm um nome próprio
+#sendo representados por nomes genéricos. Além disso, por serem obrigatórios, não possuem nenhum valor padrão.
+  
+#Os argumentos opcionais são os argumentos nomeados. Eles possuem nomes próprios fixos na documentação de ajuda e possuem valores padrão que
+#são utilizados sempre que não explicitamente fornecidos.
   
 #Na função runif(), n é obrigatório e min e max são parâmetros opcionais cujos valores padrão são 0 e 1 respectivamente.
   
   runif(n, min=0, max=1)
   
+#Informando outros valores para os parâmetros nomeados, são eles que serão utilizados.
+  
+  runif(n, min=5, max=10)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #BOAS PRÁTICAS
   
-#Utilizar sempre comentários para explicar seções do código
-#Nomear objetos efêmeros (aqueles usados dentro de uma mesma seção) com nomes curtos
-#Nomear objetos persistentes (aqueles usados entre seções distintas) com nomes significativos
+#Utilizar sempre comentários para explicar seções do código. Os comentários são executados após um símbolo de '#' e vão até o fim da linha
+  
+#Nomear objetos efêmeros (aqueles usados dentro de uma mesma seção) com nomes curtos para facilitar e nomear objetos persistentes 
+#(aqueles usados entre seções distintas), ou seja, possuem utilização frequente, com nomes significativos que transmitam sua utilidade.
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #EXPRESSÕES
   
-#Para colocar duas expressões ou mais numa mesma linha, usamos o ponto-e-vírgula  
+#Para colocar duas expressões ou mais numa mesma linha, usamos o ponto-e-vírgula.  
   
   x <- c(1, 2, 3); x
 
