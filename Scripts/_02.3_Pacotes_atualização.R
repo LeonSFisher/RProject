@@ -20,7 +20,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #VERIFICAR PACOTES ATUALIZÁVEIS
 
-#Verificar quais pacortes têm versões novas para instalar. A função update.packages() instala estas versões
+#Verificar quais pacotes têm versões novas para instalar. A função update.packages() instala estas versões
 
   old.packages()
 
@@ -41,6 +41,12 @@
 #Definir de onde baixar a atualização
 
   update.packages("dplyr", repos = "https://cloud.r-project.org") 
+  
+#Ou como uma variável
+  
+  repositorio <- "https://cloud.r-project.org"
+  
+  update.packages("dplyr", repos = repositorio)   
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Atualizando mais de um pacote de uma vez
@@ -59,7 +65,6 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Se não definirmos o pacote, haverá atualização para todos os pacotes instalados que podem ser atualizados
-#Mesmo ausentes os argumentos principais, as funções podem receber outros parâmetros
   
   update.packages()
   
@@ -75,6 +80,11 @@
 #Definindo onde eles estão disponíveis
 
   new.packages(repos = "https://cloud.r-project.org")   
+  
+#Ou como uma variável
 
-
+  repositorio <- "https://cloud.r-project.org"
+  
+  new.packages(repos = repositorio)    
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -16,20 +16,24 @@
 #Os pacotes podem ser de três tipos:
 
 # (1) Pacotes que vêm instalados com o R e são carregados automaticamente. Exemplo: pacote 'base'
-# (2) Pacotes que vêm instalados com o R, mas não são carregados automaticamente e precisam ser carregados
-# (3) Pacotes que não vêm instalados com o R, e precisam ser instalados e depois carregados
+# (2) Pacotes que vêm instalados com o R, mas não são carregados automaticamente e precisam ser carregados. Exemplo: pacote 'graphics'
+# (3) Pacotes que não vêm instalados com o R, e precisam ser instalados e depois carregados. Exemplo: pacote 'agricolae'
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #INSTALAÇÃO DE PACOTES JÁ BAIXADOS
 
-#Pacotes que não vêm instalados com o R precisam ser instalados, por óbvio. (Obrigatório como string)
-#Instalar o pacote na pasta padrão
+#Pacotes que não vêm instalados com o R precisam ser instalados, por óbvio. 
+
+#Instalar o pacote na pasta padrão (Obrigatório como string).
+
+  install.packages(dplyr)
 
   install.packages("dplyr")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Instalando mais de um pacote
+  
 #Tentar instalar dois pacotes de uma vez no argumento da função não funciona  
 
   install.packages("dplyr", "agricolae")
@@ -53,8 +57,8 @@
   url1 <- "https://cran-r.c3sl.ufpr.br" #CRAN Brasil, UFPR
   
   url2 <- "https://cran.fiocruz.br"     #CRAN Brasil, Fiocruz
-
-#Para instalar um pacote de cada repositório, devemos instalar um de cada vez  
+  
+#Para instalar um pacote de cada repositório, devemos instalar um de cada vez. 
   
   install.packages("dplyr", repos = url1)
   
@@ -65,8 +69,7 @@
   install.packages(c("dplyr", "ggplot2"), repos = url1)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Definindo para onde baixar os pacotes
-#Criar as pastas no PC antes de proceder
+#Definindo para onde baixar os pacotes (criar as pastas no PC antes de proceder)
 
   dir1 <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir1"
   
@@ -84,8 +87,8 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo o diretório de download do pacote de instalação (compactado)
-#Se não for informado, será baixado para a pasta de arquivo temporário e apagado depois de instalado
-#Criar as pastas antes senão haverá um erro
+  
+#Se não for informado, será baixado para a pasta de arquivo temporário e apagado depois de instalado (criar as pastas antes senão haverá um erro)
   
   arquivo_compactado <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir4"
   
@@ -119,7 +122,4 @@
   
   install.packages(c("dplyr", "ggplot2"), Ncpus = 4)
 
- 
-  
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

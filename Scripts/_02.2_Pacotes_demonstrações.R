@@ -10,7 +10,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #DEMONSTRAÇÕES
 
-#Podemos exibir demonstrações de pacotes (necessário apertar enter)
+#Podemos exibir demonstrações de pacotes (necessário apertar enter para alguns pacotes)
 
   demo(graphics)
   
