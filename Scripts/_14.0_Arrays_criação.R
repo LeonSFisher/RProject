@@ -11,8 +11,13 @@
 #CRIAÇÃO DE ARRAYS
 
 #Arrays são estruturas multidimensionais generalizadas que têm o vetor e a matriz como casos particulares uni e bi dimensionis, respectivamente.
+
 #Imporatnte é o fato de que, apesar de um vetor ser tecnicamente um array, eles são identificados separadamente
 #Assim, o que é vetor não será identificado como array e o que é array não será identificado como vetor
+
+#Outra coisa que precisa se dita é que a difrença entre um array de dimensão 1 e um vetor reside basicamente na existência de um vetor de dimensões
+#Um vetor de dimensões é um vetor de inteiros positivos e seu comprimento dá adimensão do array.
+#O vetor de dimensões é um atributo de um array e o nome do atributo é 'dim'
 
 #Unidimensional com cinco elementos
 
