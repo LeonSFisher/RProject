@@ -10,6 +10,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #CRIANDO LISTAS
 
+#Listas são coleções ordenadas de objetos arbitrários
 #Para criar uma lista usamos a função list()
 #Listas podem ser criadas compondo todos os tipos de dados e estruturas disponíveis
 #As listas manterão a estrutura original dos objetos que lhe servem de elementos

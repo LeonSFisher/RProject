@@ -22,6 +22,13 @@
 #Gerando o dataframe
   
   tabela = data.frame(numeros, objetos, salario, valores, classes)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Criando dataframes a partir de uma matriz
+  
+#Perceba que as colunas do dataframe serão automaticamente nomeadas
+  
+  as.data.frame(matrix(1 : 24, nrow = 4, ncol = 6))
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Detalhes sobre strings no dataframe

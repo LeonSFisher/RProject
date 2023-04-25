@@ -46,7 +46,6 @@
   
   tabela = data.frame(num = numeros, obj = objetos, sal = salario, val = valores, class = classes)
  
-   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Outra forma de saber os nomes das colunas de um dataframe:
 #depois de attach() podemos chamar a coluna diretamente

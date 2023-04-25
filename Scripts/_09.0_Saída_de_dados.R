@@ -56,6 +56,25 @@
   print(msg2)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Removendo as aspas
+  
+#Caso se queira imprimir uma string sem as aspas, podemos usar a função noquote()
+  
+  "Eu estou aqui!"
+  
+  print("Eu estou aqui!")
+  
+  print(noquote("Eu estou aqui!"))
+  
+#Ou usando noquote() sozinha
+  
+  noquote("Eu estou aqui!")
+  
+#Cuidado com a ordem das expressões
+  
+  noquote(print("Eu estou aqui!"))
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #SAÍDA CONCATENADA
   
