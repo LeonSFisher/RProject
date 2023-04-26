@@ -1,0 +1,5 @@
+nome,idade,peso,altura
+joão,13,40,1.30
+maria,17,50,1.60
+carlos,33,85,1.83
+nuno,67,67,1.67
