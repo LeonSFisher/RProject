@@ -20,7 +20,7 @@
 
   read.table()
   
-  read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt")
+  xisto <- read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\xisto.txt", sep = ',', header = TRUE)
 
 #Arquivos csv (comma separated value)
 #O parâmetro header determina se a tabela tem ou não um cabeçalho e sep é o separador utilizado
