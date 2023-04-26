@@ -21,7 +21,8 @@
 
   list.files(path = "E:\\GITHUB\\RProject\\Subdiretorios")
 
-#Omitindo o parâmetro:
+#Omitindo o parâmetro:/././;./"/;l.;/
+
 
   list.files("E:\\GITHUB\\RProject\\Subdiretorios")
 
@@ -105,6 +106,5 @@
     #ignore.case
     #include.dirs
     #no..
-  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
