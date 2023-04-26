@@ -10,19 +10,12 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ARQUIVOS DO DIRETÓRIO
 
-#Verificar os aquivos e subdiretórios do diretório atual
+#Verificar os aquivos e subdiretórios do diretório de trabalho atual.
 
   list.files()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Verificar os arquivos de um diretório especificado
-
-#O parâmetro 'path' identifica o caminho
-
-  list.files(path = "E:\\GITHUB\\RProject\\Subdiretorios")
-
-#Omitindo o parâmetro:/././;./"/;l.;/
-
 
   list.files("E:\\GITHUB\\RProject\\Subdiretorios")
 
@@ -32,10 +25,20 @@
   
   list.files(caminho)
 
+#Explicitanedo o parâmetro 'path' que identifica o caminho
+
+  list.files(path = "E:\\GITHUB\\RProject\\Subdiretorios")
+
+
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Definindo se mostra os arquivos ocultos ou apenas os visíveis
+  
+#Por padrão é FALSE (não mostra os arquivos ocultos)
 
   list.files(path = caminho, all.files = FALSE)
+  
+#Pedindo para exibir os arquivos ocultos
   
   list.files(path = caminho, all.files = TRUE)
   

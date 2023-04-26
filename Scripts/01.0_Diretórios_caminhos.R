@@ -10,28 +10,31 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OPERAÇÕES DE DIRETÓRIO
 
-#Verificar o diretório atual no formato de endereço
+#Diretório é sinônimo do que, na informática, chamamos de pasta.
 
-#Se o diretório não estiver disponível, retorna NULL
+#Podemos definir um diretório de trabalho arbitrário, mas quando criamos um projeto no RStudio, o diretório de trabalho é o do projeto.
+
+#Verificar o diretório de trabalho atual (pasta de trabalho atual) no formato de endereço.
+#Se o diretório não estiver disponível, retorna NULL.
 
   getwd()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Podemos armazenar o caminho numa variável
+#Podemos armazenar o caminho do diretório de trabalho numa variável usando o retorno da função getwd().
 
   caminho <- getwd()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Alterar o diretório
   
-#Se não funcionar, retorna um erro
-#O caminho deve ser colocado com \\ para que a \ simples junto com a letra seguinte não seja confundida com uma sequência de escape
+#Se não funcionar, retorna um erro.
+#O caminho deve ser colocado com \\ para que a \ simples junto com a letra seguinte não seja confundida com uma sequência de escape.
   
-#Informando o diretório para a função diretamente
+#Informando o diretório para a função diretamente.
 
   setwd("E:\\GITHUB\\RProject")
 
-#Ou usando uma variável para armazenar o diretório
+#Ou usando uma variável para armazenar o diretório.
 
   caminho <- "E:\\GITHUB\\RProject"
   
@@ -40,15 +43,25 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Selecionando o diretório por uma caixa de diálogo
   
+#Com a função choose.dir() podemos escolher uma pasta para abrir. Ela retorna o endereço da pasta.
+  
+  ?choose.dir()
+  
+#Esse retorno da função pode ser, inclusive, armazenado numa variável.
+  
+  endereco <- choose.dir()
+  
+#Feito isso, podemos usar a função choose.dir() combinada com a função setwd().
+  
   setwd(choose.dir())
   
-#Podemos escolher que pasta abrir inicialmente (Para facilitar) - No windows só abre na pasta 'Meu Computador'
+#Podemos escolher que pasta abrir inicialmente (Para facilitar) - No windows só abre na pasta 'Meu Computador'.
   
   choose.dir(default = "E:\\GITHUB")
   
-#Dar um título para a janela (Evitar confusão)  
+#Dar um título para a janela (Evitar confusão).  
   
-  choose.dir(caption = "Escolha o Workspace do R")
+  choose.dir(caption = "ESCOLHA A PASTA")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Observação:
@@ -56,5 +69,7 @@
 #Apesar de getwd() retornar o endereço com \ simples e setwd() requerer o endereço com \\, o seguinte funcionará:
 
   setwd(getwd())
+  
+  
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
