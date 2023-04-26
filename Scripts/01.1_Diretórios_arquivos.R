@@ -61,7 +61,30 @@
   list.files(caminho, recursive = FALSE)
   
   list.files(caminho, recursive = TRUE)
-
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Filtrando arquivos através de expressões regulares
+  
+#Podemos utilizar expreções regulares para filtrar aruivos específicos
+#Abaixo, filtramos os arquivos a exibir por formato: .csv ou.txt
+  
+  local <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir5"
+  
+  list.files(local, pattern = "\\.csv$")
+  
+  list.files(local, pattern = "\\.txt$")
+  
+#Podemos utilizar o parâmetro ignore.case para determinar de devemos filtra diferenciando maiúsculas de minúsculas
+#Por padrão é FALSE, o que significa que a consulta será case-sensitive. Se TRUE, tratará minúsculas e maiúsculas como iguais
+  
+  list.files(local, pattern = "xis")
+  
+#Explicitando o parâmtero
+  
+  list.files(local, pattern = "xis", ignore.case = FALSE)
+  
+  list.files(local, pattern = "xis", ignore.case = TRUE)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #SUBDIRETÓRIOS
@@ -100,10 +123,7 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Argumentos faltantes:
-  
   #list.files()
-    #pattern
-    #ignore.case
     #include.dirs
     #no..
   
