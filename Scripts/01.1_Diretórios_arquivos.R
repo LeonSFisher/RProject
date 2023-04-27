@@ -139,6 +139,16 @@
   
   list.files(local, pattern = "CSV_", ignore.case = FALSE)
   
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Listando arquivos de vários diretórios distintos
+  
+#Podemos criar um vetor de diretórios com todos os caminhos a pesquisar arquivos
+  
+  caminhos <- c("E:\\GITHUB\\RProject\\Subdiretorios\\dir5", "E:\\GITHUB\\RProject\\Subdiretorios\\dir6")
+  
+  list.files(caminhos, all.files = FALSE, recursive = FALSE)
+  
+  
   
   
   

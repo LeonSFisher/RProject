@@ -49,6 +49,16 @@
 
   list.dirs(path = caminho, recursive = FALSE)
   
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Listando subdiretórios de vários diretórios diferentes  
+  
+#Podemos criar um vetor de diretórios com todos os caminhos a pesquisar subdiretórios
+  
+  caminhos <- c("E:\\GITHUB\\RProject\\Subdiretorios\\dir5", "E:\\GITHUB\\RProject\\Subdiretorios\\dir6")
+  
+  list.dirs(caminhos, recursive = FALSE)
+  
+  
   
   
   
