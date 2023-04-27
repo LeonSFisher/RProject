@@ -88,7 +88,17 @@
   
   vetor_1 <- c(2, 3, 0); vetor_2 <- c(-2, -3, 0)
   
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#AVISOS
   
+#Quando recebermos uma mensagem do R informando que nós temos avisos 'warnings' aós alguma operação, podemos verificar quais são.
+  
+#Quando temos um erro, a função para a sua execução, mas quando temos um aviso, a função executa, mas alerta para algo errado que pode ter acontecido.
+  
+#Para isso, usamos a função warnings(). Após chamarmos a função, R mostrará quais são os avisos.
+  
+  warnings()  
   
   
   
