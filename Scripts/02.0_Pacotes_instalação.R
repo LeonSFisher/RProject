@@ -27,9 +27,11 @@
 
 #Instalar o pacote na pasta padrão (Obrigatório como string).
 
-  install.packages(dplyr)
-
   install.packages("dplyr")
+  
+#Se utilizarmos como nome de pacote, obteremos um erro:
+  
+  install.packages(dplyr)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Instalando mais de um pacote
@@ -42,7 +44,7 @@
 
   install.packages(c("dplyr", "agricolae"))
 
-#Ou criar um vetor de pacotes
+#Ou criar um vetor de pacotes externamente
   
   pacotes <- c("dplyr", "agricolae")
   
@@ -98,7 +100,13 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #INSTALAÇÃO DE DEPENDÊNCIAS
   
-#Alguns pacotes possuem outros pacotes como prerrequisitos. Para instalar pacotes com as suas dependências, fazemos:
+#Alguns pacotes possuem outros pacotes como prerrequisitos. São as suas dependências, ou seja, pacotes que guardam funções que são usadas por
+#funções do pacote dependente. 
+  
+#Caso um pacote necessite de outro, será emitido um aviso e necessitamos instalar este a fim de utilizarmos aquele. É últil, ao instalar um
+#pacote, intalar também as suas dependências de imediato.
+  
+#Para instalar pacotes com as suas dependências, fazemos:
   
   install.packages("dplyr", dependencies = TRUE)
   
@@ -108,9 +116,17 @@
   
 #Exibir informaçòes adicionais
   
+#Alguns pacotes são naturalmente silenciosos na instalação ou mostram poucas informações. Para forçar que pacotes exibam mais informações
+#durante o processo de instalação, usamos o parâmetro 'verbose'. Caso o pacote realmente não tenha muita informação para mostrar, esta opção
+#não terá, evidentemente, muita utilidade.
+  
   install.packages(c("dplyr", "ggplot2"), verbose = TRUE)
  
 #Reduzir a quantidade de outputs
+  
+#Contrariamente, pode ser que alguns pacotes exibam muitas informações desnecessárias para o momento tornando sua instalação muito verbosa.
+#Para tentar diminuir a quantidade de informação mostrada, podemos usar o parâmetro 'quiet'. Caso o pacote realmente necessite mostrar as
+#informações que mostra, esta opção não terá, evidentemente, muita utilidade.
   
   install.packages(c("dplyr", "ggplot2"), quiet = TRUE)
 
@@ -119,6 +135,10 @@
 #PROCESSAMENTO PARALELO  
   
 #Instalação com processamento paralelo
+  
+#Algumas vezes, as instalações podem ser demoradas, principalmente quando muitos pacotes são instalados ou quando possuem muitas dependências.
+#Um recurso interessante, nesse caso, é utilizar poder de processamento paralelo. O parâmetro 'Ncpus'determina quantos núcleos do processador 
+#serão utilizados durante o processo. 
   
   install.packages(c("dplyr", "ggplot2"), Ncpus = 4)
 
