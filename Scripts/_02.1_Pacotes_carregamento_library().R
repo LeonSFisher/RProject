@@ -1,7 +1,7 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#PACOTES - CARREGAMENTO
+#PACOTES - CARREGAMENTO - library()
 
 ######################################################################################################################################################
 ######################################################################################################################################################
@@ -10,9 +10,13 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #VERIFICAÇÃO
 
-#Verificar todos os pacotes disponíveis na nossa biblioteca
+#Verificar todos os pacotes disponíveis
 
   library()
+
+#Lista todos os pacotes disponíveis na biblioteca padrão
+
+  library(lib.loc = .Library)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Verificar quais pacotes já estão carregados
@@ -36,6 +40,18 @@
 #Caso seja necessário dar à função library() um input advindo de uma string, fazemos:
 
   library("graphics")
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Carregamento da ajuda (documentação do pacote) com informações sobre ele
+
+  library(help = splines) 
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Determinar de onde carregar o pacote
+
+#Aqui, carregaremos o pacote 'dplyr' que está numa pasta diferente
+
+  library("dplyr", lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Podemos usar um parâmetro em library() para exigir a entreda em caracteres
@@ -69,6 +85,19 @@
   library(graphics, logical.return = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Decidindo se deve avisar sobre conflitos
+
+#Conflitos podem acontecer, por exemplo, quando dois pacotes carregados possuem funções com mesmo nome.
+
+#Por padrão, é TRUE e sempre mostra os conflitos
+
+  library("graphics", warn.conflicts = TRUE)
+
+#Para ocultar os avisos, mudamos o valor para FALSE
+  
+  library("graphics", warn.conflicts = FALSE)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Para diagnósticos adicionais
 
   library(graphics, verbose = FALSE)
@@ -90,57 +119,5 @@
 #Vemos que ao introduzir o vetor diretamente na função, temos um aviso dizendo que o comprimento do mesmo deve ser 1
   
   library(c("dplyr", "ggplot2", "e1071"))
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#OUTRA FORMA DE CARREGAR PACOTES
-  
-#Podemos utilizar a função require() para carregar os pacotes
-#A diferença entre as funções de carregamento library() e require() é a seguinte:
-#Se o pacote não estiver instalado, a função library() emite uma mensagem de erro e finaliza a execução.
-#Já a função require(), caso o pacote não esteja instalado, emite uma mensagem de erro e prossegue a execução
-  
-  require(ggplot2)
-  
-  require("agricolae")
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#A função require() possui alguns argumentos semelhantes aos da função library()
-#Exigir que o nome seja em caracteres
-#Nomes fornecidos como caracteres
-  
-  require("ggplot2", character.only = TRUE)
-  
-  require("ggplot2", character.only = FALSE)
-  
-#Nomes fornecidos como nomes de pacotes normalmente
-  
-  require(ggplot2, character.only = TRUE)
-  
-  require(ggplot2, character.only = FALSE)  
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Diminuir a quantidade de outputs
-  
-  require("agricolae", quietly = TRUE)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#FUNÇÕES DE PACOTES 
-
-#Depois de carregados, os pacotes podem ser usados normalmente 
-#No entanto, podemos buscar e usar funções de um pacote sem precisar carregá-lo diretamente
-#Este formato também serve para evitar ambiguidades quando mais de um pacote possuem funções com mesmo nome
-  
-  agricolae::skewness(mtcars$hp)
-  
-#Que é equivalente ao seguinte código:
-  
-  library(agricolae)
-  
-  skewness(mtcars$hp)
-  
-
-  
   
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 

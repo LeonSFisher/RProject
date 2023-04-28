@@ -13,7 +13,7 @@
 #Abrir a ajuda inicial
 #No RStudio, abre na aba 'Help'. NO RGui abre no navegador
 
-  help.start()
+  ?help.start()
 
 #Uma só palavra na busca
 
