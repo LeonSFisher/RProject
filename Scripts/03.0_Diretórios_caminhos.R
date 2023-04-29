@@ -10,8 +10,6 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OPERAÇÕES DE DIRETÓRIO
 
-#Diretório é sinônimo do que, na informática, chamamos de pasta.
-
 #Podemos definir um diretório de trabalho arbitrário, mas quando criamos um projeto no RStudio, o diretório de trabalho é o do projeto.
 
 #Verificar o diretório de trabalho atual (pasta de trabalho atual) no formato de endereço.
@@ -19,7 +17,6 @@
 
   getwd()
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Podemos armazenar o caminho do diretório de trabalho numa variável usando o retorno da função getwd().
 
   caminho <- getwd()
@@ -27,7 +24,6 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Alterar o diretório
   
-#Se não funcionar, retorna um erro.
 #O caminho deve ser colocado com \\ para que a \ simples junto com a letra seguinte não seja confundida com uma sequência de escape.
   
 #Informando o diretório para a função diretamente.
@@ -45,11 +41,7 @@
   
 #Com a função choose.dir() podemos escolher uma pasta para abrir. Ela retorna o endereço da pasta.
   
-  ?choose.dir()
-  
-#Esse retorno da função pode ser, inclusive, armazenado numa variável.
-  
-  endereco <- choose.dir()
+  choose.dir()
   
 #Feito isso, podemos usar a função choose.dir() combinada com a função setwd().
   
@@ -62,6 +54,12 @@
 #Dar um título para a janela (Evitar confusão).  
   
   choose.dir(caption = "ESCOLHA A PASTA")
+  
+#Esse retorno da função pode ser, inclusive, armazenado numa variável.
+  
+  endereco <- choose.dir()
+  
+  setwd(endereco)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Observação:
@@ -70,6 +68,4 @@
 
   setwd(getwd())
   
-  
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -29,7 +29,4 @@
 #Em 1997, foi formado um grupo de profissionais que têm acesso ao código fonte do R, possibilitando, assim, a atualização mais rápida do software. 
 #Desde então, o R vem ganhando cada vez mais adeptos em todo o mundo.
 
-
-  
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
