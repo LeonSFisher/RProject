@@ -19,7 +19,12 @@
 #Nomear objetos persistentes (aqueles usados entre seções distintas), ou seja, possuem utilização frequente, com nomes significativos que 
 #transmitam sua utilidade.
 
+#Nunca deixar de descarregar pacotes depois de utilizados para evitar conflitos.
 
+#Utilzar ao máximo o uso de vetorização para ganho de eficiência.
 
+#Separar scripts por projeto, não por tema.
+
+#Não esquecer de salva o workspace para caso de precisar continuar o trabalho depois.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
