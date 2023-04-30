@@ -10,12 +10,16 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ARQUIVOS DO DIRETÓRIO
 
-#Verificar os aquivos e subdiretórios do diretório de trabalho atual.
+#Verificar os aquivos e subdiretórios do diretório de trabalho atual
+
+#Usamos a função no formato vazio
 
   list.files()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Verificar os arquivos de um diretório especificado
+
+#Usamos a função com o diretório como uma string de carcteres
 
   list.files("E:\\GITHUB\\RProject\\Subdiretorios")
 
@@ -23,8 +27,9 @@
 
   list.files(path = "E:\\GITHUB\\RProject\\Subdiretorios")
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Usando uma variável para armazenar o caminho do arquivo
-
+  
   caminho <- "E:\\GITHUB\\RProject\\Subdiretorios"
   
 #Utilizando a variável na função
