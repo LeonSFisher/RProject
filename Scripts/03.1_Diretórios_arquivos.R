@@ -110,7 +110,7 @@
   list.files("E:\\GITHUB\\RProject\\Subdiretorios\\dir6", recursive = FALSE, include.dirs = FALSE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Filtrando arquivos através de expressões regulares
+#Listando arquivos através de expressões regulares
   
 #Podemos utilizar expressões regulares para filtrar aruivos específicos dentro de uma pasta
   
@@ -153,8 +153,12 @@
   
   list.files(caminhos, all.files = FALSE, recursive = FALSE)
   
-  
-  
-  
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#UMA ALTERNATIFA À FUNÇÃO list.files()  
+  
+#A função dir() é um alias (apelido) para a função list.files(). Desse modo, pode ser usada da mesma forma com os mesmos parâmetros:
+  
+  dir(path = caminhos, all.files = FALSE, full.names = FALSE, recursive = FALSE, include.dirs = TRUE)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  

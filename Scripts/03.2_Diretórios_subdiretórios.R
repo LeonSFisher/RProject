@@ -10,7 +10,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #SUBDIRETÓRIOS
 
-#Damesma forma que temos uma função para listar arquivos, temos uma para listar diretórios que nos permite verificar todos os subdiretórios
+#Da mesma forma que temos uma função para listar arquivos, temos uma para listar diretórios que nos permite verificar todos os subdiretórios
 #que estão dentro do diretório atual. fazemos isso com a função list.dir()
 
   list.dirs("E:\\GITHUB\\RProject\\Subdiretorios")
@@ -19,6 +19,7 @@
 
   list.dirs(path = "E:\\GITHUB\\RProject\\Subdiretorios")
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Também podemos usar uma variável intermediária
 
   caminho <- "E:\\GITHUB\\RProject\\Subdiretorios"
@@ -57,9 +58,5 @@
   caminhos <- c("E:\\GITHUB\\RProject\\Subdiretorios\\dir5", "E:\\GITHUB\\RProject\\Subdiretorios\\dir6")
   
   list.dirs(caminhos, recursive = FALSE)
-  
-  
-  
-  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
