@@ -127,6 +127,10 @@ rwilcox()
 #mostrar as variáveis de forma categórica e suas respectivas quantidades
 table(mtcars$cyl)
 
+#Pode-se realizar cálculos com os vetores oriundos de table
+
+max(table(mtcars$mpg))
+
 #resume todas as variáveis de um dataframe
 summary(mtcars)
 
