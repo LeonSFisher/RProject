@@ -28,7 +28,7 @@
 #Instalar o pacote na pasta padrão (Obrigatório como string).
 
   install.packages("dplyr")
-  
+ 
 #Se utilizarmos como nome de pacote, obteremos um erro:
   
   install.packages(dplyr)
@@ -44,7 +44,8 @@
 
   install.packages(c("dplyr", "agricolae"))
 
-#Ou criar um vetor de pacotes externamente
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Podemos criar um vetor de pacotes externamente e usá-lo na função
   
   pacotes <- c("dplyr", "agricolae")
   
@@ -62,6 +63,8 @@
   
 #Para instalar um pacote de cada repositório, devemos instalar um de cada vez. 
   
+#Utilizamos o parâmetro 'repos' para informar o local de onde baixar
+  
   install.packages("dplyr", repos = url1)
   
   install.packages("agricolae", repos = url2)
@@ -78,6 +81,8 @@
   dir2 <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir2"
   
   dir3 <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir3"
+  
+#Utilizamos o parâmetro 'lib' para definir o diretório a receber a instalação
 
 #Instalar o mesmo pacote em mais de uma pasta
   
@@ -91,6 +96,12 @@
 #Definindo o diretório de download do pacote de instalação (compactado)
   
 #Se não for informado, será baixado para a pasta de arquivo temporário e apagado depois de instalado (criar as pastas antes senão haverá um erro)
+  
+#Para definir o local usamos o parâmetro 'destdir'
+  
+  install.packages(c("dplyr", "ggplot2"), destdir = "E:\\GITHUB\\RProject\\Subdiretorios\\dir4")  
+  
+#Podemos armazenar o local da pasta numa variável antes de usarmos na função  
   
   arquivo_compactado <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir4"
   
@@ -106,6 +117,10 @@
 #Caso um pacote necessite de outro, será emitido um aviso e necessitamos instalar este a fim de utilizarmos aquele. É últil, ao instalar um
 #pacote, intalar também as suas dependências de imediato.
   
+#Para definir se devemos baixar as dependências usamos o parâmetro 'dependencies' que, por padrão, é FALSE
+  
+  install.packages("dplyr", dependencies = FALSE)
+  
 #Para instalar pacotes com as suas dependências, fazemos:
   
   install.packages("dplyr", dependencies = TRUE)
@@ -120,13 +135,26 @@
 #durante o processo de instalação, usamos o parâmetro 'verbose'. Caso o pacote realmente não tenha muita informação para mostrar, esta opção
 #não terá, evidentemente, muita utilidade.
   
+#Por padrão, o parâmetro 'verbose' é FALSE
+  
+  install.packages(c("dplyr", "ggplot2"), verbose = FALSE)  
+  
+#Mas, se quisermos que ele atue, mudamos para TRUE
+  
   install.packages(c("dplyr", "ggplot2"), verbose = TRUE)
- 
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Reduzir a quantidade de outputs
   
 #Contrariamente, pode ser que alguns pacotes exibam muitas informações desnecessárias para o momento tornando sua instalação muito verbosa.
 #Para tentar diminuir a quantidade de informação mostrada, podemos usar o parâmetro 'quiet'. Caso o pacote realmente necessite mostrar as
 #informações que mostra, esta opção não terá, evidentemente, muita utilidade.
+  
+#Por padrão, o parâmetro 'quiet' é FALSE
+  
+  install.packages(c("dplyr", "ggplot2"), quiet = FALSE)  
+  
+#Mas, se quisermos que ele atue, mudamos para TRUE
   
   install.packages(c("dplyr", "ggplot2"), quiet = TRUE)
 
