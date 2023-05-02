@@ -78,3 +78,12 @@ attributes()
 
 data()
 data("airquality")
+
+
+Sys.time()
+
+format()
+
+format(Sys.time(), "%H")
+
+

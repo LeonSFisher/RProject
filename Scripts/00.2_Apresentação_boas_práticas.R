@@ -12,7 +12,9 @@
 
 #Utilizar sempre comentários para explicar seções do código. Os comentários são executados após um símbolo de '#' e vão até o fim da linha.
 
-#Utilizar, quando possível, indentações para promever clareza no código.
+#Utilizar, quando possível, indentações para promever clareza no código. (ctrl + i)
+
+#Quando possível, limpar o console para despoluir a visualização das saídas. (ctrl + l)
 
 #Nomear objetos efêmeros (aqueles usados dentro de uma mesma seção) com nomes curtos para facilitar.
 

@@ -8,13 +8,16 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#VERSÃO DO PACOTE
+#VERIFICANDO A VERSÃO DO PACOTE
 
 #Verificar a versão de um pacote
 
   packageVersion("agricolae")
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Podemos também informar em que lugar se encontra o pacote cuja versão queremos descobrir
   
-  packageVersion("graphics")
+  packageVersion("dplyr", lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,7 +28,16 @@
   old.packages()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#definindo que pacote verificar a versão
+
+#Exibe a versão instalada, a versão do R e a versão no repositório a instalar em caso de atualização
+
+  old.packages(lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo de onde devem ser verificadas as novas versões
+
+#Informamos o endereço do repositório on-line no formato de uma string de caracteres
 
   old.packages(repos = "https://cloud.r-project.org") 
 
@@ -33,9 +45,43 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ATUALIZAÇÃO
 
+#Se não definirmos o pacote, haverá atualização para todos os pacotes instalados que podem ser atualizados
+
+  update.packages()
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Defininindo quais pacotes atualizar
+
+#No caso de atualizarmos vários pacotes, podemos definir quais queremos atualizar e quais pular em tempo real
+
+  update.packages(ask = TRUE)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Atualizando um único pacote
 
   update.packages("dplyr")
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Atualizando mais de um pacote de uma vez
+
+  update.packages("dplyr", "ggplot2")
+
+#Ou como vetor de strings com os nomes dos pacotes
+
+  pacotes <- c("dplyr", "ggplot2", "e1071")
+
+  update.packages(pacotes)
+
+#Ou diretamente com o vetor no argumento da função
+
+  update.packages(c("dplyr", "ggplot2", "e1071"))
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Definindo onde está o pacote a atualizar
+
+#Se houver mais de um pacote no diretório, todos serão atualizados. Aqui não se especifica o pacote.
+
+  update.packages(lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definir de onde baixar a atualização
@@ -49,35 +95,17 @@
   update.packages("dplyr", repos = repositorio)   
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Atualizando mais de um pacote de uma vez
-
-  update.packages("dplyr", "ggplot2")
-
-#Ou como vetor de strings com os nomes dos pacotes
-  
-  pacotes <- c("dplyr", "ggplot2", "e1071")
-
-  update.packages(pacotes)
-
-#Ou diretamente com o vetor no argumento da função
-
-  update.packages(c("dplyr", "ggplot2", "e1071"))
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Se não definirmos o pacote, haverá atualização para todos os pacotes instalados que podem ser atualizados
-  
-  update.packages()
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #PACOTES RECOMENDADOS
 
-#Procurar pacotes adequados e oferecer a instalação
+#Procurar pacotes adequados e oferecer a instalação, ou seja, pacotes não instalados
 
   new.packages() 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo onde eles estão disponíveis
+  
+#Isto define de qual repositório on-line comparar os pacotes instalados para recomendá-los
 
   new.packages(repos = "https://cloud.r-project.org")   
   
@@ -86,5 +114,10 @@
   repositorio <- "https://cloud.r-project.org"
   
   new.packages(repos = repositorio)    
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Podemos definir de qual pasta de instalação comparar
+  
+  new.packages(lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
