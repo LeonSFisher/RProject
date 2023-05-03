@@ -15,9 +15,22 @@
   example("log")
 
   example(plot)
-
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Informar o pacote ao qual a função de exemplo pertence
+  
+  example("log", package = "base")
+  
+  example("log", package = "ggplot2")
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Informar a biblioteca a pesquisar  
+  
+  example("log", lib.loc = "C:\\Program Files\\R\\R-4.2.3\\library")
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo se o tópico a ser procurado é uma string de caracteres
+  
 #Como string de caracteres
 
   example("log", character.only = FALSE) 
@@ -29,16 +42,10 @@
   example(log, character.only = FALSE) 
   
   example(log, character.only = TRUE)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Informar o pacote ao qual a função de exemplo pertence
-
-  example("log", package = "base")
-  
-  example("log", package = "ggplot2")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Onde mostrar o exemplo
+  
 #No console da aplicação (RStudio, por exemplo)
 
   example("log", type = "console") 
@@ -52,10 +59,27 @@
 
   example("log", echo = FALSE)   
   
-  example("log", echo = TRUE) 
+  example("log", echo = TRUE)
   
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Para definir o prompt no caso de 'echo' ser TRUE
   
+  example("log", echo = TRUE, prompt.prefix = "aviso") 
   
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Exibir informações adicionais  
   
-
+  example("log", verbose = TRUE) 
+  
+#Aqui não temos o parâmetro 'quietly', portanto, para obtermos menos inputs no console, omitimos o parâmetro ou o definimos como FALSE
+  
+  example("log", verbose = FALSE)   
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Alguns exemplos podem mostrar outputs gráficos
+  
+#Para definir se devemos ser consultados sobre a exibição do gráficoantes ou se ele pode ser exibido prontamente
+  
+  example("log", ask = TRUE)   
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
