@@ -11,10 +11,13 @@
 #OBJETOS EM R
 
 #Em R tudo são objetos. Vetores, matrizes, variáveis, funções etc., são todos objetos.
-#A forma básica de armazenamento interno de um objeto éo seu mode
+
+#A forma básica de armazenamento interno de um objeto é o seu mode.
+
 #O mode de um objeto pode ser de vários tipos: character, numeric, logic, raw, complex etc.
+
 #O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado
-#Para o mode numeric temos dois types: integer e double. Para os demais o type e o mode coincidirão.
+#Para o mode numeric temos dois types: integer e double.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,17 +75,21 @@
 #TIPO LOGICAL
   
 #Os tipos de dados logical servem para avaliar valores de afirmações lógicas
-#Podemos representá-los por palavras-chave
   
-  TRUE  #Equivale verdadeiro
+#Podemos representá-los pelas palavras-chave TRUE e FALSE
+  
+#Para um valor verdadeiro, usamos TRUE
+  
+  TRUE
   
   mode(TRUE)
   
   typeof(TRUE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Para um valor falso, usamos FALSE 
   
-  FALSE #Equivale a falso
+  FALSE
   
   mode(FALSE)
   
@@ -96,7 +103,16 @@
   F   #Equivale a FALSE
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Cuidados com a forma abreviada
+  
 #Recomenda-se evitar o uso das formas abreviadas, pois TRUE e FALSE são palavras reservadas e R não permitirá atribuições a elas.
+  
+#Perceba que as operações de atribuição abaixo não são permitidas
+  
+  TRUE <- 3
+  
+  FALSE <- 4
+  
 #Portanto podemos fazer assim:
   
   T <- 7
@@ -104,6 +120,7 @@
   c(T, T, T)
   
 #Como podemos ver, o vetor acima não armazena c(TRUE, TRUE, TRUE), mas c(7, 7, 7)
+  
 #Para evitar isso fazemos
   
   c(TRUE, TRUE, TRUE)
