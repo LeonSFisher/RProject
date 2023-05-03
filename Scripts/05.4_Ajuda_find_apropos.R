@@ -1,61 +1,37 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#AJUDA - EXEMPLOS
+#AJUDA - FIND E APROPOS
 
 ######################################################################################################################################################
 ######################################################################################################################################################
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#BUSCAR EXEMPLOS DE APLICAÇÃO DAS FUNÇÕES
+#DESCOBRIR DE QUAL PACOTE É UMA FUNÇÃO OU DATASET
 
-#Buscando exemplos de uso de funções
+#Busca pelo pacote onde fica o dataset 'mtcars'
 
-  example("log")
-
-  example(plot)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Definindo se o tópico a ser procurado é uma string de caracteres
-#Como string de caracteres
-
-  example("log", character.only = FALSE) 
-
-  example("log", character.only = TRUE) 
-  
-#Agora como nome de função
-  
-  example(log, character.only = FALSE) 
-  
-  example(log, character.only = TRUE)
+  find('mtcars')
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Informar o pacote ao qual a função de exemplo pertence
-
-  example("log", package = "base")
+#Definindo se a string de caracteres buscada deve ser buscada como uma só palavra
   
-  example("log", package = "ggplot2")
+  find('mtcars', simple.words = TRUE)
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
+#///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+#BUSCANDO RESULTADOS PROVÁVEIS  
+
+#A função apropos() retorna um vetor de caracteres com as possíveis combinações da pesquisa
+
+#Ideal para lembrar palavras inteiras que contenham a partícula buscada
+
+  apropos('mt')
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Onde mostrar o exemplo
-#No console da aplicação (RStudio, por exemplo)
+#Também podemos definir se a busca deve ser case-sensitive
 
-  example("log", type = "console") 
-
-#Em um documento html
-
-  example("log", type = "html")
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Se deve ser mostrada o input   
-
-  example("log", echo = FALSE)   
-  
-  example("log", echo = TRUE) 
-  
-  
-  
-  
+  apropos('mt', ignore.case = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
