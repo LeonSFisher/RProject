@@ -8,26 +8,29 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#OBJETOS EM R
+#OBJETOS EM R E CLASSES ATÔMICAS
 
-#Em R tudo são objetos. Vetores, matrizes, variáveis, funções etc., são todos objetos.
+#Em R tudo são objetos. Esses objetos podem ser de diversas classes que determinam a forma de armazenamento interna desses objetos.
 
-#A forma básica de armazenamento interno de um objeto é o seu mode.
+#A forma básica de armazenamento interno de um objeto é o seu 'mode' que pode ser verificado com a função mode() ou com storage.mode()
 
-#O mode de um objeto pode ser de vários tipos: character, numeric, logic, raw, complex etc.
+#O mode de um objeto pode ser dos tipos (classes atômicas): character, numeric, logical, complex.
 
-#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado.
-#Para o mode numeric temos dois types: integer e double.
+#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado. Pode ser verificado com a função type()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO CHARACTER
+
+#O mode character só temum type que é o próprio character
   
 #Representando caracteres com aspas duplas
 
   "casa"
 
   mode("casa")
+  
+  ?storage.mode("casa")
   
   typeof("casa")
   
@@ -38,17 +41,23 @@
   
   mode('ferragem')
   
+  storage.mode('ferragem')
+  
   typeof('ferragem')
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO NUMERIC
  
+#O mode numeric possui dois types: integer (números inteiros) e double (ponto flutuante)
+  
 #Por padrão, valores numéricos são armazenados com precisão dupla (double) 
 
   5
   
   mode(5)
+  
+  storage.mode(5)
   
   typeof(5)
   
@@ -59,6 +68,8 @@
   
   mode(5L)
   
+  storage.mode(5L)
+  
   typeof(5L)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -68,11 +79,15 @@
   
   mode(4.4)
   
+  storage.mode(4.4)
+  
   typeof(4.4)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO LOGICAL
+  
+#O mode logical só possui o type logical
   
 #Os tipos de dados logical servem para avaliar valores de afirmações lógicas
   
@@ -84,6 +99,8 @@
   
   mode(TRUE)
   
+  storage.mode(TRUE)
+  
   typeof(TRUE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -92,6 +109,8 @@
   FALSE
   
   mode(FALSE)
+  
+  storage.mode(FALSE)
   
   typeof(FALSE)
 
@@ -160,11 +179,15 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO COMPLEX
   
+#O mode complex só possui o type complex
+  
 #Usa-se i para a parte imaginária
   
   5 - 3i
   
   mode(5 - 3i)
+  
+  storage.mode(5 - 3i)
   
   typeof(8 + 2i)
 
@@ -180,16 +203,8 @@
   
   mode(1i)
   
+  storage.mode(1i)
+  
   typeof(1i)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------   
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#TIPO PARA FUNÇÕES
-  
-#As funções têm o mode do tipo 'function' e type 'closure'
-  
-  mode(mean)
-  
-  typeof(mean)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

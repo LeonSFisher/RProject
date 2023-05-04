@@ -21,7 +21,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #FUNÇÕES PARA VERIFICAR O TIPO DE DADO
   
-#Além das funções mode() e type() podemos usar outras que verificam o mode ou o type de um objeto
+#Além das funções mode() e type() podemos usar outras que verificam o mode ou o type de um objeto. Estas funções retornam um valor lógico.
   
 #Se é um valor do tipo numeric (funcionará tanto com double quanto com integer)
   
