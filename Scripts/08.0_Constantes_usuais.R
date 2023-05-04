@@ -25,7 +25,7 @@
   4.2-3.7i
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Constantes numéricas precedidas de 0x ou 0X são interpretadas como hexadecimais
+#Constantes numéricas precedidas de 0x ou 0X são interpretadas como valores hexadecimais
   
   0x32
   
@@ -55,6 +55,7 @@
 #BUILT-IN R CONSTANTS
   
 #São constantes embutinas no pacote base do R  
+  
 #Para produzir as letras do alfabeto (Maiúsculas)
   
   LETTERS
@@ -100,6 +101,4 @@
   
   PI
   
-
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -36,7 +36,7 @@
   
   is.na(NA)
   
-#NA's também podem ser gerados quando tentamosinverter a hierarquia de coerção
+#NA's também podem ser gerados quando tentamos inverter a hierarquia de coerção
 #Por exemplo, podemos converter um dado numérico para character, mas não podemos converter um character não numérico para numeric
   
   palavra <- "casa"
@@ -49,7 +49,8 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Infinitos
-#Representa infinito positivo
+  
+#Representar infinito positivo
 
   Inf
 
@@ -63,7 +64,7 @@
   TRUE/FALSE
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Representa infinito negativo
+#Representar infinito negativo
 
   -Inf
   
@@ -99,11 +100,14 @@
 #Outros exemplos de operações envolvendo infinito
   
   exp(-Inf)
+  
   0/Inf
+  
   (0:3)^Inf
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Not-a-number
+  
 #Representa um valor numérico não definido
 
   NaN
@@ -122,52 +126,30 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#FAZENDO ALGUMAS VERIFICAÇÕES  
-  
-#Verificando se é finito
-
-  is.finite(2)
-  
-  is.finite(-2/0)  
-
-#Verificando se é infinito
-
-  is.infinite(-3)
-  
-  is.infinite(1/0) 
-
-#Verificando se é NaN
-
-  is.nan(55)
-  
-  is.nan(3/0)
-  
-  is.nan(0/0)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #DISTINGUINDO NA, NaN e INF
   
   valores <- c(NA, 0 / 0, Inf - Inf, Inf, 5)
   
-#Com a função is.na() os valores NA e NaN são identificados como NA, assim como INF - INF
+#Utilizando funções para verificar os NA's, os NaN's e os Inf's
+ 
+#Para verificar se são NA's 
+#Com a função is.na() os valores NA e NaN são identificados todos como NA, assim como INF - INF
   
   is.na(valores)
-  
+ 
+#Para verificar se são NaN's 
 #A função is.nan() distingue NA's de NaN's e interpreta INF - INF como NaN
   
   is.nan(valores)
-  
+
+#Para verificar se são valores finitos
 #INF - INF é identificado como infinito com a função is.finite()
   
   is.finite(valores)
-  
+
+#Para verificar se são valores infinitos  
 #Mas é identificado como finito com a função is.infinite()
   
   is.infinite(valores)
   
-  
-  
-  
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  

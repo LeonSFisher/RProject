@@ -18,7 +18,7 @@
 
 #Números(integer) podem ser comparados com conteúdos de uma string numérica
 
-  5L == "5"  
+ 5L == "5"  
   
   5 == "5"
 
@@ -28,26 +28,7 @@
   1 != 3
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Para comparar podemos usar a função identical()
-
-  identical(5, 7)
   
-  identical(0, 0)
-
-#O parâmetro num.eq define se os números devem ser comparados usando == (TRUE) ou bit-a-bit (FALSE)
-#Usando o operador de curto-circuito  
-
-  identical(5, 7, num.eq = FALSE)
-  
-  identical(-0, +0, num.eq = FALSE)
-
-#Usando o operador bit-a-bit
-
-  identical(5, 7, num.eq = TRUE)  
-  
-  identical(-0, +0, num.eq = TRUE)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Menor que
 
   1 <  4
@@ -68,3 +49,25 @@
   1 >= 1
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Para comparar podemos usar a função identical()
+  
+  identical(5, 7)
+  
+  identical(0, 0)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#O parâmetro num.eq define se os números devem ser comparados usando == (TRUE) ou bit-a-bit (FALSE)
+  
+#Usando o operador de curto-circuito  
+  
+  identical(5, 7, num.eq = FALSE)
+  
+  identical(-0, +0, num.eq = FALSE)
+  
+#Usando o operador bit-a-bit
+  
+  identical(5, 7, num.eq = TRUE)  
+  
+  identical(-0, +0, num.eq = TRUE)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
