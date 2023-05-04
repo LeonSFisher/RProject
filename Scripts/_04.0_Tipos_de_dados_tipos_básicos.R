@@ -113,17 +113,19 @@
   
   FALSE <- 4
   
-#Portanto podemos fazer assim:
+#No entanto, podemos fazer assim:
   
   T <- 7
   
-  c(T, T, T)
+  F <- 0
   
-#Como podemos ver, o vetor acima não armazena c(TRUE, TRUE, TRUE), mas c(7, 7, 7)
+#Assim, o vetor abaixo não equivale a c(TRUE, TRUE, TRUE, FALSE, FALSE), mas c(7, 7, 7, 0, 0)
   
-#Para evitar isso fazemos
+  c(T, T, T, F, F)
   
-  c(TRUE, TRUE, TRUE)
+#Para evitar isso fazemos, usamos as palavras reservadas
+  
+  c(TRUE, TRUE, TRUE, FALSE, FALSE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Operações com o tipo lógico 
