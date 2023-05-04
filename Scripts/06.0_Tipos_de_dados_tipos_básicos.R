@@ -16,7 +16,7 @@
 
 #O mode de um objeto pode ser de vários tipos: character, numeric, logic, raw, complex etc.
 
-#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado
+#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado.
 #Para o mode numeric temos dois types: integer e double.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -105,52 +105,56 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Cuidados com a forma abreviada
   
-#Recomenda-se evitar o uso das formas abreviadas, pois TRUE e FALSE são palavras reservadas e R não permitirá atribuições a elas.
+#Recomenda-se evitar o uso das formas abreviadas, pois 'T' e 'F' podem ser utilizadas como variáveis. 
   
-#Perceba que as operações de atribuição abaixo não são permitidas
-  
-  TRUE <- 3
-  
-  FALSE <- 4
-  
-#No entanto, podemos fazer assim:
+#Por exemplo, podemos fazer o seguinte:
   
   T <- 7
   
   F <- 0
   
-#Assim, o vetor abaixo não equivale a c(TRUE, TRUE, TRUE, FALSE, FALSE), mas c(7, 7, 7, 0, 0)
+#Assim, o vetor abaixo não equivale a c(TRUE, TRUE, TRUE, FALSE, FALSE), mas a c(7, 7, 7, 0, 0)
   
-  c(T, T, T, F, F)
+  c(T, T, T, F, F)  
   
-#Para evitar isso fazemos, usamos as palavras reservadas
+#Já TRUE e FALSE são palavras reservadas e R não permitirá atribuições a elas.
+  
+#Por exemplo, as atribuições abaixo não são permitidas
+  
+  TRUE <- 7
+  
+  FALSE <- 0
+  
+#Portanto, o vetor abaixo produz o resultado desejado
   
   c(TRUE, TRUE, TRUE, FALSE, FALSE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Operações com o tipo lógico 
-#TRUE reprenta 1 e FALSE representa 0
-#Podemos fazer cálculos aritméticos com TRUE e FALSE  
+  
+#Do ponto de vista numérico, TRUE representa 1 e FALSE representa 0
+  
+#Isto significa que podemos fazer cálculos com eles. Segue alguns exemplos:
+  
+#Operações aritméticas simples
   
   TRUE + FALSE
   
   TRUE + TRUE + TRUE
   
+  TRUE/2
+  
+  TRUE - 5
+  
+#Comparações lógicas com os valores lógicos
+  
   TRUE < FALSE
   
   FALSE < TRUE
-  
-  TRUE/2
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
+
 #Podemos até mesmo usá-los em argumentos de funções
   
   cos((TRUE + TRUE + TRUE)^(TRUE-FALSE))
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Armazenamento de valores lógicos advindos de condicionais
-  
-  valorlogico <- (5 < 3)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -180,21 +184,9 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------   
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#TIPO RAW
-  
-#RAW (Um fluxo de bytes)
-  
-  tipoRaw <- charToRaw('010110110011') 
-  
-  mode(tipoRaw)
-  
-  typeof(tipoRaw)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------   
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO PARA FUNÇÕES
   
-#As funções têm o mode do tipo function
+#As funções têm o mode do tipo 'function' e type 'closure'
   
   mode(mean)
   

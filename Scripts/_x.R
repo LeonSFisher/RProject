@@ -86,4 +86,4 @@ format()
 
 format(Sys.time(), "%H")
 
-
+is.atomic()
