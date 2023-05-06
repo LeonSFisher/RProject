@@ -27,6 +27,7 @@
 #Converter para inteiro
 
   as.integer(x)
+  
   as.integer(y)
   as.integer(z) #character não pode ser convertido para inteiro. Introduz-se NA's
   as.integer(w) #valores lógicos são 1 ou 0 como inteiros

@@ -11,7 +11,9 @@
 #SAÍDA SIMPLES DE DADOS
 
 #Impressão de dados
+
 #Imprimindo constantes
+
 #Basta usar a função print() com a constante
 
   print(5L)
@@ -24,6 +26,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Imprimindo variáveis
+  
 #Basta usar a função print() com a variável
   
   x <- 5L
@@ -39,7 +42,8 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Imprimindo strings
-#Diretamente
+  
+#Diretamente na função
   
   print('Olá, mundo!')
   
@@ -78,8 +82,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #SAÍDA CONCATENADA
   
-#A função paste() exibe a forma concatenada das strings no console, mas pode ser necessário garantir a exibição
-#Para isso, sempre combinamos a função paste() com a função print() quando queremos exibir  
+#A função paste() exibe a forma concatenada das strings no console, mas pode ser necessário garantir a exibição. Isto é especialmente verdade
+#quando rodamos um script com source(). Nestas situações convém utilizar a combinação de print() e paste()
   
   msg1 <- "Estamos aqui!"
   
@@ -92,11 +96,25 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #SAÍDA EXPRESSA
-#Imprime automaticamente
+  
+#Imprime e concatena automaticamente
   
   cat("O valor é:", 155)
   
   cat("O valor é:", 155, ", e nada menos!")
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Definindo um separador para a função 'cat'
+  
+#Perceba a diferença de uso com e sem o separador
+  
+#Com o separador
+  
+  cat("O valor é", 155, sep = ": ")
+  
+#Sem o separador
+  
+  cat("O valor é:", 155)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Linhas impressas separadamente
@@ -114,21 +132,10 @@
   
   cat("O valor é:", 155, ", bocó!", file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt", append = FALSE)
   
-#Dando uma organização do arquivo em linhas
+#Dando uma organização do arquivo em linhas com o caractere de nova linha '\n'
   
   cat("Estou","vendo", "uma linda", "nuvem", "\n", file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt", append = FALSE)
   
   cat("O valor é:", 155, ", bocó!", file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\bizu.txt", append = TRUE)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#concatenando várias variáveis  
-  
-  peso <- 399
-  
-  nome <- "Maria"
-  
-  cat(nome, "pesa", peso, "quilos!")
-  
-
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

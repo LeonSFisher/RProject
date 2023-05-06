@@ -24,6 +24,11 @@
   (.packages())
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Pacotes carregados por padrão
+
+  getOption("defaultPackages")
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Lista todos os pacotes disponíveis na biblioteca padrão
 
 #Podemos verificar o caminho da biblioteca padrão assim:
