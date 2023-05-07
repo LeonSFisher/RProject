@@ -20,7 +20,7 @@
   valor <- readline()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Armazenar um valor enviando uma mensagem
+#Armazenar um valor enviando uma mensagem para o prompt
 
   valor <- readline(prompt = "Digite um valor: ")
 
@@ -30,7 +30,10 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Cuidados com readline()
+  
 #Deve-se rodar o script com 'source' (não funciona com run)
+  
+#Com o 'run', a execução não espera pela digitação dos valores no teclado e sobrepõe os comandos
 
   valor <- readline("Digite seu nome: ")
   
@@ -41,7 +44,8 @@
   print(valor)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Outra formade ler dados do tecladoécom a função scan()
+#Outra forma de ler dados do teclado é com a função scan()
+  
 #Após terminar de digitar os dados, precione ENTER uma última vez para finalizar
   
   scan()
