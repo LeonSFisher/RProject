@@ -12,7 +12,8 @@
 
 #Outra forma de ler dados do teclado é com a função scan()
 
-#Após terminar de digitar os dados, precione ENTER uma última vez para finalizar. Sem parâmetros, a função scan() recebe dados da entrada padrão.
+#A função scan() armazena os valores num vetor. Após terminar de digitar os dados, precione ENTER uma última vez para finalizar. Sem parâmetros, a 
+#função scan() recebe dados da entrada padrão.
 
   scan()
 
@@ -35,6 +36,24 @@
 #sofrer coerção para caracteres, mas o contrário não ocorre.
   
   arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_numeros1.txt", what = "character")
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Removendo aviso de dados lidos
+  
+#Ao ler uma arquivos, sempre nos é retornada a quantidade de dados lidos do arquivo. Para omitir essa informação, utilizamos o parâmetro 'quiet' que,
+#por padrão, é FALSE.
+  
+#Omitindo o parâmetro
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_alpha.txt",what = "character") 
+  
+#Explicitando o parâmetro
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_alpha.txt",what = "character", quiet = FALSE) 
+  
+#Utilizando o valor TRUE para omitir a informação
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_alpha.txt",what = "character", quiet = TRUE) 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo um limite de palavras a serem lidas 
@@ -65,7 +84,21 @@
 #Para ler das 3 primeiras linhas
   
   arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_alpha.txt", what = "character", nmax = 16, nlines = 3)
-
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Eliminando linhas em branco
+  
+#Se o arquivo de texto tiver linhas em branco, por padrão elas serão ignoradas
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_delta.txt", what = "character")
+  
+#Podemos definir se queremos ignorá-las ou não com o parâmtero 'blank.lines.skip', por padrão, ele é TRUE. Usando o valor FALSE, as linhas serão
+#capturadas como valores "vazios" ou seja, "".
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_delta.txt", what = "character", blank.lines.skip = TRUE)
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_delta.txt", what = "character", blank.lines.skip = FALSE)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Definindo o separador a usar para delimitar cada palavra 
 
@@ -87,7 +120,13 @@
   arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_alpha.txt", what = "character", skip = 1) 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-
-  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_alpha.txt", what = "character", skip = 1)  
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------- 
+#Definindo o separador decimal
+  
+#No caso de estarmos lendo valores numéricos, podemos definir qual caractere será tratado como o ponto decimal. Abaixo, perceba a diferença entre os
+#dois comandos. Um tem como separador a vírgula e, como ponto decimal, o ponto. No outro, a situação se inverte.
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_numeros3.txt", what = "character", sep = ",", dec = ".") 
+  
+  arquivo <- scan(file = "E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_numeros3.txt", what = "character", sep = ".", dec = ",") 
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
