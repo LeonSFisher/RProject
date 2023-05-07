@@ -24,20 +24,21 @@
   -3:-11    
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Intervalos não inteiros funcionam até o valor menor ou igual ao extremo do intervalo
+#Intervalos não inteiros continuam progredindo de 1 em 1 e funcionam até o valor menor ou igual ao extremo do intervalo
   
   1.1:5.5
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+
 #Se as decimais coincidirem, temos todos os valores corretamente incluindo os extremos
   
   1.3:7.3
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#CRIAÇÃO DE SEQUÊNCIA COM A FUNÇÃO seq() 
+#CRIAÇÃO DE SEQUÊNCIA COM A FUNÇÃO seq()
 
 #Sequências podem também serem criadas pela função seq()
+  
+#Explicitando os parâmetros
   
   seq(from = 1, to = 10, by = 2)
   
@@ -45,20 +46,29 @@
   
   seq(1, 10, 2)
   
-#Se não informarmos o parâmetro 'by', a sequência será criada de 1 em 1
+#Se não informarmos o parâmetro 'by', a sequência será criada de 1 em 1 por padrão
   
   seq(1, 15)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#criando uma sequência com UM número de valores fixos
+#criando uma sequência com um número de valores fixos
+  
+#Com o parâmtero 'length.out' definimos o número de valores equidistantes que queremos entre os extremos definidos
   
   seq(1, 30, length.out = 10) 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Criando uama sequência do mesmo tamanho que um outro objeto
   
+#Utilizando o parâmetro 'along.with' podemos criar, entre os extremos definidos, tantos valores quanto a quantidade de valores do objeto informado
+  
   vetor <- c(2, 3, 5, -1)
   
   seq(1, 30, along.with = vetor) 
+  
+#Num dataframe, a dimensão referida aqui é a quantidade de colunas que ele possui. Assim, sabendo que o dataframe mtcars possui 11 colunas, podemos
+#obter 11 números numa sequência que corresponda a cada posição respectiva de cada coluna.
+  
+  seq(1, 30, along.with = mtcars) 
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
