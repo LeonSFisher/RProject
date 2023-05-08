@@ -160,11 +160,22 @@
   vetor[vetor > 5]
   
   vetor[which(vetor > 5)]
+  
+#Podemos também utilizar a função which() com vetores que tenha sido nomeados. Para isso, utilizamos o parâmetro 'useNames' exibindo os nomes dos
+#índices correspondentes ao resultado da filtragem
+    
+  vetor <- c(2, 1, 5)
+  
+  names(vetor) <- c("carros", "motos", "bicicletas")
+  
+  which(vetor < 3, useNames = TRUE)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Retornando o índice do valor mínimo do vetor
   
   which.min(vetor)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Retornando o índice do valor máximo do vetor
 
   which.max(vetor)
@@ -189,61 +200,77 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#EXCLUINDO VALORES DE VETORES  
+#EXCLUINDO VALORES DA FILTRAGEM
   
-  vetor7 <- c(-1, -4, 3, 4, 9, 7, 99, -15)
+#Da mesma forma que podemos utilizar índices para obter certos valores numa filtragem,podemos excluir valores dessa filtragem. Aqui é importante
+#saber que estamos apenas excluindo valores da própria filtragem, mas não do vetor em si que permanece inalterado.
   
 #Através de valores negativos dentro do indexador
   
-  vetor7[c(-1, -3)]
+  vetor <- c(-1, -4, 3, 4, 9, 7, 99, -15)
+
+#Excluindo apenas um elemento do vetor. 
+#Queremos todos os valores do vetor exceto o segundo
+  
+  vetor[-2]
+
+#Excluindo mais de um elemento do vetor
+#Queremos todos os valores do vetor exceto o primeiro e o terceiro
+  
+  vetor[c(-1, -3)]
   
 #Ou colocando o sinal de menos em evidência
   
-  vetor7[-c(1, 3)]
+  vetor[-c(1, 3)]
   
 #Ou multiplicando o vetor por menos um
   
-  vetor7[-1*c(1, 3)]
+  vetor[-1*c(1, 3)]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Através de vetor de valores lógicos
+  
+#Excluindo da filtragem o primeiro, o terceiro e o sétimo valor
 
-  vetor7[c(FALSE, TRUE, FALSE, TRUE, TRUE, TRUE)]
+  vetor[c(FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE)]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Através de sequências negativas crescentes e decrescentes
+  
 #Como os valores estão sendo excluídos e só os valores não excluídos serão exibidos, a ordem não importa
 
-  vetor7[-2:-5]
+  vetor[-2:-5]
   
-  vetor7[-5:-2]
+  vetor[-5:-2]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Remoção de valores por nome com sinal negativo não funciona
-
-  vetor7[-"João"]
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Podemos criar um vetor de tamanho zero excluindo o único valor de um vetor de tamanho 1
+#Poderia parecer intuitivo utilizar o sinal de menos para excluir um valor mesmo quando a filtragem é feita por nomes pois, no caso da filtragem, o
+#sinal de menos significa exclusão e não uma operação aritmética nem um valor negativo. Infelizmente, isso não ocorre.
   
-  y <- 5
+  vetor <- c(2, 1, 5)
   
-  z <- y[-1]
+  names(vetor) <- c("carros", "motos", "bicicletas")
   
-  length(z)
+  vetor[-"carros"]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #EXPANDINDO VETOR
   
-#Da mesma forma que podemos remover elementos de um vetor, também podemos adicioná-los
-#Adicionando valor em posição seguinte do vetor
+#Também podemos adicionar valores a um vetor já existente
   
-  vetor7[9] <- 1999
+  vetor <- c(-1, -4, 3, 4, 9, 7, 99, -15)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Adicionando o novo valor na posição seguinte do último valor do vetor
+  
+  vetor[9] <- 1999
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Adicionando valores em posições distantes do vetor (NA's são introduzidos)
+#Adicionando valores em posições distantes do último valor do vetor produz NA's
   
-  vetor7[15] <- 77
+  vetor[15] <- 77
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
