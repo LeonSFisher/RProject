@@ -11,11 +11,11 @@
 #COERÇÃO EM VETORES
 
 #Coerção é o processo de converter tipos de dados (mode) para manter a homegeneidade de estruturas de dados homogêneas
-#A coerção segue a seguinte hierarquia: character > complex > numeric > integer > logical
+#A coerção segue a seguinte hierarquia: logical > integer > numeric > complex > character
 
-  vetor1 <- c("a", 2.2, 3L, TRUE)
+  vetor <- c("a", 2.2, 3L, TRUE)
   
-  typeof(vetor1)
+  typeof(vetor)
   
 #Perceba que o mode de menor prioridade é o logical. Isso significa que ele pode sofrer coerção para qualquer outro mode
 #Com isso,podemos usaar a função vector() para criar um vetor vazio a ser preenchido pois ela cria um vetor de mode lógico
