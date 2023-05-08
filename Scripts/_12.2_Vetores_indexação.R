@@ -10,86 +10,122 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #INDEXAÇÃO DE VETORES
 
-#Inteiros positivos,negativos,lógicos e caracteres
+#Para promover a indexação de vetores, podemos utilizar valores inteiros positivos, negativos, lógicos e caracteres
 
 #Indexação por posição 
-#O indexador [] retorna o valor da posição e [[]] retorna a estrutura da posição (Isto será mais útil em listas)
 
-  vetor1 <- c(4, 5, -1, 0, 7)
+#O indexador [] retorna o valor da posição correspondente no vetor
+
+  vetor <- c(4, 5, -1, 0, 7)
   
-  vetor1[3]
-  
-  vetor1[[3]]
+  vetor[3]
 
 #Perceba que no vetor criado a partir da concatenação de outro vetor com alguns valores, a ordem é mantida como definida
 
-  vetor2 <- c(2, 3, -1, c(7, 9, 0))
+  vetor <- c(2, 3, -1, c(7, 9, 0))
   
-  vetor2[5]
+  vetor[3]
   
-  vetor2[[6]]
+  vetor[5]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por variável
+  
 #Podemos criar uma variável e usar seu valor como indexador
 
   indice <- 2
   
-  vetor2[indice]
+  vetor[indice]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por vetor de posições
+  
+#Cada posição do vetor de índicer refere-se à posição do vetor do qual se quer extrair os valores
 
   indices <- c(1, 3, 5)
   
-  vetor2[indices]
+  vetor[indices]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por sequência
+  
+#Uma sequência também pode ser usada para indexar valores de um vetor
+  
 #Ordem direta
 
-  vetor2[1:3]
+  vetor[1:3]
 
 #Ordem inversa
 
-  vetor2[3:1]
+  vetor[3:1]
+  
+#Ou com a função seq()
+  
+  vetor[seq(1, 6, 2)]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Indexação por nome (Uma vez que o vetor tenha sido nomeado, é claro)
+  
 #Criando e nomeando o vetor
   
-  vetor3 <- c(2, 1, 5)
+  vetor <- c(2, 1, 5)
   
-  nomesvetor3 <- c("carros", "motos", "bicicletas")
+  nomesvetor <- c("carros", "motos", "bicicletas")
   
-  names(vetor3) <- nomesvetor3
+  names(vetor) <- nomesvetor
   
 #Usando o nome no indexador
   
-  vetor3["motos"]
+#Uma vez nomeado, o vetor responde com cada posição sendo referida pelo seu nome correspondente
   
-  vetor3[c("carros", "bicicletas")]
+  vetor["motos"]
+  
+  vetor[c("carros", "bicicletas")]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Indexação por filtro lógico  
-#Através de Vetor lógico
-
-  vetor4 <- c(2, 8, 3, 1, -1)
+#Indexação por filtro lógico
   
-  selecao <- c(TRUE, FALSE, FALSE, TRUE, TRUE)
+#Utilizando um vetor de valores lógicos, todos os valores TRUE homólogos às posições do vetor que se quer inedxar serão entendidos como valores a 
+#capturar e os valores FALSE homólogos serão entendidos como valores a ignorar.
+
+#Criando um vetor para utilizar de exemplo 
   
-  vetor4[selecao]
+  vetor <- c(2, 3, -1, c(7, 9, 0))
+  
+#Criando um vetor de valores lógicos
+  
+  selecao <- c(TRUE, FALSE, FALSE, TRUE, TRUE, FALSE)
+  
+#Realizando a indexação
+  
+  vetor[selecao]
 
-#Ou colocando o vetor de lógicos diretamente no indexador
+#Ou colocando o vetor de valores lógicos diretamente no indexador
 
-  vetor4[c(TRUE, FALSE, FALSE, TRUE, TRUE)] 
+  vetor[c(TRUE, FALSE, FALSE, TRUE, TRUE, FALSE)] 
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Indexação por meio de operações relacionais
-
-  vetor4 > 2
   
-  vetor4[vetor4 > 2]
+#Ao realizarmos uma comparação, sabemos que nos é retornado um valor lógico. Se essa comparação ocorrer sobre um vetor, um vetor de valores lógicos
+#será retornado com cada posição do vetor armazenando TRUE ou FALSE dependendo de o valor da posição passar ou não no teste de comparação.
+  
+#Feito isso, podemos utilizar o próprio vetor de lógicos oriundo de uma comparação sobre um vetor como indexador desse mesmo vetor. Isso nos retorna 
+#todos os valores do vetor que satisfazem a condição
+  
+#Criando um vetor
+  
+  vetor <- c(2, 3, -1, c(7, 9, 0), 7, 1, 0)
+  
+#Realizando uma comparação
+
+  vetor > 2
+  
+#Utilizando o resultado da comparação no indexador do vetor
+  
+  vetor[vetor > 2]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 #O R reconhece sequência entre as letras
 
