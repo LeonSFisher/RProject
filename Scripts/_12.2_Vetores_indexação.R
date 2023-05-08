@@ -126,16 +126,21 @@
   vetor[vetor > 2]
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-
+#Sequência de valores alfabéticos
+  
 #O R reconhece sequência entre as letras
 
-  vetor5 <- c(LETTERS, letters)
+  vetor <- c(LETTERS, letters)
   
-  vetor5[vetor5 > 'g']
+#Seguindo o procedimento acima, vamos indexar o vetor com um vetor de valores lógicos.No entanto desta vez, perceberemos a existência de uma
+#hierarquia entre as letras e entre as letras maiúsculas e minúsculas. Desse modo, podemos compará-las.
+  
+  vetor[vetor > 'g']
 
-#Para entendermos o resultdo acima, vejamos:
+#Para entendermos o resultdo acima, utilizaremos a função sort() para ordenar as letras maiúsculas e minúsculas e ver como elas se relacionam na sua
+#estrutura hierárquica. Vejamos:
 
-  sort(vetor5)
+  sort(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -143,30 +148,44 @@
   
 #Busca de índices cujos valores relativos obedeçam a certos critérios
 
-  vetor6 <- c(-1, -4, 3, 4, 9, 7, 99, -15)
+  vetor <- c(2, 3, -1, c(7, 9, 0), 7, 1, 0)
   
-  which(vetor6 > 7)
-
-#Retornando o índice do valor mínimo
+#Para saber quais os índices dos valores que atendem à condição, usamos a função wich()
   
-  which.min(vetor6)
+  which(vetor > 5)
+  
+#Com isso, alternativamente ao vetor de valores lógicos, podemos utilizar esse retorno no indexador do vetor para filtrar os valores correspondentes
+#a esses índices e obter o mesmo resultado. Obviamente, a primeira forma exige menos digitação.
+  
+  vetor[vetor > 5]
+  
+  vetor[which(vetor > 5)]
 
-#Retornando o índice do valor máximo
+#Retornando o índice do valor mínimo do vetor
+  
+  which.min(vetor)
 
-  which.max(vetor6)
+#Retornando o índice do valor máximo do vetor
+
+  which.max(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #USANDO ÍNDICES PARA ALTER VALORES DOS VETORES
-
-#Um só valor
   
-  vetor6[1] <- 0
+#Uma vez que sabemos como encontrar determinado valor num vetor (indexar o vetor), podemos utilizar essa técnica para substituir valores do vetor
+  
+  vetor <- c(2, 3, -1, c(7, 9, 0), 7, 1, 0)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Substituindo um só valor
+  
+  vetor[1] <- 0
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Vários valores
 
-  vetor6[c(1, 2, 3)] <- c(-1, -1, -1)
+  vetor[c(1, 2, 3)] <- c(-1, -1, -1)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
