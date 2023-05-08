@@ -10,16 +10,24 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ORDENANDO VALORES DE UM VETOR
 
-#Na ordem crescente
+#Podemos ordenar os valores de um vetor segundo alguns critérios
 
-  vetor1 <- c(5, 3, -1, -3, 5, 5, 7, -99)
+  vetor <- c(5, 3, -1, -3, 5, 5, 7, -99)
+
+#ordenando na ordem crescente
+
+  sort(vetor)
   
-  sort(vetor1)
+#Podemos também explicitar o parâmetro 'decreasing'
+  
+  sort(vetor, decreasing = FALSE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Também vale para letras
 
   sort(c("H", "z", "a", "t", "b", "k", "Z"))
+  
+  sort(c("H", "z", "a", "t", "b", "k", "Z"), decreasing = FALSE)
 
 #Ou na ordem decrescente  
 
