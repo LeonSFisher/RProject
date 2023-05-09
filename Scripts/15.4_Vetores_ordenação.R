@@ -10,7 +10,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ORDENANDO VALORES DE UM VETOR
 
-#Podemos ordenar os valores de um vetor segundo alguns critérios
+#Podemos ordenar os valores de um vetor
 
   vetor <- c(5, 3, -1, -3, 5, 5, 7, -99)
 
@@ -52,7 +52,7 @@
   
   sort(vetor, na.last = FALSE)
   
-#Com o valor FALSE conseguimos colocá-los pelo último
+#Com o valor FALSE conseguimos colocá-los por último
   
   sort(vetor, na.last = TRUE)
   
