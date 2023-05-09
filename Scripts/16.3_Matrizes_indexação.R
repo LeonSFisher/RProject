@@ -148,11 +148,7 @@
 
   matriz[c(TRUE, FALSE, TRUE), ]
   
-#Indexação das colunas
-  
   matriz[ ,c(TRUE, FALSE, TRUE)]
-  
-#Indexação de ambos
   
   matriz[c(TRUE, FALSE, TRUE), c(TRUE, FALSE, TRUE)]
 
@@ -167,7 +163,9 @@
 
   matriz[ ,-2]
 
-#Removendo a primeira linha e a primeira coluna simultaneamente (não remove apenas o elemento mx[-1, -1])
+#Removendo a primeira linha e a primeira coluna simultaneamente
+  
+#Perceba que isto não está removendo apenas o elemnto [1, 1], mas a primeira linha e a primeira coluna
 
   matriz[-1, -1] 
 
