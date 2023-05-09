@@ -10,8 +10,6 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #COERÇÃO EM MATRIZES
 
-#Matrizes são estruturas de dados homogêneas, dessa forma, ocorre coerção
-
 #Vetor de caracteres
   
   nomes <- c("junior", "marcelo", "nunes")
@@ -20,16 +18,23 @@
   
   valores <- c(0, 1, -7)
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Criaremso uma matriz juntando estes dois vetores por linha e por coluna, respectivamente. Como eles possuem modes diferentes e uma matriz é uma
+#estrutura de dados homogênea, deverá haver coerção segundo a hierarquia definida.
+
 #Juntando por linha
   
-  typeof(rbind(nomes, valores))
+  matriz <- rbind(nomes, valores)
+  
+  noquote(matriz)
+  
+  typeof(matriz)
   
 #Juntando por coluna
   
-  typeof(cbind(nomes, valores))
-
+  matriz <- cbind(nomes, valores)
   
-    
+  noquote(matriz)
+  
+  typeof(matriz)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

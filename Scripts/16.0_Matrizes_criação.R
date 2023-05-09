@@ -20,6 +20,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Criação de matrizes com o mesmo valor em todas as entradas
+  
 #Vetor coluna
 
   matrix(1, nrow = 3)
@@ -34,7 +35,9 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Criação de matrizes com um vetor de dados 
+  
 #Se o número de linhas ou de colunas informado for igual ao número de elementos, cria um vetor linha ou coluna, respectivamente
+  
 #vetor coluna por padrão 
   
   matrix(c(1, 2, 3, 4, 5, 6, 7, 8))
@@ -66,25 +69,39 @@
   
   diag(vetor, nrow = 3) 
   
-  diag(vetor, nrow = 4)   
+  diag(vetor, nrow = 4) 
+  
+#Ou criando uma matriz não quadrada
+  
+  diag(vetor, nrow = 2, ncol = 3) 
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Extrapolando o tamanho da matriz
-#criação de matrizes fornecendo mais linhas do que elementos
+  
+#criação de matrizes fornecendo mais entradas para a matriz do que elementos do vetor
+  
 #Repete os valores até preencher a matriz
   
   matrix(c(2, 6, 5, 1, 10, 4), nrow = 8, ncol = 2)
   
 #criação de matrizes fornecendo mais colunas do que elementos
+  
 #Repete os valores até preencher a matriz
   
   matrix(c(2, 6, 5, 1, 10, 4), nrow = 2, ncol = 8)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------   
 #Criando matrizes a partir da conversão de um vetor
+  
 #Cria um vetor coluna
   
-  as.matrix(c(1, 2, 3, 4, 5, 6, 7,8,9))   
+  as.matrix(c(1, 2, 3, 4, 5, 6, 7,8,9)) 
+  
+#Verificando se é uma matriz
+  
+  matriz <- as.matrix(c(1, 2, 3, 4, 5, 6, 7,8,9))
+  
+  is.matrix(matriz)
  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Criação de matrizes por composição de vetores
@@ -118,7 +135,9 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Construção da matriz
+  
 #Definir em que ordem são organizados os elementos na matriz
+  
 #Por linha
   
   matrix(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 2, ncol = 4, byrow = TRUE)
@@ -135,6 +154,12 @@
   
   matriz <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 2, ncol = 4)
 
-  c(matriz)  
+  vetor <- c(matriz)  
+  
+#Verificando o tipo de estrutura de dado resultante
+  
+  is.matrix(vetor)
+  
+  is.vector(vetor)
  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
