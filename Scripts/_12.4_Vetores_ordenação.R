@@ -71,49 +71,58 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ÍNDICES DO VETOR ORIGINAL NO VETOR ORDENADO
   
+#A função rank() faz o oposto da função order()
+  
 #A função rank() dá a ordem que cada elemento do vetor original no vetor ordenado
 
-  vetor1 <- c(11, 2, 2, 2, -3, 4, 5.5, 6)
+  vetor <- c(11, 2, 2, 2, -3, 4, 5.5, 6)
   
-  rank(vetor1)
+#Vetor original ordenado de forma direta
+  
+  sort(vetor)
+  
+#Abaixo, 11 do vetor original é o oitavo no vetor ordenado, 2 no vetor original é terceiro no vetor ordenado etc.
+  
+  rank(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Os 'ties' valores repetidos podem ter o seguinte tratamento:
+  
 #Os três valores 2 quando ordenados estariam nas posições 2, 3 e 4 cuja média é 3. Assim, eles serão ordenados como tendo a sua posição média, 3.
 
-  rank(vetor1, ties.method = "average")
+  rank(vetor, ties.method = "average")
 
 #No caso de a média ter valor quebrado, também funciona:
 
-  vetor1 <- c(11, 2, 2, 2, 2, -3, 4, 5.5, 6)
+  vetor <- c(11, 2, 2, 2, 2, -3, 4, 5.5, 6)
 
-  rank(vetor1, ties.method = "average")
+  rank(vetor, ties.method = "average")
 
 #Podemos atribuir aos 'ties' os índices começando na sua primeira posição
 
-  rank(vetor1, ties.method = "first")
+  rank(vetor, ties.method = "first")
 
 #Ou podemos atribuir aos 'ties' os índices começando na sua última posição
 
-  rank(vetor1, ties.method = "last")
+  rank(vetor, ties.method = "last")
 
 #Para organizar os 'ties' com índices randômicos (não qualquer valor, mas entre si)
 
-  rank(vetor1, ties.method = "random")
+  rank(vetor, ties.method = "random")
 
 #Os índices dos 'ties' podem também ter o valor de sua posição máxima
 
-  rank(vetor1, ties.method = "max")
+  rank(vetor, ties.method = "max")
 
 #Ou de sua posição mínima
 
-  rank(vetor1, ties.method = "min")
+  rank(vetor, ties.method = "min")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Exibir os valores do vetor em ordem inversa
-#Não é ordenar o vetor na ordem inversa, mas sim reverter a ordem sem ordenar
-#Exibe do último para o primeiro mantendo a posição relativa
+  
+#Não é ordenar o vetor na ordem inversa, mas sim reverter a ordem sem ordenar. Exibe do último para o primeiro mantendo a posição relativa.
 
-  rev(vetor1)
+  rev(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
