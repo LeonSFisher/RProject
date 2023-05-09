@@ -16,6 +16,7 @@
 
 #ordenando na ordem crescente
 
+  
   sort(vetor)
   
 #Podemos também explicitar o parâmetro 'decreasing' como sendo igual a FALSE
@@ -37,6 +38,25 @@
 
   sort(c("H", "z", "a", "t", "b", "k", "Z"), decreasing = TRUE)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Ordenação com NA's na função sort()
+  
+#Algumas vezes, nosso vetor pode conter NA's. Os NA's são valores ausentes e, por isso, não influenciam na coerção de dados.
+  
+#Por padrão a função sort() ignora os NA's
+  
+  vetor <- c(NA, 3, -2, NA, 99, 7.7, NA)
+  
+  sort(vetor)  
+  
+#Se explicitarmos o parâmetro 'na.last', os NA's tendem a ficar no começo
+  
+  sort(vetor, na.last = FALSE)
+  
+#Com o valor FALSE conseguimos colocá-los pelo último
+  
+  sort(vetor, na.last = TRUE)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ÍNDICES DO VETOR ORDENADO NO VETOR ORIGINAL
