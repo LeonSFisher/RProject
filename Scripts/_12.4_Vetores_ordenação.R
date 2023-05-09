@@ -18,9 +18,13 @@
 
   sort(vetor)
   
-#Podemos também explicitar o parâmetro 'decreasing'
+#Podemos também explicitar o parâmetro 'decreasing' como sendo igual a FALSE
   
   sort(vetor, decreasing = FALSE)
+  
+#Ou com TRUE para colocar na ordem decerescente
+  
+  sort(vetor, decreasing = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Também vale para letras
@@ -37,14 +41,31 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ÍNDICES DO VETOR ORDENADO NO VETOR ORIGINAL
   
-#A função order() dá a ordem de cada elemento do vetor ordenado no vetor original
+#Podemos obter índices de vetores ordenados de diversas formas
+  
+  vetor <- c(5, 3, -1, -3, 5, 5, 7, -99)
 
-  order(vetor1)
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#A função order() dá a ordem de cada elemento do vetor ordenado no vetor original
+  
+#Vetor original ordenado de forma direta
+  
+  sort(vetor)
+ 
+#Abaixo, vemos que -99 no vetor ordenado é o oitavo no vetor normal, -3 no vetor ordenado é o quarto no vetor normal e assim por diante...
+
+  order(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Dar a ordem de cada elemento do vetor ordenado em ordem inversa no vetor original
+#Dar a ordem de cada elemento do vetor ordenado em relação ao vetor original invertido
+  
+#Vetor original ordenado de forma inversa
+  
+  sort(vetor, decreasing = TRUE)
+  
+#Abaixo, o 7 do vetor invertido é o sétimo no vetor original, o 5 do vetor invertido é o primeiro no vetor original etc.
 
-  order(vetor1, decreasing = TRUE)
+  order(vetor, decreasing = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
