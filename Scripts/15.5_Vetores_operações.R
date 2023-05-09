@@ -10,54 +10,59 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OPERAçÕES ENTRE VETORES
 
-#Para operações com vetores, os comprimentos têm que ser iguais (errado)
+#Criando dois vetores para o exemplo
 
-  vetor1 <- c(1, 2, 3)
+  vetor1 <- c(1, 2, 3, -1, -5)
   
-  vetor2 <- c(1, 2, 3)
+  vetor2 <- c(1, 2, 3, -4, 2)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Operação de soma
+
+  vetor = vetor1 + vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Operações aritméticas usuais
-#Soma
+#Operação de subtração
 
-  vetor3 = vetor1 + vetor2
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Subtração
-
-  vetor3 = vetor1 - vetor2
+  vetor = vetor1 - vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Multiplicação termo-a-termo
 
-  vetor3 = vetor1 * vetor2
+  vetor = vetor1 * vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Divisão termo-a-termo
 
-  vetor3 = vetor1 / vetor2
+  vetor = vetor1 / vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Potenciação termo-a-termo
 
-  vetor3 = vetor1 ^ vetor2
+  vetor = vetor1 ^ vetor2
+  
+  vetor = vetor1 ** vetor2
+  
+  vetor = '^'(vetor1, vetor2)
+  
+  vetor = `^`(vetor1, vetor2)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Obtenção do resto da divisão termo-a-termo
 
-  vetor3 = vetor1 %% vetor2
+  vetor = vetor1 %% vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #obtenção do quociente inteiro termo-a-termo
 
-  vetor3 = vetor1 %/% vetor2
+  vetor = vetor1 %/% vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Expressão qualquer termo-a-termo
 
-  vetor3 <- vetor1^2 + 2*vetor2
+  vetor <- vetor1^2 + 2*vetor2
   
-  vetor3 <- (vetor2 - vetor1)^2
+  vetor <- (vetor2 - vetor1)^2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -95,6 +100,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Não só constantes numéricas operam com os elementos dos vetores termo-a-termo:
+  
 #A função paste() também pode concatenar strings com um vetor
 
   amostras <- c(10, 25, 27, 17, 19)
@@ -111,24 +117,24 @@
   
   vetor2 <- c(3, 5)
 
-#Se a dimensão dos vetores forem múltiplos, funciona
-#Já que são múltiplos, R repete o vetor menor atéque fique com o mesmo tamanho do maior
+#Se a dimensão dos vetores forem múltiplos, R repete o vetor menor até que fique com o mesmo tamanho do maior
 
-  vetor3 = vetor1 * vetor2
+  vetor = vetor1 * vetor2
   
-  vetor3 = vetor1 / vetor2
+  vetor = vetor1 / vetor2
   
-  vetor3 = vetor1 - vetor2
+  vetor = vetor1 - vetor2
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Se as dimensões dos vetores não forem múltiplos, funciona, mas o R reclama.
+  
 #R irá repetir os valores do vetor menor até completar o tamanho do vetor maior.
 
   vetor1 <- c(1, 2, 3) 
   
   vetor2 <- c(-1, 3)
   
-  vetor3 = vetor1 * vetor2
+  vetor = vetor1 * vetor2
   
 #O mesmo acontece se for o primeiro vetor o menor. Nesse caso, seu tamanho será extendido ciclando seus valores.
   
@@ -136,47 +142,80 @@
   
   vetor2 <- c(1, 2, 3, -4, 7) 
   
-  vetor3 <- vetor2/vetor1
+  vetor <- vetor2/vetor1
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OUTRAS OPERAÇÕES SOBRE VETORES
+  
+  vetor <- c(2, 4, 5,-6, -3,-3, 11, 5)
 
 #saber o tamanho do vetor
   
-  length(vetor1)
+  length(vetor)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Amplitude (valor mínimo e máximo, respectivamente)
+  
+#Produz um vetor de duas posições correspondendo ao mínimo e ao máximo respectivamente
 
-  range(vetor1)
+  range(vetor)
+  
+#Quando um vetor possui NA's seu range será NA
+  
+  vetor <- c(NA, NA, 3, 5, -1, NA, 5.5, NA, 77, 11)
+  
+  range(vetor)
+  
+#Para eliminar esse efeito, podemos utilizar o parâmetro 'na.rm'
+  
+#Por padrão, seu valor é FALSE
+  
+  range(vetor, na.rm = FALSE)
+  
+#Utilizando o valor TRUE os NA's serão desconsiderados
+  
+  range(vetor, na.rm = TRUE)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Converter um vetor em um objeto nulo
 
-  vetor3 <- NULL
+  vetor2 <- NULL
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Soma cumulativa
   
-  cumsum(vetor1)
+#Produz um vetor de somas cumulativas em cada estágio do somatório
+  
+  cumsum(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Produto cumulativo
   
-  cumprod(vetor1)
+#Produz um vetor de produtos cumulativos em cada estágio do produtório
+  
+  cumprod(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Máximo cumulativo
   
-  cummax(vetor1)  
+#Produz um vetor de máximos cumulativos de todos os elementos até aquela posição
+  
+  cummax(vetor)  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Mínimo cumulativo
   
-  cummin(vetor1)
+#Produz um vetor de mínimos cumulativos de todos os elementos até aquela posição
+  
+  cummin(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Máximo por posição
+#Máximos e mínimos paralelos
+  
+#Os máximos e mínimos paralelos são os valores máximos e mínimos das posições homólogas dos vetores considerados. Caso os vetores tenham tamanhos
+#diferentes, os vetores irão ciclar seus valores até atingirem o tamanhos do maior vetor da comparação. Feito isso, os valores máximos ou mínimos
+#serão tomados de cada posição gerando um vetor de máximos ou mínimos do tamanho do maior dos vetores.
   
   v1 <- c(2, 4, -1)
   
@@ -184,10 +223,11 @@
   
   v3 <- c(4, 4, 4, 4)
   
+#Máximo paralelo
+  
   pmax(v1, v2, v3)
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Mínimo por posição  
+#Mínimo paralelo 
   
   pmin(v1, v2, v3)
   
