@@ -12,12 +12,19 @@
 
 #Para promover a indexação de vetores, podemos utilizar valores inteiros positivos, negativos, lógicos e caracteres
 
+#Criando e nomeando o vetor
+
+  vetor <- c(4, 5, -1, 0, 7)
+  
+  nomesvetor <- c("carros", "motos", "bicicletas", "aviões", "barcos")
+  
+  names(vetor) <- nomesvetor
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por posição 
 
 #O indexador [] retorna o valor da posição correspondente no vetor
 
-  vetor <- c(4, 5, -1, 0, 7)
-  
   vetor[3]
 
 #Perceba que no vetor criado a partir da concatenação de outro vetor com alguns valores, a ordem é mantida como definida
@@ -65,14 +72,6 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Indexação por nome (Uma vez que o vetor tenha sido nomeado, é claro)
-  
-#Criando e nomeando o vetor
-  
-  vetor <- c(2, 1, 5)
-  
-  nomesvetor <- c("carros", "motos", "bicicletas")
-  
-  names(vetor) <- nomesvetor
   
 #Usando o nome no indexador
   

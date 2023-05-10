@@ -13,12 +13,16 @@
 #A indexação de arrays é feita da mesma forma que se faz para matrizes e vetores com a diferença de que agora teremos tantos índices quantas forem as 
 #dimensões do array.
 
-  resultado <- array(mtcars$wt, dim = c(2, 3, 4))
+  linhas = c("marcelo", "thiago", "roberta")
+  
+  colunas = c("suco", "refrigerante", "chá")
+  
+  folhas = c("ficha1", "ficha2", "ficha3", "ficha4", "ficha5")
+  
+  array_novo <- array(mtcars$wt, dim = c(3, 3, 5), dimnames = list(linhas, colunas, folhas)) 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Indexando arrays por posição
-
-#Acessando elementos de matrizes geradas por arrays
   
 #Segunda linha, terceira coluna, primeira folha  
 
@@ -42,8 +46,36 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por vetor de posições
   
-#Primeira e segunda linha e segunda e terceira coluna da segunda e terceira folha
+#Vetor de linhas
+  
+  lin <- c(1, 2)
+  
+  resultado[lin, 1, 1]
+  
+#Vetor de colunas
+  
+  col <- c(2, 3)
+  
+  resultado[1, col, 1]
+  
+#Vetor de folhas
+  
+  fol <- c(2, 3)
+  
+  resultado[1, 1, fol]
+  
+#Indexação por vetor de linhas, colunas e folhas
+  
+  resultado[lin, col, fol]
+  
+#Ou diretamente no indexador
 
+  resultado[c(1, 2), 1, 1]
+  
+  resultado[1 , c(2, 3), 1]
+  
+  resultado[1, 1, c(2, 3)]
+  
   resultado[c(1, 2), c(2, 3), c(2, 3)]
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -67,18 +99,6 @@
 #Indexação por nome
   
 #Arrays nomeados podem sofrer filtragem semelhante às das matrizes
-  
-#Criando array e nomeando-o
-  
-  linhas = c("marcelo", "thiago", "roberta")
-  
-  colunas = c("suco", "refrigerante", "chá")
-  
-  folhas = c("ficha1", "ficha2", "ficha3", "ficha4", "ficha5")
-  
-  array_novo <- array(mtcars$wt, dim = c(3, 3, 5), dimnames = list(linhas, colunas, folhas))  
-  
-#Realizando filtragens por nome  
   
 #Todas as colunas de todas a s folhas referentes à linha 'thiago'
   

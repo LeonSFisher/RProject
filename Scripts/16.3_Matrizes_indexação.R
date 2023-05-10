@@ -38,16 +38,14 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por variável
   
-  a <- 3
+  lin <- 3
   
-  b <- 3
+  col <- 3
   
-  matriz[a, b]
+  matriz[lin, col]
   
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Indexação por vetor de posições
-  
-#Podemos filtrar grupos de linhas e colunas com um vetor de índices 
   
 #Indexação por vetor de linhas
   
@@ -67,9 +65,9 @@
   
 #Ou diretamente no indexador
   
-  matriz[c(1, 2), ]
+  matriz[c(1, 2), 1]
   
-  matriz[ ,c(2, 3)]
+  matriz1[1 ,c(2, 3)]
   
   matriz[c(1, 2), c(2, 3)] 
   
