@@ -33,6 +33,7 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Detalhes sobre strings no dataframe
+  
 #Algumas vezes pode haver a conversão automática de strings para fatores ao criarmos dataframes
   
   is.character(tabela[,2])
@@ -47,10 +48,6 @@
 #Para evitar que haja conversão na seção de trabalho, podemos fazer:
   
   options(stringsAsFactors = FALSE)
-  
-#Ou, caso queiramos que sempre haja conversão de strings para fatores:
-  
-  options(stringsAsFactors = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -62,6 +59,7 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Adicionando uma tabela inteita contígua
+  
 #Com o operador de coluna nomeada
   
   tabela$junc = tabela
@@ -111,8 +109,26 @@
   
 #Carrega um dataframe particular
   
-   data("mtcars") 
-  
-  #print para table
-  
+  data("mtcars") 
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#EXIBINDO DATAFRAMES
+  
+#A função print() possui parâmetros especiais para quando imprimimos tabelas na tela
+  
+#Definir o número de dígitos a exibir
+    
+  print(tabela, digits = 1)
+  
+#Definir se devemos exibir as aspas nos valores
+  
+  print(tabela, quote = TRUE)
+  
+#Definir se as strings devem ficar alinhdas à direita ou não. Por padrão, é TRUE
+
+  print(tabela, right = TRUE)  
+  
+  print(tabela, right = FALSE)  
+  
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
