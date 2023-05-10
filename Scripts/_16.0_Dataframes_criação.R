@@ -11,6 +11,7 @@
 #CRIANDO DATAFRAMES
 
 #Criando dataframes a partir de vetores (mesmo tamanho)
+
 #Criando os vetores
 
   numeros = c(1, 2, 3, -1, -4)

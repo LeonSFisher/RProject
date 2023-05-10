@@ -151,6 +151,14 @@
   array_novo <- array(vetor, dim = c(2, 2, 2))
   
   prod(array_novo)
+  
+#Caso haja NA's no objeto no qual se deseja avaliar o produtório, podemos usar o parâmetro 'na.rm' para removê-los
+  
+  vetor <- c(NaN, 2, 3, 8, NA, 9, 4, NA, 1, 2, 2, NA, NA)
+  
+  prod(vetor)
+  
+  prod(vetor, na.rm = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Somatório
@@ -171,12 +179,25 @@
   
   sum(array_novo)
   
+#Caso haja NA's no objeto no qual se deseja avaliar o somatório, podemos usar o parâmetro 'na.rm' para removê-los
+  
+  vetor <- c(NaN, 2, 3, 8, NA, 9, 4, NA, 1, 2, 2, NA, NA)
+  
+  sum(vetor)
+  
+  sum(vetor, na.rm = TRUE)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Fatorial
+#Funções relacionadas ao fatorial
+  
+#Fatorial simples
   
   factorial(77)
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Logaritmo natural do fatorial
+  
+  lfactorial(77)
+  
 #Fatorial para reais (gamma)
   
   gamma(4.66)
@@ -185,10 +206,33 @@
   
   lgamma(4.66)
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Primeira derivada do logarítmo natural da função gamma
+  
+  digamma(4.66)
+  
+#Segunda derivada do logarítmo natural da função gamma
+  
+  trigamma(4.66)
+  
+#Derivada de ordem mais alta do logaritmo da função gamma
+  
+  psigamma(4.66, deriv = 5)
+  
+#Função Beta de parâmetros a e b
+  
+  beta(3, 2)
+  
+#Logarítmo natural da função beta
+  
+  lbeta(3, 2)
+  
 #Coeficientes binomiais (combinações)
   
   choose(10, 3)
+  
+#Logaritmos naturais dos valores absolutos dos coeficientes binomiais
+  
+  lchoose(10, 3)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Valores máximos e mínimos
@@ -200,6 +244,18 @@
 #Valor mínimo de um conjunto de dados
   
   min(vetor)
+  
+#Caso hajam NA's, podemos eliminá-los
+  
+  vetor <- c(NaN, 2, 3, 8, NA, 9, 4, NA, 1, 2, 2, NA, NA)
+  
+  max(vetor)
+  
+  max(vetor, na.rm = TRUE)
+  
+  min(vetor)
+  
+  min(vetor, na.rm = TRUE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Diferença consecultiva
@@ -224,6 +280,7 @@
   z <- log(10)
 
 #Arredondando para a unidade mais próxima
+  
   
   round(z)
 
