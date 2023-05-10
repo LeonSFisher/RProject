@@ -27,32 +27,42 @@
 #Terceira linha, primeira coluna, primeira folha
 
   resultado[2, 1, 1]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Acessando uma matriz inteira
   
-#Terceira folha
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação por variável
+  
+  lin <- 2
+  
+  col <- 3
+  
+  fol <- 1
+  
+  resultado[lin, col, fol]
 
-  resultado[, , 3]
-
-#Primeira e terceira folhas
-
-  resultado[, , c(1, 3)]
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Agrupando resultados
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação por vetor de posições
   
 #Primeira e segunda linha e segunda e terceira coluna da segunda e terceira folha
 
   resultado[c(1, 2), c(2, 3), c(2, 3)]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Excluindo elementos de uma filtragem
   
-#Removendo primeira linha, terceira coluna e removendo a primeira, segunda e terceira folha
-
-  resultado[-1, -3, c(-1, -2, -3)]
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação por sequência
   
+#Podemos utilizar uma sequência para indexar um array
+  
+#Na ordem direta
+  
+  resultado[1:2, 1:3, 2:4]
+  
+#Na ordem inversa
+  
+  resultado[2:1, 3:1, 4:2]
+  
+#Ou com a função seq() (ideal para indexação de matrizes muito grandes)
+  
+  resultado[seq(1, 2), seq(1, 3, 1), seq(2, 4)]
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Indexação por nome
   
@@ -85,6 +95,24 @@
 #Todas as linhas referentes a suco e chá das folhas 1 e 5  
   
   array_novo[ ,c("suco", "chá") ,c("ficha1", "ficha5")]
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Acessando uma matriz inteira
+  
+#Terceira folha
+  
+  resultado[, , 3]
+  
+#Primeira e terceira folhas
+  
+  resultado[, , c(1, 3)]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Excluindo elementos de uma filtragem
+  
+#Removendo primeira linha, terceira coluna e removendo a primeira, segunda e terceira folha
+  
+  resultado[-1, -3, c(-1, -2, -3)]
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por filtro lógico
@@ -111,6 +139,11 @@
 #vetores externos para filtragem pois a expressão resultante pode ficar muito grande e diminuir a clareza.
   
   array_novo[c(TRUE, FALSE, TRUE), c(FALSE, FALSE, TRUE), c(TRUE, FALSE, TRUE, FALSE, FALSE)]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação mista
+  
+  array_novo["marcelo", c("suco","chá"), 5]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #O "comprimento" de um array. Na verdade, seu número total de elementos

@@ -34,55 +34,32 @@
 #Assim como nos vetores, usamos números inteiros no indexador da matriz para filtrar dados
 
   matriz[3, 3]
-
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Indexando a matriz pelos nomes
+#Indexação por variável
   
-#Uma vez que a matriz tenha sido nomeada, utilizamos seus nomes para filtragens
+  a <- 3
   
-  matriz["francisco", "idade"]
-
+  b <- 3
+  
+  matriz[a, b]
+  
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Indexação mista
+#Indexação por vetor de posições
   
-#Os dois métodos de filtragem podem ser combinados
-
-  matriz[1, "peso"]
-  
-  matriz["helder", 2]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Indexação por linha inteira
-  
-#Deixar o indexador de colunas vazio tem o efeito de capturar todas as colunas
-
-  matriz[2, ]
-  
-  matriz["francisco", ]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Indexação por coluna inteira
-  
-#Deixar o indexador de linhas vazio tem o efeito de capturar todas as linhas
-
-  matriz[ ,3]
-  
-  matriz[ ,"idade"]
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Podemos filtrar grupos de linhas e colunas com um vetor de índices 
   
 #Indexação por vetor de linhas
-
+  
   lin_sel <- c(1, 2)
   
-  matriz[lin_sel, ]  
+  matriz[lin_sel, 1]  
   
 #Indexação por vetor de colunas
-    
+  
   col_sel <- c(2, 3)
   
-  matriz[ ,col_sel]
+  matriz[1 ,col_sel]
   
 #Indexação por vetor de linhas e colunas  
   
@@ -95,12 +72,35 @@
   matriz[ ,c(2, 3)]
   
   matriz[c(1, 2), c(2, 3)] 
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação por sequência
+  
+#Podemos utilizar uma sequência para indexar uma matriz
+  
+#Na ordem direta
+  
+  matriz[1:2, 1:3]
+  
+#Ou na ordem inversa
+  
+  matriz[2:1, 3:1]
+  
+#Ou com a função seq() (ideal para indexação de matrizes muito grandes)
+  
+  matriz[seq(1, 2), seq(1, 3, 1)]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Também é possível que a matriz seja indexada por um vetor de caracteres (nomes)
+#Indexando a matriz pelos nomes
+  
+#Uma vez que a matriz tenha sido nomeada, utilizamos seus nomes para filtragens
+  
+  matriz["francisco", "idade"]
+  
+#Também é possível que a matriz seja indexada por um vetor de caracteres 
   
 #Para as linhas nomeadas
-
+  
   lin_sel <- c("alberto", "francisco")
   
   matriz[lin_sel, ]
@@ -122,6 +122,29 @@
   matriz[ ,c("peso", "idade")]
   
   matriz[c("alberto", "francisco"), c("peso", "idade")] 
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação com posições vazias
+  
+#Deixar o indexador totalmente vazio retorna a matriz inteira
+  
+  matriz[ , ]
+  
+#Indexação por linha inteira
+  
+#Deixar o indexador de colunas vazio tem o efeito de capturar todas as colunas
+
+  matriz[2, ]
+  
+  matriz["francisco", ]
+
+#Indexação por coluna inteira
+  
+#Deixar o indexador de linhas vazio tem o efeito de capturar todas as linhas
+
+  matriz[ ,3]
+  
+  matriz[ ,"idade"]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por vetor de valores lógicos
@@ -151,6 +174,15 @@
   matriz[ ,c(TRUE, FALSE, TRUE)]
   
   matriz[c(TRUE, FALSE, TRUE), c(TRUE, FALSE, TRUE)]
+  
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
+#Indexação mista
+  
+#Os dois métodos de filtragem podem ser combinados
+  
+  matriz[1, "peso"]
+  
+  matriz["helder", 2]
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Removendo valores de uma matriz numa filtragem
