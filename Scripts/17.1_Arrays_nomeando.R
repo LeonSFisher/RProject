@@ -1,49 +1,34 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#ARRAYS - INDEXAÇÃO
+#ARRAYS - NOMEANDO
 
 ######################################################################################################################################################
 ######################################################################################################################################################
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#INDEXAÇÃO DE ARRAYS
+#NOMEANDO ARRAYS
 
-  resultado <- array(mtcars$wt, dim = c(2, 3, 4))
+#Podemos nomear o array tal como fazemos com as matrizes
 
-#Acessando elementos de matrizes geradas por arrays
-#Segunda linha, terceira coluna, primeira folha  
+#Nomes das linhas
 
-  resultado[2, 3, 1]
+  linhas = c("marcelo", "thiago", "roberta")
 
-#Terceira linha, primeira coluna, primeira folha
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Nomes das colunas
 
-  resultado[2, 1, 1]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Acessando uma matriz inteira (terceira folha)
-
-  resultado[, , 3]
-
-#Acessando uma matriz inteira (primeira e terceira folha)
-
-  resultado[, , c(1, 3)]
+  colunas = c("suco", "refrigerante", "chá")
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Agrupando resultados (primeira e terceiras linhas e segunda e terceira colunas das segunda e terceira folhas)  
+#Nomes das folhas
 
-  resultado[c(1, 2), c(2, 3), c(2, 3)]
+  folhas = c("ficha1", "ficha2", "ficha3", "ficha4", "ficha5")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Excluindo elementos (removendo primeira linha, terceira coluna e removendo a primeira, segunda e terceira folha)
+#Implementando os nomes
 
-  resultado[-1, -3, c(-1, -2, -3)]
-  
-#O "comprimento" de um array. Na verdade, seu número total de elementos
-
-  length(resultado)
-  
-  #which() para arrays
+  array_novo <- array(mtcars$wt, dim = c(3, 3, 5), dimnames = list(linhas, colunas, folhas))
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

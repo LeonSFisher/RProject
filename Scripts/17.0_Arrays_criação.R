@@ -10,21 +10,17 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #CRIAÇÃO DE ARRAYS
 
-#Arrays são estruturas multidimensionais generalizadas que têm o vetor e a matriz como casos particulares uni e bi dimensionis, respectivamente.
+#Arrays são estruturas multidimensionais generalizadas que têm o vetor e a matriz como casos particulares uni e bi dimensionais, respectivamente.
 
-#Imporatnte é o fato de que, apesar de um vetor ser tecnicamente um array, eles são identificados separadamente
-#Assim, o que é vetor não será identificado como array e o que é array não será identificado como vetor
+#Importante é o fato de que, apesar de um vetor ser tecnicamente um array, eles são identificados separadamente. Assim, o que é vetor não será
+#identificado como array e o que é array não será identificado como vetor.
 
-#Outra coisa que precisa se dita é que a difrença entre um array de dimensão 1 e um vetor reside basicamente na existência de um vetor de dimensões
-#Um vetor de dimensões é um vetor de inteiros positivos e seu comprimento dá adimensão do array.
-#O vetor de dimensões é um atributo de um array e o nome do atributo é 'dim'
-
-#Unidimensional com cinco elementos
+#Unidimensional com cinco elementos (vetor)
 
   array(mtcars$wt, dim = c(5))
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Bidimensional com duas linhas e três colunas
+#Bidimensional com duas linhas e três colunas (matriz)
 
   array(mtcars$wt, dim = c(2, 3))
 
@@ -35,9 +31,11 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Diferença entre vetores e array de dimensão 1
-#Um array de dimensão 1 difere basicamente de um vetor por possuir um atributo chamado de vetor de dimensões
-#Nos exemplos acima, os vetores de dimensões são, respectivamente, c(5), c(2, 3), c(2, 3, 4)
-#Já uma matriz tem duas dimensões e, portanto, tem um vetor de dimensões. Dessa forma, uma matriz é automaticamente identificada como array
+
+#A difrença entre um array de dimensão 1 e um vetor reside basicamente na existência de um vetor de dimensões como atributo 'dim' do array. Um vetor 
+#de dimensões é um vetor de inteiros positivos e seu comprimento dá a dimensão do array. Nos exemplos acima, os vetores de dimensões dos exemplos
+#são, respectivamente, c(5), c(2, 3), c(2, 3, 4). Já uma matriz tem duas dimensões e, portanto, tem um vetor de dimensões. Dessa forma, uma matriz é 
+#automaticamente identificada como array.
 
   teste <- 1:10
 
