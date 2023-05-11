@@ -26,11 +26,11 @@
   
 #Segunda linha, terceira coluna, primeira folha  
 
-  resultado[2, 3, 1]
+  array_novo[2, 3, 1]
 
 #Terceira linha, primeira coluna, primeira folha
 
-  resultado[2, 1, 1]
+  array_novo[2, 1, 1]
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por variável
@@ -41,7 +41,7 @@
   
   fol <- 1
   
-  resultado[lin, col, fol]
+  array_novo[lin, col, fol]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por vetor de posições
@@ -50,33 +50,33 @@
   
   lin <- c(1, 2)
   
-  resultado[lin, 1, 1]
+  array_novo[lin, 1, 1]
   
 #Vetor de colunas
   
   col <- c(2, 3)
   
-  resultado[1, col, 1]
+  array_novo[1, col, 1]
   
 #Vetor de folhas
   
   fol <- c(2, 3)
   
-  resultado[1, 1, fol]
+  array_novo[1, 1, fol]
   
 #Indexação por vetor de linhas, colunas e folhas
   
-  resultado[lin, col, fol]
+  array_novo[lin, col, fol]
   
 #Ou diretamente no indexador
 
-  resultado[c(1, 2), 1, 1]
+  array_novo[c(1, 2), 1, 1]
   
-  resultado[1 , c(2, 3), 1]
+  array_novo[1 , c(2, 3), 1]
   
-  resultado[1, 1, c(2, 3)]
+  array_novo[1, 1, c(2, 3)]
   
-  resultado[c(1, 2), c(2, 3), c(2, 3)]
+  array_novo[c(1, 2), c(2, 3), c(2, 3)]
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por sequência
@@ -85,56 +85,71 @@
   
 #Na ordem direta
   
-  resultado[1:2, 1:3, 2:4]
+  array_novo[1:2, 1:3, 2:4]
   
 #Na ordem inversa
   
-  resultado[2:1, 3:1, 4:2]
+  array_novo[2:1, 3:1, 4:2]
   
 #Ou com a função seq() (ideal para indexação de matrizes muito grandes)
   
-  resultado[seq(1, 2), seq(1, 3, 1), seq(2, 4)]
+  array_novo[seq(1, 2), seq(1, 3, 1), seq(2, 4)]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Indexação por nome
   
 #Arrays nomeados podem sofrer filtragem semelhante às das matrizes
   
-#Todas as colunas de todas a s folhas referentes à linha 'thiago'
+  array_novo["thiago", "refrigernate", "ficha2"]
   
-  array_novo["thiago", , ]
+#Também é possível que o array seja indexado por um vetor de caracteres 
   
-#Todas a linhas e folhas da coluna 'chá' 
+  lin <- c("marcelo", "thiago")
   
-  array_novo[ ,"chá" , ]
+  col <- c("refrigerante", "chá")
   
-#Todas as linhas e colunas da folha 'ficha2'  
+  fol <- c("ficha4", "ficha5")
   
-  array_novo[ , ,"ficha2"]
+  array_novo[lin, col, fol]
   
-#Todas as linhas referentes a suco e chá das folhas 1 e 5  
+#Ou diretamente no indexador
   
-  array_novo[ ,c("suco", "chá") ,c("ficha1", "ficha5")]
+  array_novo[c("marcelo", "thiago"), c("refrigerante", "chá"), c("ficha4", "ficha5")]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Acessando uma matriz inteira
   
-#Terceira folha
+#Apenas uma linha
   
-  resultado[, , 3]
+  array_novo[1, , ]
   
-#Primeira e terceira folhas
+  array_novo["marcelo", , ]
   
-  resultado[, , c(1, 3)]
+  array_novo[c(1, 3), , ]
+  
+  array_novo[c("marcelo","roberta"), , ]
+  
+#Apenas uma coluna
+  
+  array_novo[, 2, ]
+  
+  array_novo[, "refrigerante", ]
+  
+  array_novo[, c(2, 3), ]
+  
+  array_novo[, c("refrigerante", "chá"), ]
+  
+#Filtrando nas folhas
+  
+  array_novo[, , 3]
+  
+  array_novo[, , "ficha3"]
+  
+  array_novo[, , c(1, 3)]
+  
+  array_novo[, , c("ficha1", "ficha3")]
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Excluindo elementos de uma filtragem
-  
-#Removendo primeira linha, terceira coluna e removendo a primeira, segunda e terceira folha
-  
-  resultado[-1, -3, c(-1, -2, -3)]
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por filtro lógico
   
 #De modo análogo, podemos utilizar fltros lógicos para indexar os arrays
@@ -160,18 +175,38 @@
   
   array_novo[c(TRUE, FALSE, TRUE), c(FALSE, FALSE, TRUE), c(TRUE, FALSE, TRUE, FALSE, FALSE)]
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Indexação mista
   
-  array_novo["marcelo", c("suco","chá"), 5]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#O "comprimento" de um array. Na verdade, seu número total de elementos
-
-  length(resultado)
+#Assim como nas matrizes, podemos misturar as formas de realizar a indexação
   
+  array_novo[c(1, 2), c("refrigerante","chá"), c(TRUE, FALSE, FALSE, TRUE, TRUE)]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Excluindo elementos de uma filtragem
+  
+#Removendo primeira linha, terceira coluna e removendo a primeira, segunda e terceira folha
+  
+  array_novo[-1, -3, c(-1, -2, -3)]
+  
+#Através de vetores de números negativos
+  
+  array_novo[c(-1, -3), c(-1, -2), c(-1, -2, -3)]
+  
+  array_novo[-c(1, 3), -c(1, 2), -c(1, 2, 3)]
+  
+  array_novo[-1*c(1, 3), -1*c(1, 2), -1*c(1, 2, 3)]
+  
+#Através de sequências de números negativos
+  
+#Como os valores estão sendo excluídos e só os valores não excluídos serão exibidos, a ordem não importa
+  
+  array_novo[-1:-2, , -1:-3]
+  
+  array_novo[-2:-1, , -3:-1]
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Verificando valores
+#Busca de índices
   
 #Se quisermos buscar num array que valores obedecem a certo filtro lógico,podemos fazer
   
@@ -183,5 +218,20 @@
   which(array_novo > 3, arr.ind = FALSE)
   
   which(array_novo > 3, arr.ind = TRUE)
+  
+#Retornando o índice de valores máximos e mínimos do array
+  
+#O índice que retorna é relativo à ordem no vetor de dados quando da criação do array
+  
+  which.min(array_novo)
+  
+#Retornando o índice do valor máximo do vetor
+  
+  which.max(array_novo)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#O "comprimento" de um array. Na verdade, seu número total de elementos
+  
+  length(array_novo)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

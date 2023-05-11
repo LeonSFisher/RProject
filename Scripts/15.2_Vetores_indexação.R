@@ -75,9 +75,15 @@
   
 #Usando o nome no indexador
   
-#Uma vez nomeado, o vetor responde com cada posição sendo referida pelo seu nome correspondente
-  
   vetor["motos"]
+  
+#Também é possível que o vetor seja indexado por um vetor de caracteres 
+  
+  nomes <- c("carros", "bicicletas")
+  
+  vetor[nomes]
+  
+#Ou diretamente no indexador
   
   vetor[c("carros", "bicicletas")]
   
@@ -147,10 +153,57 @@
 #estrutura hierárquica. Vejamos:
 
   sort(vetor)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Excluindo valores da filtragem
+  
+#Da mesma forma que podemos utilizar índices para obter certos valores numa filtragem,podemos excluir valores dessa filtragem. Aqui é importante
+#saber que estamos apenas excluindo valores da própria filtragem, mas não do vetor em si que permanece inalterado.
+  
+#Através de valores negativos dentro do indexador
+  
+  vetor <- c(-1, -4, 3, 4, 9, 7, 99, -15)
+  
+#Excluindo apenas um elemento do vetor. 
+#Queremos todos os valores do vetor exceto o segundo
+  
+  vetor[-2]
+  
+#Excluindo mais de um elemento do vetor
+#Queremos todos os valores do vetor exceto o primeiro e o terceiro
+  
+  vetor[c(-1, -3)]
+  
+#Ou colocando o sinal de menos em evidência
+  
+  vetor[-c(1, 3)]
+  
+#Ou multiplicando o vetor por menos um
+  
+  vetor[-1*c(1, 3)]
+  
+#Através de sequências negativas crescentes e decrescentes
+  
+#Como os valores estão sendo excluídos e só os valores não excluídos serão exibidos, a ordem não importa
+  
+  vetor[-2:-5]
+  
+  vetor[-5:-2]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Remoção de valores por nome com sinal negativo não funciona
+  
+#Poderia parecer intuitivo utilizar o sinal de menos para excluir um valor mesmo quando a filtragem é feita por nomes pois, no caso da filtragem, o
+#sinal de menos significa exclusão e não uma operação aritmética nem um valor negativo. Infelizmente, isso não ocorre.
+  
+  vetor <- c(2, 1, 5)
+  
+  names(vetor) <- c("carros", "motos", "bicicletas")
+  
+  vetor[-"carros"]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#BUSCA DE ÍNDICES  
+#Busca de índices
   
 #Busca de índices cujos valores relativos obedeçam a certos critérios
 
@@ -176,15 +229,20 @@
   
   which(vetor < 3, useNames = TRUE)
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Retornando o índice de valores máximos e mínimos do vetor
+  
 #Retornando o índice do valor mínimo do vetor
   
   which.min(vetor)
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Retornando o índice do valor máximo do vetor
 
   which.max(vetor)
+  
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
+#O "comprimento" de um vetor. Na verdade, seu número total de elementos
+  
+  length(vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -203,63 +261,6 @@
 #Vários valores
 
   vetor[c(1, 2, 3)] <- c(-1, -1, -1)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#EXCLUINDO VALORES DA FILTRAGEM
-  
-#Da mesma forma que podemos utilizar índices para obter certos valores numa filtragem,podemos excluir valores dessa filtragem. Aqui é importante
-#saber que estamos apenas excluindo valores da própria filtragem, mas não do vetor em si que permanece inalterado.
-  
-#Através de valores negativos dentro do indexador
-  
-  vetor <- c(-1, -4, 3, 4, 9, 7, 99, -15)
-
-#Excluindo apenas um elemento do vetor. 
-#Queremos todos os valores do vetor exceto o segundo
-  
-  vetor[-2]
-
-#Excluindo mais de um elemento do vetor
-#Queremos todos os valores do vetor exceto o primeiro e o terceiro
-  
-  vetor[c(-1, -3)]
-  
-#Ou colocando o sinal de menos em evidência
-  
-  vetor[-c(1, 3)]
-  
-#Ou multiplicando o vetor por menos um
-  
-  vetor[-1*c(1, 3)]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Através de vetor de valores lógicos
-  
-#Excluindo da filtragem o primeiro, o terceiro e o sétimo valor
-
-  vetor[c(FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, TRUE)]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Através de sequências negativas crescentes e decrescentes
-  
-#Como os valores estão sendo excluídos e só os valores não excluídos serão exibidos, a ordem não importa
-
-  vetor[-2:-5]
-  
-  vetor[-5:-2]
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Remoção de valores por nome com sinal negativo não funciona
-  
-#Poderia parecer intuitivo utilizar o sinal de menos para excluir um valor mesmo quando a filtragem é feita por nomes pois, no caso da filtragem, o
-#sinal de menos significa exclusão e não uma operação aritmética nem um valor negativo. Infelizmente, isso não ocorre.
-  
-  vetor <- c(2, 1, 5)
-  
-  names(vetor) <- c("carros", "motos", "bicicletas")
-  
-  vetor[-"carros"]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

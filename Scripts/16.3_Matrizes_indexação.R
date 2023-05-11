@@ -97,27 +97,13 @@
   
 #Também é possível que a matriz seja indexada por um vetor de caracteres 
   
-#Para as linhas nomeadas
-  
   lin_sel <- c("alberto", "francisco")
   
-  matriz[lin_sel, ]
-  
-#Ou para as colunas nomeadas
-  
   col_sel <- c("peso", "idade")
-  
-  matriz[ ,col_sel]
-  
-#Para linhas e colunas nomeadas
   
   matriz[lin_sel, col_sel]
   
 #Ou diretamente no indexador
-  
-  matriz[c("alberto", "francisco"), ]
-  
-  matriz[ ,c("peso", "idade")]
   
   matriz[c("alberto", "francisco"), c("peso", "idade")] 
 
@@ -135,6 +121,10 @@
   matriz[2, ]
   
   matriz["francisco", ]
+  
+  matriz[c(2, 3), ]
+  
+  matriz[c("francisco","helder"), ]
 
 #Indexação por coluna inteira
   
@@ -143,6 +133,10 @@
   matriz[ ,3]
   
   matriz[ ,"idade"]
+  
+  matriz[ , c(1, 2)]
+  
+  matriz[ ,c("idade", "peso")]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por vetor de valores lógicos
@@ -165,22 +159,18 @@
 
 #Ou diretamente no indexador da matriz
   
-#Indexação das linhas
-
-  matriz[c(TRUE, FALSE, TRUE), ]
-  
-  matriz[ ,c(TRUE, FALSE, TRUE)]
-  
   matriz[c(TRUE, FALSE, TRUE), c(TRUE, FALSE, TRUE)]
   
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Indexação mista
   
-#Os dois métodos de filtragem podem ser combinados
+#Os métodos de filtragem podem ser combinados
   
   matriz[1, "peso"]
   
-  matriz["helder", 2]
+  matriz[c(TRUE, TRUE, FALSE), 2]
+  
+  matriz["francisco", c(TRUE, TRUE, FALSE)]
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Removendo valores de uma matriz numa filtragem
@@ -198,5 +188,52 @@
 #Perceba que isto não está removendo apenas o elemnto [1, 1], mas a primeira linha e a primeira coluna
 
   matriz[-1, -1] 
+  
+#Através de vetores de números negativos
+  
+  matriz[c(-1, -2), c(-1, -2)] 
+  
+  matriz[-c(1, 2), -c(1, 2)]
+  
+  matriz[-1*c(1, 2), -1*c(1, 2)]
+  
+#Através de sequências de números negativos
+  
+#Como os valores estão sendo excluídos e só os valores não excluídos serão exibidos, a ordem não importa
+  
+  matriz[-1:-2, -1:-2]
+  
+  matriz[-2:-1, -2:-1]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Busca de índices
+  
+#Busca de índices cujos valores relativos obedeçam a certos critérios
+  
+#Para saber quais os índices dos valores que atendem à condição, usamos a função wich()
+  
+  which(matriz > 5)
+  
+#No entanto, a forma acima devolve apenas os índices gerais dos valores sendo difícil saber quem são. Utilizando o parâmetro 'arr.ind' podemos saber
+#quais são os índices dos valores que correspondem ao filtro. Por padrão, seu valor é FALSE.
+  
+  which(matriz > 3, arr.ind = FALSE)
+  
+  which(matriz > 3, arr.ind = TRUE)
+  
+#Retornando o índice de valores máximos e mínimos da matriz
+  
+#O índice que retorna é relativo à ordem no vetor de dados quando da criação da matriz
+  
+  which.min(matriz)
+  
+#Retornando o índice do valor máximo do vetor
+  
+  which.max(matriz)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#O "comprimento" de uma matriz. Na verdade, seu número total de elementos
+  
+  length(matriz)
+  
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
