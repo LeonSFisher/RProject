@@ -10,6 +10,15 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #NOMEANDO DATAFRAMES 
 
+  numeros = c(1, 2, 3, -1, -4)
+  objetos = c("carro", "casa", "faca", "bola", "foice")
+  salario = c(500, 550, 600, 900, 630)
+  valores = c(1.2, 2.5, 6.7, 4.4, 9.0)
+  classes = c(3, 3, 4, 3, 5)
+  
+  tabela = data.frame(numeros, objetos, salario, valores, classes)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Saber o nome das linhas
 
   rownames(tabela)
@@ -42,16 +51,9 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Podemos nomear o dataframe atribuindo nomes aos vetores que o compõe
+  
 #O nome da variável vem primeiro e depois o vetor correspondente que possui os valores
   
   tabela = data.frame(num = numeros, obj = objetos, sal = salario, val = valores, class = classes)
  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Outra forma de saber os nomes das colunas de um dataframe:
-#depois de attach() podemos chamar a coluna diretamente
-  
-  attach(tabela)
-  
-  objetos
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

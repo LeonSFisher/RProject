@@ -10,34 +10,91 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #INDEXANDO DATAFRAMES
 
-#De forma análoga às matrizes
-#Por posição
+  numeros = c(1, 2, 3, -1, -4)
+  objetos = c("carro", "casa", "faca", "bola", "foice")
+  salario = c(500, 550, 600, 900, 630)
+  valores = c(1.2, 2.5, 6.7, 4.4, 9.0)
+  classes = c(3, 3, 4, 3, 5)
+  
+  tabela = data.frame(numeros, objetos, salario, valores, classes, row.names = c("tico", "teco", "monte", "geninha", "bzum"))
 
-  tabela[, 2:3]
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#De forma análoga aos vetores, matrizes e arrays
+
+#Indexação por posição
+  
+#Todas as linhas da segunda e terceira coluna
+
+  tabela[2, 3]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação por variável
+  
+  linha <- 4
+  
+  coluna <- "valores"
+  
+  tabela[linha, coluna]
+  
+  tabela[linha, linha]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Com o operador de coluna nomeada $
 
-  tabela$num
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Pelo nome
-#Apenas um nome no indexador pega a coluna
+  tabela$numeros
   
-  tabela["val"]
-  
-  tabela[3, 'val']
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Indexação com vetores e sequências
-
-  tabela[2:3, c(2, 3)]
+#Indexação com vetores de índices
+  
+  linha <- c(1, 2)
+  
+  coluna <- c(2, 3)
+  
+  tabela[linha, coluna]
+  
+#Ou diretamente no indexador do dataframe
   
   tabela[c(1, 2), c(2, 3)]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação com sequências
+  
+#Podemos utilizar uma sequência para indexar um dataframe
+  
+#Na ordem direta
+  
+  tabela[1:2, 1:3]
+  
+#Ou na ordem inversa
+  
+  tabela[2:1, 3:1]
+  
+#Ou com a função seq() (ideal para indexação de matrizes muito grandes)
+  
+  tabela[seq(1, 2), seq(1, 3, 1)]
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação pelo nome
+  
+#Apenas um nome no indexador pega a coluna
+  
+  tabela["valores"]
+  
+#Também podemos pesquisar como nas matrizes, mas, nesse caso, retorna os resultados como linha e não nomeados
+  
+  tabela[ ,"valores"]
+  
+#Também é possível que o dataframe seja indexada por um vetor de caracteres 
+  
+  linha <- 
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação mista
+  
+  tabela[3, 'valores']
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Filtrando registros de dados
-#Por condicionais
+#Indexação por condicionais
 
   tabela[tabela$sal > 600, ]
 
@@ -49,6 +106,7 @@
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Usando valores de uma coluna como linhas a selecionar
+  
 #Os valores da coluna servirão com índice das linhas que devem ser exibidas
 
   mtcars[mtcars[,"gear"], ]
@@ -68,8 +126,4 @@
 
   subset(mtcars, selecao, select = c("hp", "wt", "vs"))  
 
-
-
-
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

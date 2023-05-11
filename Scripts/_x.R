@@ -91,3 +91,16 @@ is.atomic()
 class()
 
 str()
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Outra forma de saber os nomes das colunas de um dataframe:
+
+#depois de attach() podemos chamar a coluna diretamente
+
+attach(tabela)
+
+objetos
+
+
+
+
