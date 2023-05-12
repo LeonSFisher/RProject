@@ -109,7 +109,17 @@
   
 #Carrega um dataframe particular
   
-  data("mtcars") 
+  data("mtcars")
+  
+#Podemos definir em que pacote devemos procurar o dataframe
+  
+  data("mtcars", package = "ggplot2")
+  
+  data("mtcars", package = "datasets")
+  
+#Caso queiramos aumentar os outputs com informações durante o carregamento do pacote
+  
+  data("mtcars", verbose = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
