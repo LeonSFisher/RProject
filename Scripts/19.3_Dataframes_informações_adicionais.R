@@ -11,6 +11,7 @@
 #INFORMAÇÕES ADICIONAIS SOBRE OS DATAFRAMES
 
 #saber número de linhas e de colunas
+
 #número de linhas
 
   nrow(mtcars)
@@ -21,6 +22,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Verificar as linhas das extremidades
+  
 #verificar as primeiras linahs (6 primeiras)
 
   head(mtcars)
@@ -39,6 +41,8 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #saber a dimensão do objeto (linhas vs colunas)
+  
+#Retorna um vetor com o número de linhas e de colunas, respectivamente
 
   dim(mtcars)
   
