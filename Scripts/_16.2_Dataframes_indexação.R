@@ -86,7 +86,50 @@
   
 #Também é possível que o dataframe seja indexada por um vetor de caracteres 
   
-  linha <- 
+#Apenas um vetor sem identificação de posição no indexador, filtra as colunas
+  
+  atributos <- c("objetos","salario","classes")
+  
+  tabela[atributos]
+  
+#Também podemos discrimonar o vetor por linhas e colunas
+  
+  personagens <- c("teco","geninha")
+  
+  tabela[personagens, atributos]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexador vazio
+  
+#O nome do dataframe com o indexador vazio retorna o dataframe inteiro
+  
+  tabela[]
+  
+#Utilizar o nome do dataframe sem indexador resulta no mesmo  
+  
+  tabela
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indexação por filtro lógico
+  
+#Utilizando um vetor de valores lógicos, todos os valores TRUE homólogos às posições do vetor que se quer indexar serão entendidos como valores a 
+#capturar e os valores FALSE homólogos serão entendidos como valores a ignorar.
+  
+#Criando um vetor para utilizar de exemplo 
+  
+  vetor <- c(2, 3, -1, c(7, 9, 0))
+  
+#Criando um vetor de valores lógicos
+  
+  selecao <- c(TRUE, FALSE, FALSE, TRUE, TRUE, FALSE)
+  
+#Realizando a indexação
+  
+  vetor[selecao]
+  
+#Ou colocando o vetor de valores lógicos diretamente no indexador
+  
+  vetor[c(TRUE, FALSE, FALSE, TRUE, TRUE, FALSE)] 
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação mista

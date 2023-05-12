@@ -97,7 +97,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por filtro lógico
   
-#Utilizando um vetor de valores lógicos, todos os valores TRUE homólogos às posições do vetor que se quer inedxar serão entendidos como valores a 
+#Utilizando um vetor de valores lógicos, todos os valores TRUE homólogos às posições do vetor que se quer indexar serão entendidos como valores a 
 #capturar e os valores FALSE homólogos serão entendidos como valores a ignorar.
 
 #Criando um vetor para utilizar de exemplo 
