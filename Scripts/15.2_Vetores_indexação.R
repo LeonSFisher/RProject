@@ -154,6 +154,13 @@
 
   sort(vetor)
   
+  
+  vetor <- c(4, 5, -1, 0, 7)
+  
+  nomesvetor <- c("carros", "motos", "bicicletas", "aviões", "barcos")
+  
+  names(vetor) <- nomesvetor
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Excluindo valores da filtragem
   

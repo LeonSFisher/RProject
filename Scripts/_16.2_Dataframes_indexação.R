@@ -112,24 +112,27 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação por filtro lógico
   
-#Utilizando um vetor de valores lógicos, todos os valores TRUE homólogos às posições do vetor que se quer indexar serão entendidos como valores a 
-#capturar e os valores FALSE homólogos serão entendidos como valores a ignorar.
+#Criando um vetor de valores lógicos para selecionar as colunas
   
-#Criando um vetor para utilizar de exemplo 
+  colunas <- c(TRUE, FALSE, FALSE, TRUE, TRUE)
   
-  vetor <- c(2, 3, -1, c(7, 9, 0))
+  tabela[colunas]
   
-#Criando um vetor de valores lógicos
+  tabela[ ,colunas]
   
-  selecao <- c(TRUE, FALSE, FALSE, TRUE, TRUE, FALSE)
+#Agora indexando as linhas
   
-#Realizando a indexação
+  linhas <- c(TRUE, FALSE, FALSE, TRUE, TRUE)
   
-  vetor[selecao]
+  tabela[linhas, ]
+  
+#Selecionando linhas e colunas
+  
+  tabela[linhas, colunas]
   
 #Ou colocando o vetor de valores lógicos diretamente no indexador
   
-  vetor[c(TRUE, FALSE, FALSE, TRUE, TRUE, FALSE)] 
+  tabela[c(TRUE, FALSE, FALSE, TRUE, TRUE), c(TRUE, FALSE, FALSE, TRUE, TRUE)] 
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexação mista
@@ -138,24 +141,67 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Indexação por condicionais
+  
+#O mesmo princípio de saber que o retorno de uma comparação é um vetor de lógicos pode ser usado para filtragem
 
   tabela[tabela$sal > 600, ]
-
-#Extraindo dados com base em múltiplas condições e um vetor de valores lógicos
-
-  selecao <- (mtcars$mpg > 17)&(mtcars$gear == 4)
   
-  mtcars[selecao,]
+  tabela[tabela$sal > 600, c("classes","numeros")]
+  
+#Abaixo, selecionamos todos os carros do dataframe mtcars que possuem mpg > 17 e gear igual a 4
 
+  selecao <- (mtcars$mpg > 15) & (mtcars$gear == 4)
+  
+  mtcars[selecao, ]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Filtrando comparações com sequências de alfanuméricos  
+  
+#A sequência predefinida em R para a ordem dos caracteres alfabéticos pode ser usada para estabelecer uma busca ordenada em atributos que recebem 
+#strings como seus valores
+  
+  tabela[tabela$objetos > "casa", ]
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Excluindo valores de uma filtragem
+  
+#Da mesma forma como acontece com vetores, matrizes e arrays, podemos utilizar valores negativos para excluir as linhas e colunas que não queremos 
+#exibir durante a filtragem de valores num dataframe
+  
+  tabela[c(-1, -2), c(-4,-5)]
+  
+  tabela[-c(1, 2), -c(4,5)]
+  
+  tabela[-1*c(1, 2), -1*c(4, 5)]
+  
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Usando valores de uma coluna como linhas a selecionar
   
 #Os valores da coluna servirão com índice das linhas que devem ser exibidas
 
   mtcars[mtcars[,"gear"], ]
-
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Para evitar usar um vetor de lógicos no indexador, usamos a funcão subset
+#Aletrando valores de um dataframe
+  
+#Podemos utilizar a indexação para alterar valores de um dataframe
+  
+#Alterando um só valor
+  
+  tabela[1, "numeros"] <- 999
+  
+#Alterando vários valores
+  
+  tabela[1:5, "numeros"] <- c(0, 0, 0, 0, 0)
+  
+#Lembrando da propriedade de ciclagem dos vetores, podemos repetir apenas uma vez o valor a substituir
+  
+  tabela[1:5, "numeros"] <- c(1)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Para evitar usar um vetor de lógicos no indexador, podemos usar a funcão subset
+  
+  selecao <- (mtcars$mpg > 15) & (mtcars$gear == 4)
 
   subset(mtcars, selecao)
 
