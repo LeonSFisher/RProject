@@ -14,16 +14,32 @@
 
   mtcars$mpg
 
-#Para evitar o uso do operador $ e utilizarmos o nome da dimensão diretamente, usamos a função attach()
+#Para evitar o uso do operador $ e utilizarmos o nome da dimensão diretamente, usamos a função attach().
 
   attach(mtcars)
 
+#Podemos explicitar o parâmetro
+
+  attach(what = mtcars)
+
+#Após isso, podemos nos referir às colunas do dataframe pelo nome sem problemas
+
+  mpg
+
   sum(mpg)
-
-#Após a execução dos comandos desejados,para salvar memória,podemos nos livrar do dataframe com a função detach()
   
-  detach(mtcars)
-
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+##Podemos definir se desejamos verificar conflitos
+  
+#Por padrão, R mostra uma série de conflitos possíveis, podemos definir que isso sempre aconteça explicitando o parâmetro 'warn.conflicts' que é o
+#responsável por isso com o valor TRUE.
+  
+  attach(what = mtcars, warn.conflicts = TRUE)
+  
+#Ou para ignorar os avisos
+  
+  attach(what = mtcars, warn.conflicts = FALSE)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Ordem de prioridade
   
@@ -43,6 +59,7 @@
   sum(dataframe_2$mpg)
   
 #Vamos restringir os nomes das colunas ao dataframe_2
+  
 #Perceba que a soma será feita sobre os valores de dataframe_2 apesar dedataframe_1 também ter um atributo 'mpg'
 #Apesar de dataframe_1 ter sido 'atachado' depois, dataframe_2 tem prioridade mais alta e o cálculo será feito sobre os atributos dele
 #Não é possível determinar a prioridade como sendo 1
@@ -53,7 +70,8 @@
 
   sum(mpg)  
   
-#Após isso...
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Após todo os trabalhos executados, descarregamos os dataframes utilizados
   
   detach(dataframe_1)
   
