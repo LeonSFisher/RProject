@@ -10,9 +10,14 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #apply()
 
-#As funçõs da família apply() servem para substituir operações onde seriam necessárias laços de repetição
-#Recebe um dataframe, matriz ou array multidimensional
-#Dependendo do input, retorna um vetor, lista, matriz ou array
+#A técnica de evitar lações de repetição utilizando funções otimizadas que atuam em todos os elementos de um objeto simulataneamente é chaamada de 
+#vetorização. A vetorização não serve apenas para evitar o uso de laços de repetição, mas de fato para obter ganhos de performance sensíveis.
+
+#Muitas funções em R possibilitam o uso de vetorização. Agora veremos um conjunto de funções com essa capacidade conhecido como família apply
+
+#A primeira função da família aplly que utilizaremosé a função base dessa família - a função apply()
+
+#Recebe um dataframe, matriz ou array multidimensional. Dependendo do input, retorna um vetor, lista, matriz ou array. 
 #No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos
 
 #Usando uma matriz de input
