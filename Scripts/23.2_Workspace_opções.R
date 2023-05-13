@@ -11,8 +11,9 @@
 #OPÇÕES DO WORKSPACE
 
 #Controle de precisão
-#Para controlar quantos dígitos R mostra nas suas operações, fazemos:
-#Após fazermos isso, os cálculos na presente seção serão exibidos com esta precisão
+
+#Para controlar quantos dígitos R mostra nas suas operações, utilizamos o parâmetro 'digits' da função options(). Após fazermos isso, os cálculos
+#na presente seção serão exibidos com esta precisão. Perceba que se estáinformando o número de dígitos, não o número de casas decimais.
 
   sqrt(pi/17)
   
@@ -21,15 +22,10 @@
   sqrt(pi/17)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#MUDAR COMPORTAMENTO DO PROMPT
+#Comportamento do prompt
 
-#O parâmetro 'prompt' informa como será o novo prompt naquela seção
-#O parâmetro 'continue' informa como será indicada a nova linha de continuação
-#Se quisermos utilizar essa customização sempre que rodarmos o R, precisamos colocar o código no arquivo Rprofile  
-#Esse arquivo reside no subdiretório 'etc' na pasta de instalação do R 
+#O parâmetro 'prompt' informa como será o novo prompt naquela seção. Já o parâmetro 'continue' informa como será indicada a nova linha de continuação
 
   options(prompt = 'leo> ', continue = ">>")
-  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -10,16 +10,19 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ENCERRANDO A SEÇÃO DO R
 
-#Função quit()  
+#Para fecharmos uma seção do R na qual estejamos trabalahndo, usamos a função quit()
 
   quit()
 
-#Ou com a saída abreviada
+#A função quit possui também uma alias que é a função q()
 
   q()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Definindo se devemos salvar o ambiente 'workspace' 
+#Definindo se devemos salvar o 'workspace' 
+  
+#Quando fechamoso RStudio, nos é perguntado se queremos salvar o workspace. Isso é equivalente a utilizarmos o parâmetro 'save' na função quit()
+  
 #Para não salvar o workspace
 
   quit(save = "no")

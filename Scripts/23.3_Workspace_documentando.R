@@ -10,12 +10,20 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
 #DOCUMENTANDO O TRABALHO
 
-#Às vezes, gastamos muito tempo buscando uma função para usá-la apenas uma vez e logo esquecê-la
-#Para documentar o nosso trabalho, podemos usar a função history()  
-#Damos um parâmetro numérico para a função history(), digamos p e ela mostrá as p últimas declarações feitas (não inputs)
-#Assim, podemos copiar e salvar esse texto num script e editá-lo.
+#Às vezes, gastamos muito tempo buscando uma função para usá-la apenas uma vez e logo esquecê-la. Evitamosisso documentando o nosso trabalho. Para 
+#documentar o nosso trabalho, podemos usar a função history()  
+
+#Damos um parâmetro numérico para a função history(), digamos p e ela mostrá as p últimas declarações feitas (não inputs). Assim, podemos copiar e 
+#salvar esse texto num script e editá-lo.
 
   history(30)
 
+#Ou explicitando o parâmetro
+
+  history(max.show = 30)
+  
+#Caso precisemos dos histórico na ordem inversa (do mais recente para o mais antigo)
+  
+  history(max.show = 30, reverse = TRUE)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
