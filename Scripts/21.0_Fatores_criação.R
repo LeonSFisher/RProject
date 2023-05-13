@@ -51,37 +51,10 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#INFORMAÇÕES DE FATORES
-  
-#Saber o número de níveis
-  
-  nlevels(resultado)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Saber quais são os níveis
-  
-  levels(resultado)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Determinando a categoria mais baixa (necessário ser ordinal)
-  
-  min(resultado)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Determinando a caregoria mais alta (necessário ser ordinal)
-  
-  max(resultado) 
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Verificando se é ordenado
-  
-  is.ordered(resultado)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #EXCLUSÃO DE NÍVEIS
   
-#Excluindo níveis de um vetor de levels quando criar um conjunto de níveis a partir de um já existente  
+#Excluindo níveis de um vetor de levels quando criar um conjunto de níveis a partir de um já existente. O parâmetro 'exclude' remove do vetor de 
+#níveis os valores que estiverem nele especificados.
   
 #Necessário que os rótulos sejam do mesmo tamanho que o vetor de níveis depois dos valores excluídos
   
@@ -89,7 +62,7 @@
   
   resultado <- factor(valores, labels = novos_rotulos, ordered = TRUE, levels = niveis, exclude = c("SP", "AM"))
   
-#Com a exclusão, os valores cujos níveis correspondestes foram excluídos perderão também o rótulo associaso e serão rotulados como NA
+#Com a exclusão, os valores cujos níveis correspondentes foram excluídos perderão também o rótulo associado e serão rotulados com NA's
   
   resultado 
   
@@ -97,11 +70,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #GERANDO NÍVEIS PARA FATORES COM A FUNÇÃO gl()
 
-#Repetir 4 vezes os 3 primeiros levels
-  
-  niveis_fatores = gl(3, 4, labels = c("eu", "tu", "ele"))
-  
-#SE tivermos mais níveis determinados, pega-se somente o suficiente
+#Repetir 4 vezes os 3 primeiros levels. Se tivermos mais níveis determinados, pega-se somente o suficiente. Assim, temos cinco níveis abaixo, mas só
+#serão utilizados os três primeiros sendo que estes serão repetidos quatro vezes.
   
   niveis_fatores = gl(3, 4, labels = c("eu", "tu", "ele", "ela", "nós"))
   
@@ -111,50 +81,16 @@
   
 #Definindo um tamanho para o vetor de levels (pode ser igual, maior ou menor do que 3*4)
   
+#Se o vetor de níveis for menor que as repetições, vai até preencher o vetor
+  
   niveis_fatores = gl(3, 4, labels = c("eu", "tu", "ele", "ela", "nós"), ordered = TRUE, length = 10)
   
+#Se o vetor de níveis for do mesmo tamanho que as repetições, tudo fica normal
+  
   niveis_fatores = gl(3, 4, labels = c("eu", "tu", "ele", "ela", "nós"), ordered = TRUE, length = 12)
+  
+#Se o vetor de níveis for maior do que as repetições, haverá ciclagem dos valores das repetições até que o vetor de níveis seja preenchido
   
   niveis_fatores = gl(3, 4, labels = c("eu", "tu", "ele", "ela", "nós"), ordered = TRUE, length = 15)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#VERIFICANDO SE É FATOR
-  
-#Dados que são fatores
-  
-  is.factor(resultado)
-  
-  class(resultado)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Dados que não são fatores
-  
-  is.factor(mtcars$gear)
-  
-  class(mtcars$gear)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#CONVERTENDO PARA FATOR
-  
-#Transformando os valores em fatores com a função factor()
-  
-  dados1 <- factor(mtcars$gear)
-  
-  is.factor(dados1)
-  
-  class(dados1)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Convertendo para fator com uma função de coerção
-  
-  dados2 <- as.factor(mtcars$gear)
-  
-  is.factor(dados2)
-  
-  class(dados2)
-  
-  #ptint para fatores
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
