@@ -12,6 +12,8 @@
 
   valor1 <- 55
   
+  valor2 <- TRUE
+  
   vetor1 <- c(-3i, 2i)
   
   matriz <- matrix(c(2, 3, 4, -1), nrow = 2)
@@ -22,9 +24,11 @@
   
   lista1 <- list(-3, "a", 7, 8:12)  
   
-  lista2 <- list(valor1, vetor1, matriz, dataf1, dataf2, lista1)
+  lista2 <- list(valor1, valor2, vetor1, matriz, dataf1, dataf2, lista1)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Acessando valores na lista pelo índice
+  
 #Um só par de [] pode ser usados às vezes, mas os reservamos para os arrays
 
   lista2[6]
@@ -35,60 +39,76 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexando estruturas internas da lista
+  
 #Acessando o vetor da lista anterior com um para de []  
 
-  lista2[2]  
+  lista2[3]  
 
 #Acessando o vetor da lista anterior com [[]]  
 
-  lista2[[2]]  
+  lista2[[3]]  
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Acessando subposições de elemntos da lista
+  
 #Acessando o primeiro valor do vetor da lista anterior  
 
-  lista2[[2]][1]  
+  lista2[[3]][1]  
 
 #Acessandoa todas as linhas e a terceira coluna do segundo dataframe da lista anterior
 
-  lista2[[5]][,3]
+  lista2[[6]][,3]
 
 #Acessando a quarta linha e todas as colunas do segundo dataframe da lista anterior
 
-  lista2[[5]][4,]
+  lista2[[6]][4,]
 
-#Acessando o elemento da segunda coluna e da quarta linha do segundo dataframe da lista anterior
+#Acessando o elemento da quarta linha e segunda coluna do segundo dataframe da lista anterior
 
-  lista2[[5]][4, 2] 
+  lista2[[6]][4, 2] 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Acessando dataframes dentro de listas
-#Através do nome da coluna com o nome $  
+  
+#Através do operador de coluna nomeada $  
 
-  lista2[[5]]$mpg
+  lista2[[6]]$mpg
 
 #Através do nome da coluna no indexador
 
-  lista2[[5]]["hp"]
+  lista2[[6]]["hp"]
 
 #Podemos fazer filtros análogos
 
-  lista2[[5]][1:5, "hp"]
+  lista2[[6]][1:5, c("hp", "mpg")]
 
-#Selecionando um único valor
-
-  lista2[[5]][1, 3]
-
-#Filtrando vários dados
-
-  lista2[[5]][1:5, c("hp", "mpg")]
-
-#Acessando valor do vetor pelo seu nome
-#Primeiro precisamos nomear os elementos da lista
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Acessando valores de estruturas nomeadas do dataframe
   
-  names(lista2) <- c("valor", "vetor", "matriz", "data1", "data2", "lista")
+#Nomeando a matriz da lista
+  
+  nomes_linhas <- c("linha1", "linha2")
+  
+  nomes_colunas <- c("coluna1", "coluna2")
+  
+  rownames(lista2[[4]]) <- nomes_linhas
+    
+  colnames(lista2[[4]]) <- nomes_colunas
+  
+#Agora acessando o valor
+  
+  lista2[[4]]["linha2","coluna1"]
 
-  lista2[["vetor"]][1]
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Acessando elementos nomeados da própria lista
+  
+#Como de praxe, precisamos criar um vetor de nomes e atribuí-lo à lista.
+  
+  names(lista2) <- c("real", "lógico", "vetor_complexo", "matriz", "tabela2", "tabela", "lista")
+  
+#Realizando a atribuição
+
+  lista2[["vetor_complexo"]][1]
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,15 +116,15 @@
 
 #Modificando valores
 
-  lista2[[5]][4, 2] = 0
+  lista2[[6]][4, ] = 0
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Incluindo novos elementos
+  
 #Inserindo nova coluna na matriz da lista
 
-  nova_col <- c(4, 4)
+  nova_col_mat <- c(4, 4)
   
-  cbind(lista2[[3]], nova_col)
+  cbind(lista2[[4]], nova_col_mat)
   
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
