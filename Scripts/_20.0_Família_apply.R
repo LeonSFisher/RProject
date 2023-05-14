@@ -20,9 +20,11 @@
 #Recebe um dataframe, matriz ou array multidimensional. Dependendo do input, retorna um vetor, lista, matriz ou array. 
 #No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos
 
-#Usando uma matriz de input
+  vetor <- c(3, 4, 9)
 
   matriz <- matrix((1:12), nrow=3)
+  
+  array_novo <- array(mtcars$mpg, dim = c(2, 2, 3))
 
 #Aplicar a função às linhas. Queremos o máximo de cada linha
 
