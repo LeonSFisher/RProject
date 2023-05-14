@@ -10,31 +10,37 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #lapply()
 
-#Recebe um vetor, uma lista ou um dataframe
-#Sempre devolve uma lista. O 'l' no início significa lista
-#Criando um vetor de exemplo
+#Recebe uma lista OU VETOR E DEVOLVE UMA LISTA. O 'l' no início significa lista.
 
-  vetor1 <- c(1, 1, 3, 5, 6)
+#Aplicando a um vetor
+
+  vetor <- c(1, 1, 3, 5, 6)
   
 #Aplicando a função raiz quadarada
   
-  lapply(vetor1, FUN = sqrt)
-
+  lapply(vetor, FUN = sqrt)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Agora aplicaremos a uma lista
-#Criando uma lista de exemplo
+#Aplicando a uma lista
   
-  lista1 <- list(TRUE, 1:3, 3i)
+#Obviamente, a operação deve fazer sentido e caso a nossa lista possua letras, não podemos realizar cálculos com ela.
   
-#Aplicando a raiz quadrada
+  lista <- list("a", TRUE, 9, 16)
   
-  lapply(lista1, sqrt)
+  lapply(lista, FUN = sqrt)
+  
+#Mas, se for apenas numérica, isso será possível. Perceba que TRUE equivale a 1
+  
+  lista <- list(100, 25, TRUE, 9, 16)
+  
+  lapply(lista, FUN = sqrt)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Aplicando agora a um dataframe
+  
 #Criando um dataframe de exemplo
   
-  df <- data.frame(a=1:3, b=4:6, c=7:9, d=10:12)
+  tabela <- data.frame(a = 1:3, b = 4:6, c = 7:9, d = 10:12)
 
 #Aplicando a raiz quadrada
   

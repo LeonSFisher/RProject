@@ -21,7 +21,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #A primeira função da família aplly que utilizaremos é a função base dessa família - a função apply()
   
-#Recebe uma matriz ou array. Dependendo do input, retorna um vetor, lista ou array. 
+#Recebe uma matriz, dataframe (numérico) ou array. Dependendo do input, retorna um vetor, lista ou array. 
 #No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos.
   
 #Aplicando a função a uma matriz e retornando uma matriz
@@ -55,5 +55,20 @@
 #uma mesma linha e de uma mesma coluna numa matriz. 
   
   apply(matriz, c(1, 2), FUN = max)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Aplicando a um dataframe
+  
+#Se o dataframe for numérico, as operações com funções matemáticas são possíveis
+  
+  col1 <- c(1, 2, 3)
+  
+  col2 <- c(4, 5, 6)
+  
+  col3 <- c(7, 8, 9)
+  
+  tabela <- data.frame(col1, col2, col3)
+  
+  apply(tabela, 2, sum)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
