@@ -10,36 +10,43 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #sapply()  
 
-#É uma forma simplificada de lapply()
-#Tem a mesma sintaxe da função aplly(). Recebe um vetor, uma lista ou um dataframe
-#Tenta reduzir o objeto de output para o formato mais simples possível
-#Ou seja, simplifica um vetor para vetor, uma lista para lista e um dataframe para matriz
+#É uma forma simplificada de lapply(). Tem a mesma sintaxe da função aplly(). Recebe um vetor, uma lista ou um dataframe e tenta reduzir o objeto de 
+#output para o formato mais simples possível, ou seja, simplifica um vetor para vetor, uma lista para lista e um dataframe para matriz.
+
 #Aplicando a um vetor
 
   vetor <- c(3, 3, 6, 7, 9)
   
-  x <- sapply(vetor, sqrt)
+  novo_vetor <- sapply(vetor, sqrt)
   
-  is.vector(x)
-  
+  is.vector(novo_vetor)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Aplicando a uma lista  
   
   lista <- list(4, 5, TRUE, FALSE, 16)
   
-  x <- sapply(lista, sqrt)
+  novo_vetor <- sapply(lista, sqrt)
   
-  is.list(x)
+  is.list(novo_vetor)
   
-  is.vector(x)
+  is.vector(novo_vetor)
   
+#Se a lista não permitir operações, dará errado
+  
+  lista <- list(4, 5, "casa", FALSE, 16)
+  
+  novo_vetor <- sapply(lista, sqrt)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Aplicado a um dataframe
   
-  df <- data.frame(vetor, vetor*5)
+  tabela <- data.frame(vetor, vetor*5, vetor*10)
   
-  x <- sapply(df, sqrt)
+  novo_vetor <- sapply(tabela, sqrt)
   
-  is.data.frame(x)
+  is.data.frame(novo_vetor)
   
-  is.matrix(x)
+  is.matrix(novo_vetor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

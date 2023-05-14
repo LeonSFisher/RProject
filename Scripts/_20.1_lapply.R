@@ -10,7 +10,7 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #lapply()
 
-#Recebe uma lista OU VETOR E DEVOLVE UMA LISTA. O 'l' no início significa lista.
+#Recebe uma lista OU VETOR E DEVOLVE UMA LISTA. O 'l' no início significa lista. lapply() não precisa de parâmetro 'margin'.
 
 #Aplicando a um vetor
 
@@ -36,14 +36,23 @@
   lapply(lista, FUN = sqrt)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Aplicando a uma matriz
+  
+#Os elementos da matriz são
+  
+  filmes <- matrix(c("CASA COMIGO","ALIEN","TROPA DE ELITE", "CRISTINE"), nrow = 2)
+  
+  lapply(filmes, tolower)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Aplicando agora a um dataframe
   
 #Criando um dataframe de exemplo
   
   tabela <- data.frame(a = 1:3, b = 4:6, c = 7:9, d = 10:12)
 
-#Aplicando a raiz quadrada
+#Aplicando a raiz quadrada. Cria-se uma lista onde cada elemento da lista é um vetor correspondente a cada coluna do dataframe com a função aplicada.
   
-  lapply(df, sqrt)
+  lapply(tabela, sqrt)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
