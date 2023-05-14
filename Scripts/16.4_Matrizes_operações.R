@@ -159,3 +159,25 @@
   solve(matriz, b)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Detectar se um valor está na matriz na parte triangular inferior ou superior  
+  
+#Retorna uma matriz de valores lógicos informando se o valor está abaixo ou acima da diagonal. Note que a própria diagonal é excluída do processo.
+  
+  lower.tri(matriz)
+  
+  upper.tri(matriz)
+  
+#Para incluir a diagonal, utilizamos o parâmetro 'diag'. Com ele, agora estamos perguntando se os valores estão na diagonal principal ou acima ou
+#abaixo dela conforme o caso.
+  
+  lower.tri(matriz, diag = TRUE)
+  
+  upper.tri(matriz, diag = TRUE)
+  
+#Podemos agora saber que valores são esses  
+  
+  which(lower.tri(matriz))
+  
+  which(upper.tri(matriz))
+  
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
