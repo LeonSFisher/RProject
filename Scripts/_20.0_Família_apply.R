@@ -11,44 +11,49 @@
 #apply()
 
 #A técnica de evitar lações de repetição utilizando funções otimizadas que atuam em todos os elementos de um objeto simulataneamente é chaamada de 
-#vetorização. A vetorização não serve apenas para evitar o uso de laços de repetição, mas de fato para obter ganhos de performance sensíveis.
-
-#Muitas funções em R possibilitam o uso de vetorização. Agora veremos um conjunto de funções com essa capacidade conhecido como família apply
-
-#A primeira função da família aplly que utilizaremosé a função base dessa família - a função apply()
-
-#Recebe um dataframe, matriz ou array multidimensional. Dependendo do input, retorna um vetor, lista, matriz ou array. 
-#No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos
-
-  vetor <- c(3, 4, 9)
-
-  matriz <- matrix((1:12), nrow=3)
+#vetorização. A vetorização não serve apenas para evitar o uso de laços de repetição, mas de fato para obter ganhos de performance sensíveis. Muitas
+#funções em R possibilitam o uso de vetorização. Agora veremos um conjunto de funções com essa capacidade conhecido como família apply
+  
+  matriz <- matrix((1:12), nrow = 3)
   
   array_novo <- array(mtcars$mpg, dim = c(2, 2, 3))
 
-#Aplicar a função às linhas. Queremos o máximo de cada linha
-
-  apply(matriz, 1, FUN = max)
-
-#Aplicar a função às colunas. Queremos o máximo de  cada coluna
-
-  apply(matriz, 2, FUN = max)
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#A primeira função da família aplly que utilizaremos é a função base dessa família - a função apply()
+  
+#Recebe uma matriz ou array. Dependendo do input, retorna um vetor, lista ou array. 
+#No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos.
+  
+#Aplicando a função a uma matriz e retornando uma matriz
+  
+#Aqui, aplicaremoa a função sqrt() às linhas e à medida que são computadas elas são organizadas nas linhas ma matriz de saída
+  
+  apply(matriz, 1, sqrt)
+  
+#Com isso, se escolhermos para a função ser aplicada pelas colunas, obteremos a matriz transposta da matriz resultado
+  
+  apply(matriz, 2, sqrt)
+  
+#Obviamente, se aplicarmos a função pelas linhas e colunas, é como se aplicarmos normalmente às linahs pois agora não faz diferença
+  
+  apply(matriz, c(1, 2), sqrt)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Nos exemplos acima, a entrada foi um matriz e saída um vetor
-#Vejamos agora uma matriz de entrada resultando numa matriz de saída
+#Aplicando uma função à uma matriz e retornando um vetor  
   
-#Soma acumulada das colunas
+#Algumas funções, por sua natureza, devem retornar um vetor ao serem aplicadas sobre uma matriz como a função max()
   
-  apply(matriz, 2, FUN = cumsum)  
+#Aplicando a função sobre as linhas
+
+  apply(matriz, 1, FUN = max)
   
-#Soma acumulada das linhas
-#Exibe a matriz na forma transposta
+#Aplicando as funções sobre as colunas
+
+  apply(matriz, 2, FUN = max)
   
-  apply(matriz, 1, FUN = cumsum)   
+#Ao se pedir para se aplicar em ambas as linahs e colunas, o que se obtém é a própria matriz pois só existe um único valor que é ao mesmo tempo de 
+#uma mesma linha e de uma mesma coluna numa matriz. 
   
-#A matriz de saída não precisa ser do mesmo tamanho que a original
-  
-  apply(matriz, 2, range)
+  apply(matriz, c(1, 2), FUN = max)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
