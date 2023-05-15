@@ -1,10 +1,3 @@
-
-#com o parâmetro stringsAsFactor = FALSE, valores repetidos não serão tratados como factors
-read.table(caminho, header = T, sep = ";", stringsAsFactors = FALSE)
-
-#com o parâmetro stringsAsFactor = FALSE, valores repetidos não serão tratados como factors
-tabelalimpa <- read.table(caminho, header = T, sep = ";", stringsAsFactors = FALSE, col.names = colx)
-
 #salvando objetos
 save(objetos, file = "arquivo.Rdata")
 
@@ -14,6 +7,7 @@ load(file = "arquivo.Rdata")
 #pacotes de dados disponíveis no R
 #descobrir pacotes
 data()
+data("airquality")
 
 #basesde dados de um pacote específico
 data(package = "dplyr")
@@ -31,8 +25,6 @@ unique()
 #mostra um resumo de um conjunto de dados
 summary()
 
-################################################################################
-################################################################################
 #operador in
 vetor4 = 3:21
 
@@ -42,22 +34,8 @@ y = 7
 print(x %in% vetor4)
 print(y %in% vetor4)
 
-################################################################################
-################################################################################
-#DIRETÓRIOS
-#sabero o diretório onde estamos
-
-#ver todos os arquivos do diretório
-arquivos = dir()
-
-print(arquivos)
-
-################################################################################
-################################################################################
 #BUSCA
 dev.off()
-
-#FUNÇÕES PARA ARQUIVOS
 
 #data
 date()
@@ -66,19 +44,9 @@ date()
 
 any(grep('xlsx', install.packages()))
 
-#somacumulativa
-
-cumsum(c(1, 2, 5, 6, 7))
-
 dev.copy()
 
-
 attributes()
-
-
-data()
-data("airquality")
-
 
 Sys.time()
 
@@ -89,18 +57,6 @@ format(Sys.time(), "%H")
 is.atomic()
 
 class()
-
-str()
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Outra forma de saber os nomes das colunas de um dataframe:
-
-#depois de attach() podemos chamar a coluna diretamente
-
-attach(tabela)
-
-objetos
-
 
 rep()
 
@@ -113,4 +69,3 @@ grep()
 aggregate()
 
 by()
-
