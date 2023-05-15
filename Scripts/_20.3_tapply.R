@@ -10,34 +10,36 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #tapply()  
 
-#A função tapply é utilizada para aplicar um procedimento a diferentes partes dos dados dentro de um array, matriz ou data frame.
-#Ela difere das outras por exigir a existência de uma variável categórica a qual servirá para agrupar os dados aos diferentes níveis.
+#A função tapply() é utilizada para aplicar um procedimento a diferentes partes dos dados dentro de um array, matriz ou data frame. Ela difere das
+#outras por exigir a existência de uma variável categórica a qual servirá para agrupar os dados aos diferentes níveis.
 
 #cria o vetor de resposta
 
-  consumo <- c(13.10,15.20,16.10,14.75,15.35,16.20) 
+  consumo <- c(13.10, 15.20, 16.10, 14.75, 15.35, 16.20) 
   
 #cria vetor de fatores indicando o grupo experimental
   
-  grupo<-as.factor(c("15%PB","18%PB","18%PB","15%PB","15%PB","18%PB"))
+  grupo <- as.factor(c("alpha","beta","beta","alpha","alpha","beta"))
   
-#Obtêm a média de consumo em função do grupo
+#Obtêm a média de consumo em função do grupo. Todos os valores 15%PB serão reunidos e sua média será calculada. O mesmo acontecerá com todos os
+#valores categorizados como 18%PB
   
   tapply(consumo, grupo, mean)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Outro exemplo
-  
-  mtcars
   
 #Um vetor de médias
   
   tapply(mtcars$wt, mtcars$gear, mean)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#Quando aumentamos a quantidade de vetores categóricos, a estrutura de classificação evolui para matrizes, arrays etc.
   
 #Uma matriz de médias
   
   tapply(mtcars$gear, list(mtcars$gear, mtcars$carb), mean)
-  
+
 #Um array de médias
   
   tapply(mtcars$gear, list(mtcars$gear, mtcars$carb, mtcars$cyl), mean)

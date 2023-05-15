@@ -10,8 +10,9 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #sapply()  
 
-#É uma forma simplificada de lapply(). Tem a mesma sintaxe da função aplly(). Recebe um vetor, uma lista ou um dataframe e tenta reduzir o objeto de 
-#output para o formato mais simples possível, ou seja, simplifica um vetor para vetor, uma lista para lista e um dataframe para matriz.
+#É uma forma simplificada de lapply(). Tem a mesma sintaxe da função aplly(). Recebe um vetor, uma lista ou um dataframe e retorna um vetor ou matriz.
+#Tenta reduzir o objeto de output para o formato mais simples possível, ou seja, simplifica um vetor para vetor, uma lista para lista e um dataframe
+#para matriz.
 
 #Aplicando a um vetor
 
