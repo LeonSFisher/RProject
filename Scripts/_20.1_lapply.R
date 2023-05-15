@@ -10,7 +10,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #lapply()
 
-#Recebe uma lista OU VETOR E DEVOLVE UMA LISTA. O 'l' no início significa lista. lapply() não precisa de parâmetro 'margin'.
+#Recebe uma lista OU VETOR E DEVOLVE UMA LISTA. O 'l' no início significa lista. lapply() não precisa de parâmetro 'margin' pois a função é aplicada
+#por elemnto em listas e por colunas em dataframes.
 
 #Aplicando a um vetor
 

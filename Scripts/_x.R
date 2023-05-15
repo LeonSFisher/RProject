@@ -102,5 +102,15 @@ attach(tabela)
 objetos
 
 
+rep()
 
+sweep()
+
+agrep()
+
+grep()
+
+aggregate()
+
+by()
 

@@ -21,7 +21,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #A primeira função da família aplly que utilizaremos é a função base dessa família - a função apply()
   
-#Recebe uma matriz, dataframe (numérico) ou array. Dependendo do input, retorna um vetor, lista ou array. 
+#Recebe uma matriz, dataframe ou array. Dependendo do input, retorna um vetor, matriz, lista ou array. 
 #No parâmetro de margem usamos 1 para linhas, 2 para colinas e c(1, 2) para ambos.
   
 #Aplicando a função a uma matriz e retornando uma matriz
