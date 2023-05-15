@@ -100,3 +100,14 @@
   vetor <- c(vetor1, vetor2, use.names = FALSE)  
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Outra forma de nomear um vetor
+  
+#Também podemos nomear um vetor internamente no seu argumento durante a sua criação
+  
+  vetor_nomeado <- c(casas = 3, carros = 4, navios = 1)
+  
+#Também como strings de caracteres
+  
+  vetor_nomeado <- c("casas" = 3, "carros" = 4, "navios" = 1)
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
