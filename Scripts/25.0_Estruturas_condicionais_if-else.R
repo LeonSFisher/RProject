@@ -102,37 +102,6 @@
   }
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#if-else encadeados
-  
-#Quando utilizarmos o processo de encadear os condicionais, não precisamos escrever cada condição na forma de um intervalo completo. O fato de um
-#valor não ter entrado na faixa anterior, já o restringe a algo que está fora dela e dentro da condição seguinte. Esse processo é conseguido
-#utilizando a forma 'else if'
-  
-  valor <- 99
-
-  if (valor < 3){
-    
-    print("Bebê")
-    
-  }else if (valor < 13){
-    
-    print("Criança")
-    
-  }else if (valor < 18){
-    
-    print("Adolescente")
-    
-  }else if (valor < 65){
-    
-    print("Adulto")
-    
-  }else{
-    
-    print("Idoso")
-    
-  }
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #outra forma de if composto
   
 #Equivalente ao operador ternário de C
@@ -143,19 +112,4 @@
   
   res <- if (valor == 30) "igual" else "diferente"
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#estrutura condicional ifelse
-  
-#Equivalente ao operador ternário de C
-  
-  valor = 5
-  
-  ifelse(valor < 2, "a", "b") 
-  
-#ifelse também pode operar sobre um vetor
-  
-  v <- c(-1, 3, -5, 7, 8)
-  
-  ifelse(v < 0, "negativo", "positivo") 
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
