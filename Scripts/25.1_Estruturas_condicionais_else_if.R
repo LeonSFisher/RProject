@@ -13,8 +13,8 @@
 #if-else encadeados (else if)
 
 #Quando utilizarmos o processo de encadear os condicionais, não precisamos escrever cada condição na forma de um intervalo completo. O fato de um
-#valor não ter entrado na faixa anterior, já o restringe a algo que está fora dela e dentro da condição seguinte. Esse processo é conseguido
-#utilizando a forma 'else if'
+#valor não ter entrado na faixa anterior, já o restringe a algo que está fora dela e dentro da condição seguinte. Este processo é conseguido
+#utilizando a forma 'else if'. A última declaração termina com o 'else' normal.
 
   valor <- 99
   

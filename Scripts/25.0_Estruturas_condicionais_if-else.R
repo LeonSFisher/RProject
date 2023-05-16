@@ -12,7 +12,7 @@
 
 #Estrutura if simples
 
-#Se a condição entre parênteses for verdadeira, o bloco de instruções seguinte será executado
+#Se a condição entre parênteses for verdadeira, o bloco de instruções que a segue será executado
 
   valor <- 22
 
@@ -35,7 +35,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Estrutura if-else
   
-#Se a condição entre parênteses for verdadeira, o bloco de instruções seguinte será executado. Caso contrário, o bloco após 'else' é que será.
+#Se a condição entre parênteses for verdadeira, o bloco de instruções que a segue será executado. Caso contrário, o bloco após 'else' é que o será.
   
   valor <- 12
   
@@ -59,7 +59,7 @@
 #if's sequenciais
   
 #Podemos ter várias confições if em sequência. Serão executados tantos blocos quantos forem aqueles que tiverem satisfeitas as suas respectivas
-#condições
+#condições entre parênteses
   
   valor <- 72
   
@@ -107,9 +107,5 @@
 #Equivalente ao operador ternário de C
   
   if (valor == 30) "igual" else "diferente"
-  
-#O valor retornado pode ser, inclusive, capturado por uma variável.
-  
-  res <- if (valor == 30) "igual" else "diferente"
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
