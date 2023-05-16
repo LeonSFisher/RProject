@@ -1,66 +1,69 @@
 ######################################################################################################################################################
 ######################################################################################################################################################
 
-#ESTRUTURAS DE REPETIÇÃO - while
+#ESTRUTURAS DE REPETIÇÃO - repeat
 
 ######################################################################################################################################################
 ######################################################################################################################################################
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#LAÇO while
+#Ciclo repeat
 
-#Estruturas de repetição (while)
-#Serve para quando não sabemos o número exato de vezes que precisaremos rodar o código
-#É necessário colocar um incrementador
+#Estruturas de repetição (repeat)
 
-  x = 4
+#Por si só não tem parada. Só para com o ESC, mas, alternativamente, pode-se criar uma parada com o break
+
+  cont = 0
   
-  while (x < 10) {
+  repeat{
     
-    print(x)
+    cont = cont + 1
     
-    x = x + 1
+    print(cont)
     
   }
-  
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Uso do BREAK e do NEXT
-#Uso do BREAK dentro do while
-#O BREAK interrompe o laço sempre que é encontrado e o código prossegue
+#Uso do BREAK dentro do repeat (usual)
   
-  x = 4
+#Uso do break no repeat
   
-  while (x < 10) {
+#Usando o break para limitar o repeat de 1 a 10
+  
+  cont = 0
+  
+  repeat{
     
-    print(x)
+    cont = cont + 1
     
-    x <- x + 1
-    
-    if(x > 7){
+    if(cont > 10){
       
       break
     }
+    
+    print(cont)
   }
-  
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Uso do NEXT dentro do while
-#NEXT faz o laço rodar novamente do começo sempre que é encontrado
-#No código abiaxo, sempre que se chega em 11, o while roda de novo do começo e nunca sai de 11 pois nunca se chega na linha de incremento
+#Uso do NEXT dentro do repeat
   
-  x = 4
+#Usando o next para imprimir apenas números pares
   
-  while (x < 30) {
+  cont <- -1
+  
+  repeat{
     
-    print(x)
+    cont <- cont + 1
     
-    if(x > 10){
+    if (cont %% 2 != 0){
       
       next
+
     }
     
-    x <- x + 1
-    
+    print(cont)
+
   }
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
