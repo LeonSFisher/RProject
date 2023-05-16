@@ -10,10 +10,17 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #vapply()  
 
-#Semelhante ao sapply(), mas apresenta um tipo de valor de retorno pré-estabelecido
+#se a função mapply() aplica a função determinada a cada conjunto de valores correspondente aos valores homólogos de cada lista ou vetor, a função
+#vapply() aplica a mesma função a esses vetores individualmente.
 
-#Obter o resumo estatístico das variáveis
-
-vapply(dataset_loja[,-c(1,2,ncol(dataset_loja))], FUN = fivenum, FUN.VALUE = c(Min. = 0, "1stQu." = 0, Media = 0, "3rd Qu." = 0, Max = 0))
-
+  vetor1 <- c(1, 7, 7, 4, 6)
+  
+  vetor2 <- c(7, 17, 5, 1, 1)
+  
+  vetor3 <- c(11, 2, 87, 41, 8)
+  
+  lista_vetores <- list(vetor1, vetor2, vetor3)
+  
+  vapply(lista_vetores, min, FUN.VALUE = numeric(1))
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
