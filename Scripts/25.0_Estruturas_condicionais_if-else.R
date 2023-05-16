@@ -12,9 +12,21 @@
 
 #Estrutura if simples
 
-  x <- 22
+#Se a condição entre parênteses for verdadeira, o bloco de instruções seguinte será executado
 
-  if (x > 18){
+  valor <- 22
+
+  if (valor > 18){
+    
+    print("Maior de idade")
+    
+  }
+  
+#Caso contrário, nada acontece
+  
+  valor <- 14
+  
+  if (valor > 18){
     
     print("Maior de idade")
     
@@ -23,9 +35,11 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Estrutura if-else
   
-  x <- 12
+#Se a condição entre parênteses for verdadeira, o bloco de instruções seguinte será executado. Caso contrário, o bloco após 'else' é que será.
   
-  if (x > 18){
+  valor <- 12
+  
+  if (valor > 18){
     
     print("Maior de idade")
     
@@ -37,28 +51,31 @@
   
 #Para o caso de apenas uma declaração após cada if e else, podemos omitir as chaves {}, mas devemos colocá-las na mesma linha
   
-  x <- 12
+  valor <- 12
   
-  if (x > 18) print("Maior de idade") else print("Menor de idade")
+  if (valor > 18) print("Maior de idade") else print("Menor de idade")
     
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #if's sequenciais
   
-  x <- 72
+#Podemos ter várias confições if em sequência. Serão executados tantos blocos quantos forem aqueles que tiverem satisfeitas as suas respectivas
+#condições
   
-  if (x < 18){
+  valor <- 72
+  
+  if (valor < 18){
     
     print("Menor de idade")
     
   }
   
-  if ((x > 18) & (x < 65)){
+  if ((valor > 18) & (valor < 65)){
     
     print("Adulto")
     
   }
   
-  if (x > 65){
+  if (valor > 65){
     
     print("Idoso")
     
@@ -67,11 +84,13 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #If-else aninhados
   
-  x <- 72
+#Os comandos condicionais 'if' e 'else' podem ser colocados uns dentro dos outros
   
-  if (x > 18){
+  valor <- 72
+  
+  if (valor > 18){
     
-    if (x < 65){
+    if (valor < 65){
       
       print("Adulto")
       
@@ -85,21 +104,25 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #if-else encadeados
   
-  x <- 99
+#Quando utilizarmos o processo de encadear os condicionais, não precisamos escrever cada condição na forma de um intervalo completo. O fato de um
+#valor não ter entrado na faixa anterior, já o restringe a algo que está fora dela e dentro da condição seguinte. Esse processo é conseguido
+#utilizando a forma 'else if'
+  
+  valor <- 99
 
-  if (x < 3){
+  if (valor < 3){
     
     print("Bebê")
     
-  }else if (x < 13){
+  }else if (valor < 13){
     
     print("Criança")
     
-  }else if (x < 18){
+  }else if (valor < 18){
     
     print("Adolescente")
     
-  }else if (x < 65){
+  }else if (valor < 65){
     
     print("Adulto")
     
@@ -108,32 +131,31 @@
     print("Idoso")
     
   }
-
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #outra forma de if composto
+  
 #Equivalente ao operador ternário de C
   
-  x <- 30
+  if (valor == 30) "igual" else "diferente"
   
-  res <- if (x == 30) "igual" else "diferente"
+#O valor retornado pode ser, inclusive, capturado por uma variável.
   
-  res
+  res <- if (valor == 30) "igual" else "diferente"
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #estrutura condicional ifelse
+  
 #Equivalente ao operador ternário de C
   
-  x = 5
+  valor = 5
   
-  ifelse(x < 2, "a", "b") 
+  ifelse(valor < 2, "a", "b") 
   
 #ifelse também pode operar sobre um vetor
   
   v <- c(-1, 3, -5, 7, 8)
   
   ifelse(v < 0, "negativo", "positivo") 
-  
-  
-  
-  
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
