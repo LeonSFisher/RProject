@@ -10,13 +10,12 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #LAÇO for
 
-#Estruturas de repetição (for)
-#Serve para quando sabemos de antemão quantas vezes precisamos rodar o código
-#FOR armazena na variável cada valor que encontra na estrutura a ser varrida
+#Serve para quando sabemos de antemão quantas vezes precisamos rodar o código. Cada vez que o laço FOR executado, será armazenado na variável
+#declarada dentro dos parênteses cada valor sucessivo que for encontrado na estrutura a ser varrida.
 
-  x = list(4, 7, 99, "gf", "kk", TRUE)
+  lista = list(4, 7, 99, "gf", "kk", TRUE)
   
-  for (valor in x) {
+  for (valor in lista) {
     
     print(valor)
     
@@ -24,12 +23,14 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Uso do BREAK e do NEXT
+  
 #Uso do BREAK dentro do for
-#O BREAK interrompe o laço sempre que é encontrado e o código prossegue
   
-  y = c(-1, 2, 5, 7, 11, 13, 11, 10, 77)
+#O BREAK interrompe o laço sempre que é encontrado e o código prossegue após o laço
   
-  for (valor in y) {
+  vetor = c(-1, 2, 5, 7, 11, 13, 11, 10, 77)
+  
+  for (valor in vetor) {
     
     print(valor)
     
@@ -41,12 +42,15 @@
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Uso do NEXT dentro do for
+  
 #NEXT faz o laço rodar novamente do começo sempre que é encontrado
-#No código abiaxo, sempre que se chega em 11, o while roda de novo do começo e nunca sai de 11 pois nunca se chega na linha de incremento
   
-  y = c(-1, 2, 5, 7, 11, 13, 11, 10, 77, 5, 3, 11)
+#No código abaixo, sempre que se chega num valor maior do que 7, o for pula para o próximo valor. Isso faz com que os valores maiores do que 7 não 
+#sejam impressos.
   
-  for (valor in y) {
+  vetor = c(-1, 2, 5, 7, 11, 13, 11, 10, 77, 5, 3, 11)
+  
+  for (valor in vetor) {
     
     if(valor > 7){
       
