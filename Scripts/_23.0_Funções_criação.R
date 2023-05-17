@@ -8,7 +8,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#FUNÇÕES DE PACOTES
+#PARÂMETROS
 
 #As funções em R possuem parâmetros. Alguns são obrigatórios; outros não.
 
@@ -23,16 +23,16 @@
 #Os parâmetros obrigatórios devem sempre vir antes dos demais
 
 #Na função runif(), n é obrigatório e min e max são parâmetros opcionais cujos valores padrão são 0 e 1 respectivamente.
-
-runif(n, min=0, max=1)
+  
+  runif(n, min=0, max=1)
 
 #Informando outros valores para os parâmetros nomeados, são eles que serão utilizados.
-
-runif(n, min=5, max=10)
+  
+  runif(n, min=5, max=10)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#FUNCIONAMENTO DO R
+#FUNCIONAMENTO DAS FUNÇÕES NO R
 
 #Nomes de objetos
 
@@ -40,18 +40,18 @@ runif(n, min=5, max=10)
 
 #Consultando os nomes de um objeto
 
-names(objeto)
+  names(objeto)
 
 #Atribuindo nomes a objetos
 
-names(objeto) <- c("nome1","nome2")
+  names(objeto) <- c("nome1","nome2")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #CRIAÇÃO DE FUNÇÕES
 
 #A impressão da frase faz parte da função neste exemplo
-#Não énecessário return
+#Não é necessário return
 
   nova = function(string){
     
@@ -108,8 +108,5 @@ names(objeto) <- c("nome1","nome2")
 #Digitando no prompt o nome da função sem os parênteses ou rodando-o sem os parênteses no script,podemos ver o código da função
   
   nova
-  
-  
-  
-  
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
