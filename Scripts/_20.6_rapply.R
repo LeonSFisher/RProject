@@ -10,9 +10,15 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #rapply()  
 
-#O mesmo que lapply(), mas paresenta o resultado de formamais amigável
-#Aplica a função às colunas
+#Utilizada para aplicar recursivamente uma função a uma lista. Como uma lista pode conter elementos de modes diferntes que nem sempre servem de input
+#para a função a ser aplicada, rapply() fornece formas de lidarmos com isso.
 
-rapply(dataset_loja[,-c(1,2, ncol(dataset_loja))], mean, classes = "numeric")
+  lista <- list(a = 1:5, b = 100:110, c = c('a', 'b', 'c'))
+
+  rapply(lista, mean, how = "replace", classes = "integer")
+
+  rapply(lista, mean, how = "list", classes = "integer")
+  
+  rapply(lista, mean, how = "unlist", classes = "integer")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -45,22 +45,3 @@
   is.matrix(nova_matriz)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Tornando sapply() idêntica a lapply()
-  
-#A função sapply() tem um parâmetro chamado 'simplify' que por padrão é TRUe. Caso seja posto como FALSE, a função sapply() não irá mais tentar
-#simplificar o resultado, de modo que ela se tornará idêntica à função sapply().
-  
-  novo_vetor <- sapply(vetor, sqrt, simplify = FALSE)
-  is.list(novo_vetor)  
-  is.vector(novo_vetor)
-  
-  novo_vetor <- sapply(lista, sqrt, simplify = FALSE)
-  is.vector(novo_vetor)
-  is.list(novo_vetor)
-  
-  nova_matriz <- sapply(tabela, sqrt, simplify = FALSE)
-  is.matrix(nova_matriz)
-  is.data.frame(nova_matriz)
-  is.list(nova_matriz)
-  
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
