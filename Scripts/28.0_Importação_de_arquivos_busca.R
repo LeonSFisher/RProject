@@ -16,6 +16,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #A função file.choose() devolve o caminho do arquivo buscado
+
 #Pode ser armazenado numa variável
 
   arquivo <- file.choose()  
@@ -25,16 +26,16 @@
 #BUSCANDO UM ARQUIVO COM file.path() 
 
 #Devolve um caminho de arquivo
+  
 #Cada vírgula delimita um diretório (nunca esquecer a extensão do arquivo)
 
-  caminho <- file.path("E:","GITHUB","RProject","DataSets", "tabela2_1")
+  caminho <- file.path("E:","GITHUB","RProject","DataSets", "tabela2_1.csv")
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Por padrão, o separador é a vírgula, mas podemos definir outro
 
-  caminho <- file.path("E:","GITHUB","RProject","DataSets", "tabela2_1", fsep = "*")
+  caminho <- file.path("E:","GITHUB","RProject","DataSets", "tabela2_1.csv", fsep = "*")
   
-  caminho <- file.path("E:","GITHUB","RProject","DataSets", "tabela2_1", fsep = "/") 
-
+  caminho <- file.path("E:","GITHUB","RProject","DataSets", "tabela2_1.csv", fsep = "/") 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -8,37 +8,40 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#BUSCA DE ARQUIVOS
-
 #USANDO O PACOTE utils
 
   install.packages("utils")
 
   library(utils)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Uma função comum para abrir arquivos no formato .txt
 
   read.table()
   
   xisto <- read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\xisto.txt", sep = ',', header = TRUE)
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Arquivos csv (comma separated value)
-#O parâmetro header determina se a tabela tem ou não um cabeçalho e sep é o separador utilizado
+  
+#O parâmetro 'header' determina se a tabela tem ou não um cabeçalho e 'sep' é o separador utilizado
+  
 #Caso o arquivo esteja na pasta de trabalho:
 
   tabela <- read.csv("tabela2_1.csv")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Senão, devemos dar o endereço completo do arquivo
-#O parâmetro header serve para informar se há cabeçalho
-#O parâmetro sep serve para dar o tipo de separador em torno do qual o arquivo está organizado
+  
 #O parâmetro dec serve para informar qual é o separador decimal. No Brasil, usamos a vírgula
 
   tabela <- read.csv("E:\\GITHUB\\RProject\\DataSets\\tabela2_1.csv", header = TRUE, sep = ";", dec = ",")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#No Brasil, a vírgula é utilizada como ponto decimal e o ponto e vírgula é o separador
-#Usando a função read.csv2() evitamos erros quanto a isso 
+#csv2
+  
+#No Brasil, a vírgula é utilizada como ponto decimal e o ponto e vírgula é o separador. Usando a função read.csv2() evitamos erros quanto a isso 
+  
 #Se já estiver no diretório de trabalho
 
   tabela <- read.csv2("tab2_1.csv")
