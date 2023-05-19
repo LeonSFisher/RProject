@@ -10,11 +10,11 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #EXPRESSÕES
 
-#Várias linguagens de programação utilizam o ponto-e-vírgula como forma de encerramento de comando. No R, isso não é necessário pois o
-#interpretador entende que foi colocado um comando por linha. Caso se queira colocar duas ou mais expressões numa mesma linha, o uso
-#do ponto-e-vírgula vem a calhar.
+#Várias linguagens de programação utilizam o ponto-e-vírgula como forma de encerramento de comando. No R, isso não é necessário pois o interpretador
+#entende que foi colocado um comando por linha. desse modo, caso se queira colocar duas ou mais expressões numa mesma linha, o uso do ponto-e-vírgula 
+#se torna obrigatório.
 
-#Usualmente, as expressões são colocadas em sequência da sequinte forma:
+#Usualmente, noutras linguagens de programação, as expressões são colocadas em sequência da sequinte forma:
   
   vetor_1 <- c(2, 3, 0); 
   
