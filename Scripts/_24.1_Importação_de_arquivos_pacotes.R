@@ -17,10 +17,18 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Uma função comum para abrir arquivos no formato .txt
 
+#Utilizamos o parâmetro 'sep' para definir o que no arquivo identifica uma nova coluna.
+
+#O parâmetro 'header' informa que a primeira linha é o cabeçalho da tabela
+
   read.table()
   
-  xisto <- read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\xisto.txt", sep = ',', header = TRUE)
+  read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\xisto.txt", sep = ',', header = TRUE)
+  
+#
 
+  z <- read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_beta.txt", sep = ',', header = TRUE)
+  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Arquivos csv (comma separated value)
   

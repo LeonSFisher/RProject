@@ -97,7 +97,7 @@
   
 #Com o valor do parâmetro include.dirs sendo TRUE, vemos o nome do subdiretório listado antes do nome dos arquivos que ele contém.
   
-  list.files("E:\\GITHUB\\RProject\\Subdiretorios\\dir6", recursive = TRUE, include.dirs = TRUE)
+  list.files("E:\\GITHUB\\RProject\\Subdiretorios", recursive = TRUE, include.dirs = TRUE)
   
 #Com o valor do parâmetro include.dirs sendo FALSE, apenas os nomes dos arquivos são listados
   
