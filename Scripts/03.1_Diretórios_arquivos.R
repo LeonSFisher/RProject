@@ -21,16 +21,16 @@
 
 #Usamos a função com o diretório como uma string de carcteres
 
-  list.files("E:\\GITHUB\\RProject\\Subdiretorios")
+  list.files("E:\\GITHUB\\RProject")
 
 #Explicitanedo o parâmetro 'path' que identifica o caminho
 
-  list.files(path = "E:\\GITHUB\\RProject\\Subdiretorios")
+  list.files(path = "E:\\GITHUB\\RProject")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Usando uma variável para armazenar o caminho do arquivo
   
-  caminho <- "E:\\GITHUB\\RProject\\Subdiretorios"
+  caminho <- "E:\\GITHUB\\RProject"
   
 #Utilizando a variável na função
   
@@ -43,7 +43,8 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Definindo se mostra os arquivos ocultos ou apenas os visíveis
   
-#Por padrão, o valor do parâmetro all.files é FALSE (não mostra os arquivos ocultos)
+#Os nomes de arquivo que começam com o ponto '.' são tomados como ocultos e não são mostrados numa pesquisa de arquivos usual. Para exibir na lista
+#esses arquivos, devemos utilizar o par6ametro 'all.files'. Por padrão, o valor do parâmetro all.files é FALSE (não mostra os arquivos ocultos).
 
   list.files(path = caminho, all.files = FALSE)
   
@@ -79,10 +80,8 @@
 #----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #Lista recursiva
   
-#Listagem recursiva trata-se de um procedimento para exibir todos os arquivos e arquivos de subdiretórios até os arquivos ordinários.
-#Os arquivos ordinários são aqueles que estão em diretórios que já não possuem subdiretórios dentro de si.
-  
-#A verificação recursiva ocorre com o uso do parâmetro 'recursive'.
+#Listagem recursiva trata-se de um procedimento para exibir todos os arquivos e arquivos de subdiretórios. A verificação recursiva ocorre com o uso 
+#do parâmetro 'recursive'.
   
 #Se FALSE (valor padrão), exibe apenas os arquivos e subdiretórios imediatos do diretório atual
   
@@ -92,16 +91,16 @@
   
   list.files(caminho, recursive = TRUE)
   
-#No caso de querermos listas recursivas, podemos decidir se queremos exibir os nomes dos subdiretórios isoladamente
-#Fazemos isso com a ajuda do parâmetro include.dirs que só faz sentido para o caso de 'recursive = TRUE'. Se FALSE não fará diferença.
+#No caso de querermos listas recursivas, podemos decidir se queremos exibir os nomes dos subdiretórios isoladamente. Fazemos isso com a ajuda do
+#parâmetro 'include.dirs' que só faz sentido para o caso de 'recursive = TRUE'. Se FALSE não fará diferença.
   
 #Com o valor do parâmetro include.dirs sendo TRUE, vemos o nome do subdiretório listado antes do nome dos arquivos que ele contém.
   
-  list.files("E:\\GITHUB\\RProject\\Subdiretorios", recursive = TRUE, include.dirs = TRUE)
+  list.files("E:\\GITHUB\\RProject", recursive = TRUE, include.dirs = TRUE)
   
 #Com o valor do parâmetro include.dirs sendo FALSE, apenas os nomes dos arquivos são listados
   
-  list.files("E:\\GITHUB\\RProject\\Subdiretorios\\dir6", recursive = TRUE, include.dirs = FALSE)
+  list.files("E:\\GITHUB\\RProject", recursive = TRUE, include.dirs = FALSE)
   
 #A opção de exibi-los ou não é apenas para listas recursivas. Em listagem não-recurssiva, os subdiretórios são sempre listados. 
   
