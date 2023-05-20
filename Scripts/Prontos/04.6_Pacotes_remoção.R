@@ -50,6 +50,6 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Podemos também informar o diretório de onde remover o pacote  
   
-  remove.packages(c("ggplot2", "dplyr"), "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
+  remove.packages(c("ggplot2", "dplyr"), "E:\\GITHUB\\RProject\\Biblioteca\\dir2")
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------

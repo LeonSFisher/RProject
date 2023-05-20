@@ -48,7 +48,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo a biblioteca em que buscar
   
-  help.search('random', lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
+  help.search('random', lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Aumentando os outputs de informação no console

@@ -17,7 +17,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Podemos também informar em que lugar se encontra o pacote cuja versão queremos descobrir
   
-  packageVersion("dplyr", lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
+  packageVersion("dplyr", lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,7 +32,7 @@
 
 #Exibe a versão instalada, a versão do R e a versão no repositório a instalar em caso de atualização
 
-  old.packages(lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
+  old.packages(lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo de onde devem ser verificadas as novas versões
@@ -81,7 +81,7 @@
 
 #Se houver mais de um pacote no diretório, todos serão atualizados. Aqui não se especifica o pacote.
 
-  update.packages(lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
+  update.packages(lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definir de onde baixar a atualização
@@ -118,6 +118,6 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Podemos definir de qual pasta de instalação comparar
   
-  new.packages(lib.loc = "E:\\GITHUB\\RProject\\Subdiretorios\\dir3")
+  new.packages(lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
