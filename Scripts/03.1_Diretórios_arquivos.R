@@ -104,9 +104,9 @@
   
 #A opção de exibi-los ou não é apenas para listas recursivas. Em listagem não-recurssiva, os subdiretórios são sempre listados. 
   
-  list.files("E:\\GITHUB\\RProject\\Subdiretorios\\dir6", recursive = FALSE, include.dirs = TRUE)
+  list.files("E:\\GITHUB\\RProject", recursive = FALSE, include.dirs = TRUE)
   
-  list.files("E:\\GITHUB\\RProject\\Subdiretorios\\dir6", recursive = FALSE, include.dirs = FALSE)
+  list.files("E:\\GITHUB\\RProject", recursive = FALSE, include.dirs = FALSE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Listando arquivos através de expressões regulares
@@ -115,7 +115,7 @@
   
 #Definindo um diretório
   
-  local <- "E:\\GITHUB\\RProject\\Subdiretorios\\dir5"
+  local <- "E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts"
   
 #Abaixo, filtramos os arquivos a exibir por formato: .csv ou.txt
   
@@ -127,21 +127,21 @@
 
 #Por padrão é FALSE, o que significa que a busca será case-sensitive. Buscará exatamente da forma como digitado.
   
-  list.files(local, pattern = "arquivo")
+  list.files(local, pattern = "vend")
   
 #Podemos também explicitar o parâmetro:
   
 #Se TRUE, tratará minúsculas e maiúsculas como iguais
   
-  list.files(local, pattern = "csv_", ignore.case = TRUE)
+  list.files(local, pattern = "ven", ignore.case = TRUE)
   
-  list.files(local, pattern = "CSV_", ignore.case = TRUE)
+  list.files(local, pattern = "VEN", ignore.case = TRUE)
   
 #Se FALSE, tratará minúsculas e maiúsculas como diferentes
   
-  list.files(local, pattern = "csv_", ignore.case = FALSE)
+  list.files(local, pattern = "ven", ignore.case = FALSE)
   
-  list.files(local, pattern = "CSV_", ignore.case = FALSE)
+  list.files(local, pattern = "VEN", ignore.case = FALSE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Listando arquivos de vários diretórios distintos
