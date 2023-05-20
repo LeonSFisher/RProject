@@ -17,7 +17,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Podemos também informar em que lugar se encontra o pacote cuja versão queremos descobrir
   
-  packageVersion("dplyr", lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
+  packageVersion("MASS", lib.loc = "C:\\Program Files\\R\\R-4.2.3\\library")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,7 +32,7 @@
 
 #Exibe a versão instalada, a versão do R e a versão no repositório a instalar em caso de atualização
 
-  old.packages(lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
+  old.packages(lib.loc = "C:\\Program Files\\R\\R-4.2.3\\library")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definindo de onde devem ser verificadas as novas versões
@@ -81,7 +81,7 @@
 
 #Se houver mais de um pacote no diretório, todos serão atualizados. Aqui não se especifica o pacote.
 
-  update.packages(lib.loc = "E:\\GITHUB\\RProject\\Biblioteca\\dir3")
+  update.packages(lib.loc = "C:\\Program Files\\R\\R-4.2.3\\library")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Definir de onde baixar a atualização
