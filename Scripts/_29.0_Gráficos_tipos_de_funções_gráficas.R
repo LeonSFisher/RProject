@@ -128,3 +128,8 @@
 #Necessário instalar as ferramentas do sistema XGobi em http://www.research.att.com/areas/stat/xgobi/.
 #Uma vez instaladas, elas podem ser acessadas diretamente do R  
   
+  par()
+  
+  points()
+  
+  tiff()

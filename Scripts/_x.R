@@ -22,3 +22,10 @@ sweep()
 system.time()
 set.seed()
 unique()
+trimws()
+
+#tidyr
+
+separate()
+unique()
+pivot_longer()
