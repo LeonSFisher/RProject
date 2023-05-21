@@ -147,8 +147,6 @@ cut(mtcars$mpg, seq(10, 35, 5))
 intervalo <- seq(10, 35, 5)
 cut(mtcars$mpg, intervalo)
 
-
-
 #média
 mean()
 
@@ -169,7 +167,5 @@ summary(subset(mtcars, mpg > 3))
 
 fivenum()
 #probabilidades
-
-
 
 ?replicate

@@ -103,4 +103,3 @@
   
 #A presença de NA's e NaN's não alteram o mode das estruturas homog^nas
   
-  
