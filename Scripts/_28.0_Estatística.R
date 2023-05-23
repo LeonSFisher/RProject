@@ -169,3 +169,7 @@ fivenum()
 #probabilidades
 
 ?replicate
+
+var()
+
+quantile()
