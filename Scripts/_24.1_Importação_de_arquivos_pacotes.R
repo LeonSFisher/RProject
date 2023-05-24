@@ -15,31 +15,18 @@
   library(utils)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Uma função comum para abrir arquivos no formato .txt
+#Arquivos no formato .txt
 
 #Utilizamos o parâmetro 'sep' para definir o que no arquivo identifica uma nova coluna.
 
 #O parâmetro 'header' informa que a primeira linha é o cabeçalho da tabela
-
-  read.table()
   
-  read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\xisto.txt", sep = ',', header = TRUE)
+  read.table("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\tabela_decimais.txt", sep = '\t', dec = ",", header = FALSE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Arquivos csv (comma separated value)
-  
-#O parâmetro 'header' determina se a tabela tem ou não um cabeçalho e 'sep' é o separador utilizado
-  
-#Caso o arquivo esteja na pasta de trabalho:
 
-  tabela <- read.csv("tabela2_1.csv")
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Senão, devemos dar o endereço completo do arquivo
-  
-#O parâmetro dec serve para informar qual é o separador decimal. No Brasil, usamos a vírgula
-
-  tabela <- read.csv("E:\\GITHUB\\RProject\\DataSets\\tabela2_1.csv", header = TRUE, sep = ";", dec = ",")
+  read.csv("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\vendas_video_games.csv")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #csv2
@@ -48,11 +35,7 @@
   
 #Se já estiver no diretório de trabalho
 
-  tabela <- read.csv2("tab2_1.csv")
-
-#Senão, devemos dar o endereço
-
-  tabela <- read.csv2("E:\\GITHUB\\RProject\\DataSets\\tabela2_1.csv", header = TRUE)
+  read.csv2("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\tabela_decimais.txt", sep = "\t")
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -62,28 +45,12 @@
   
   library(readr)
 
-#Com esse pacote podemos abrir arquivos com qualquer tipo de separador
-#Caso o arquivo esteja na pasta de trabalho
+#Com a função read_delim podemos abrir arquivos com qualquer tipo de separador
 
-  tabela <- read_delim("tabela2_1.csv", delim = ";")
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------- 
-#Senão, devemos dar o endereço completo do arquiv  
-
-  tabela <- read_delim("E:\\GITHUB\\RProject\\DataSets\\tabela2_1.csv", delim = ";")   
+  read_delim("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\tabela_decimais.txt", delim = "\t")   
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Importar arquivo .txt  
-#Delimitados por ';' e suas 4 primeiras linhas
 
-  tabela <- read_delim("tabela2_1.txt", delim = ";", n_max = 4)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
-#Ou se estiverem noutra pasta
-
-  tabela <- read_delim("E:\\GITHUB\\RProject\\DataSets\\tabela2_1.csv", delim = ";", n_max = 4)
-
-  
   
   read_fwf()
   
