@@ -25,10 +25,6 @@
   
   read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\xisto.txt", sep = ',', header = TRUE)
   
-#
-
-  z <- read.table("E:\\GITHUB\\RProject\\Subdiretorios\\dir5\\arquivo_texto_beta.txt", sep = ',', header = TRUE)
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Arquivos csv (comma separated value)
   
