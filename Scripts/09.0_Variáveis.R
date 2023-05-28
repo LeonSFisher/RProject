@@ -11,10 +11,14 @@
 #IDENTIFICADORES
 
 #São os nomes que atribuiremos às variáveis
-#Podem ser uma combinação de letras, números, pontos (.) e underscores (_)
-#Deve começar com uma letra ou com o ponto
-#Se começado com o ponto, não deve ser seguido de um número
-#Palavras reservadas não podem ser utilizadas como identificadores
+
+#Podem ser uma combinação de letras, números, pontos (.) e underscores (_), mas não são permitidos, vírgula, ponto-e-vírgula, dois pontos nem espaços.
+#Deve começar com uma letra ou com o ponto, se começado com o ponto, não deve ser seguido de um número.
+
+#Palavras reservadas não podem ser utilizadas como identificadores.
+
+#Para exibirmos os valores das variáveis, podemos utilizar dois métodos: 1-Digitar o nome da variável, o que é chamado de autoimpressão, e 2-utilizar
+#a função print() com a variável no argumento da função.
 
 #Identificadores válidos
 

@@ -1,0 +1,71 @@
+<!-- R Commander Markdown Template -->
+
+Nada nessa merda
+=======================
+
+### Leandro Luz
+
+### `r as.character(Sys.Date())`
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, out.width=750, fig.height=8, fig.width=8)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+```{r}
+library(ISwR)
+```
+
+```{r}
+data(juul2, package="ISwR")
+```
+
+```{r}
+juul2 <- within(juul2, {
+  sex_mod <- Recode(sex, '1 = "masculino"; 2 = "feminino"', as.factor=TRUE, 
+  to.value="=", interval=":", separator=";")
+})
+```
+
+```{r}
+juul2 <- within(juul2, {
+  tanner_mod <- Recode(tanner, 
+  '1 = "Tanner I"; 2 = "Tanner II"; 3 = "Tanner III"; 4 = "Tanner IV"; 5 = "Tanner V"',
+   as.factor=TRUE, to.value="=", interval=":", separator=";")
+})
+```
+
+
+### Boxplot: igf1 ~ tanner_mod
+```{r}
+Boxplot(igf1 ~ tanner_mod, data=juul2, id=list(method="y"))
+```
+
+
+### Boxplot: igf1 ~ tanner_mod
+```{r}
+Boxplot(igf1 ~ tanner_mod, data=juul2, id=list(method="none"))
+```
+
+
+### Histogram: igf1
+```{r}
+with(juul2, Hist(igf1, scale="percent", breaks="Sturges", col="darkgray"))
+```
+
+```{r}
+juul2$IMC <- with(juul2, weight/(height)^2)
+```
+
+
+### Gráfico de Dispersão: IMC~age | sex_mod
+```{r}
+scatterplot(IMC~age | sex_mod, regLine=TRUE, smooth=FALSE, boxplots=FALSE, 
+  xlab="Idade", ylab="IMC", main="Idade vs IMC", by.groups=TRUE, 
+  legend=list(coords="bottomleft"), data=juul2)
+```
+
+
