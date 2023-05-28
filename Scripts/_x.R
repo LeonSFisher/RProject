@@ -22,5 +22,5 @@ trimws()
 #tidyr
 
 separate()
-unique()
+unique() #elementos distintos num objeto
 pivot_longer()

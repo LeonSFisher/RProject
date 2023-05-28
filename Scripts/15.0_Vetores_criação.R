@@ -66,6 +66,15 @@
   vetor <- complex()
   
   vetor <- complex(length = 10)
+  
+#O tipode dado também pode vir interno à função vector()
+  
+  vector("character", length = 10)
+  vector("logical", length = 10)
+  vector("double", length = 10)
+  vector("integer", length = 10)
+  vector("complex", length = 10)
+  vector("raw", length = 10)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Criação de vetores por inputs sucessivos no teclado

@@ -16,7 +16,7 @@
 
 #O mode de um objeto pode ser dos tipos (classes atômicas): character, numeric, logical, complex.
 
-#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado. Pode ser verificado com a função type()
+#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado. Pode ser verificado com a função typeof()
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,7 +30,7 @@
 
   mode("casa")
   
-  ?storage.mode("casa")
+  storage.mode("casa")
   
   typeof("casa")
   
