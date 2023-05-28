@@ -18,7 +18,9 @@
 #Palavras reservadas não podem ser utilizadas como identificadores.
 
 #Para exibirmos os valores das variáveis, podemos utilizar dois métodos: 1-Digitar o nome da variável, o que é chamado de autoimpressão, e 2-utilizar
-#a função print() com a variável no argumento da função.
+#a função print() com a variável no argumento da função. No modo interativo,geralmente não utilizamos a função print() porque é mais fácil utilizar
+#a autoimpressão. No entanto, ao criarmos scripts, funções e códigos mais longos, utilizaremos, necessariamente, a função print() porque o recurso
+#da autoimpressão não funciona nestes casos.
 
 #Identificadores válidos
 
