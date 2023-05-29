@@ -16,18 +16,18 @@
 
 #Usualmente, noutras linguagens de programação, as expressões são colocadas em sequência da sequinte forma:
   
-  vetor_1 <- c(2, 3, 0); 
+  2-3*5; 
   
-  vetor_2 <- c(-2, -3, 0); 
+  7-4*3; 
   
 #Como o interpretador entende um comando por linha, o ponto-e-vírgula no final de cada expressão é facultativo e podemos declarar assim:
   
-  vetor_1 <- c(2, 3, 0)
+  2-3*5 
   
-  vetor_2 <- c(-2, -3, 0)
+  7-4*3
 
 #Mas podem ser úteis para expressar duas expressões numa mesma linha:  
 
-  vetor_1 <- c(2, 3, 0); vetor_2 <- c(-2, -3, 0)
+  2-3*5; 7-4*3
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
