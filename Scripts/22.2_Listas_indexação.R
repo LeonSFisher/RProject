@@ -37,6 +37,14 @@
 
   lista2[[6]] 
 
+#O terceiro e segundo componentes com []
+  
+  lista2[c(2, 3)]
+  
+#O segundo elemento do terceiro componente da lista com [[]] 
+
+  lista2[[c(3, 2)]]
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Indexando estruturas internas da lista
   

@@ -24,3 +24,12 @@ trimws()
 separate()
 unique() #elementos distintos num objeto
 pivot_longer()
+
+rep() #replicar vetor, replicar sequência, replicar elementos respectivamente
+
+#dataframe é uma lista de vetores de mesmo tamanho
+
+#Criando listas com a funç~~ao vector
+
+  vector("list", length = 3)
+  
