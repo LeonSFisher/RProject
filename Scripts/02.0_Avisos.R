@@ -8,6 +8,8 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #AVISOS
 
 #Quando recebermos uma mensagem do R informando que nós temos avisos 'warnings' após alguma operação, podemos verificar quais são.
@@ -21,13 +23,6 @@
 #Exemplo de aviso simples. A variável valor_2 é criada apesar do aviso, muito embora seu valor não seja o esperado número complexo 1i.
 
   valor_2 <- sqrt(-1)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Como outro exemplo, criaremos uma matriz e extrairemos a raiz quadrada de todas as entradas dessa matriz obtendo erros nos valores negativos.
-
-  matriz <- matrix(c(-1, 0, 2, 4, 5, -9, 5, 5, -2), nrow = 3)
-  
-  sqrt(matriz)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Alguns avisos aparecem. Os erros produzidos foram NaN's nos locais em que não se pôde calcular a raiz quadrada (números negativos).
