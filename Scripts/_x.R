@@ -32,4 +32,3 @@ rep() #replicar vetor, replicar sequência, replicar elementos respectivamente
 #Criando listas com a funç~~ao vector
 
 vector("list", length = 3)
-  
