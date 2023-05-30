@@ -56,3 +56,32 @@
 #Não esquecer de salva o workspace para caso de precisar continuar o trabalho depois.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Nomear funções com camel case
+
+#Funções nomeadas com camel case são melhores para claramente distinguir o que é uma função e o que é uma variável comum.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Evitar usar a função attach()
+
+#Quando utilizada pode gerar muitas confusões. O ideal é sempre buscar o pacote quando ele for necessário.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Evitar atribuições da esquerda para a direita
+
+#É interessante padronizar a forma de atribuir valores a objetos e melhor ainda usando a opção que seja a mais natural que é a atribuição de valores
+#a objetos da direita para a esquerda.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Gerar retornos explícitos
+
+#Na criação de funções, R pode retornar os valores calculados automaticamente dentro das funções. Esse valores são aqueles que estiverem na última
+#linha do escopo da função. No entanto, é auspicioso retornar explicitamnete o valor que se deseja retornar utilizando a função return().
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indicar a origem das funções
+
+#Apesar de ser um pouco menos eficiente, comvém indicar o pacote de onde vem a função com '::' principalmente quando utilizamos muitos pacotes. Isto
+#nos permite identificar de que pacote é a função, além de que evita conflitos pois podemos ter funções de mesmo nome em pacotes distintos, mas não
+#funções com mesmo nome dentro de um mesmo pacote.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
