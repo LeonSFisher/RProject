@@ -56,7 +56,7 @@
 #Não esquecer de salva o workspace para caso de precisar continuar o trabalho depois.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Nomear funções com camel case
+#Nomear funções com camel-case
 
 #Funções nomeadas com camel case são melhores para claramente distinguir o que é uma função e o que é uma variável comum.
 
