@@ -35,12 +35,19 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Com a função read_delim podemos abrir arquivos com qualquer tipo de separador
   
-  read_delim("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\tabela_decimais.txt", delim = "\t")   
-  
+  read_delim("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\frutas.txt", delim = "@")
+
+#Podemos definir se há nomes de colunas ou não
+
+  read_delim("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\frutas.txt", delim = "@", col_names = FALSE) 
+
+  read_delim("E:\\GITHUB\\RProject\\Arquivos\\Arquivos_usados_scripts\\frutas.txt", delim = "@", col_names = TRUE) 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
   
   
-  read_fwf()
+  read_fwf('caminho/do/arquivo/arquivo_posicional.txt', col_positions = fwf_widths(c(5, 2, 10), c("col1", "col2", "col3")))
 
-
-
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
