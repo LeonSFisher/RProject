@@ -14,12 +14,16 @@
 
 #Gratuito (Licença Pública Geral (GNU) da Free Software Foundation).
 
+#Não énecessário pagar nenhum tipo de royalty para utilizar o R e nem comprar uma licença.
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Grande comunidade auxiliando o aprendizado de novos usuários.
 
-#Para obter informações importantes sobre o R, sistema operacional etc., use o comando:
+#Ao buscar informações com novos usuários na internet é bom informar dados elementares sobre o seu problema, entre eles, um exemplo de código que 
+#seja reproduzível, versão do R e do RStudio, sitema operacional e sua versão etc. Para obter informações importantes sobre o R, sistema operacional
+#e outros aspectos, use o comando:
 
-R.version
+  R.version
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Facilidade em se encontrar material escrito ou digital.

@@ -34,8 +34,8 @@
 #Desde então, o R vem ganhando cada vez mais adeptos em todo o mundo.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Para citar a utilização do R em trabalhos publicados e dar o reconhecimento à equipe de desenvolvimento, podemos encontrar a forma de citar no R com
-#a ajuda do seguinte comando:
+#Para citar a utilização do R em trabalhos publicados e dar o reconhecimento à equipe de desenvolvimento, podemos encontrar a forma de citar o core 
+#team no R com a ajuda do seguinte comando:
 
   citation()
 
