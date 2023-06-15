@@ -13,7 +13,7 @@
 #EXPRESSÕES
 
 #Várias linguagens de programação utilizam o ponto-e-vírgula como forma de encerramento de comando. No R, isso não é necessário pois o interpretador
-#entende que foi colocado um comando por linha. desse modo, caso se queira colocar duas ou mais expressões numa mesma linha, o uso do ponto-e-vírgula 
+#entende que foi colocado um comando por linha. Desse modo, caso se queira colocar duas ou mais expressões numa mesma linha, o uso do ponto-e-vírgula 
 #se torna obrigatório.
 
 #Usualmente, noutras linguagens de programação, as expressões são colocadas em sequência da sequinte forma:
