@@ -12,13 +12,15 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OBJETOS EM R E CLASSES ATÔMICAS
 
-#Em R tudo são objetos. Esses objetos podem ser de diversas classes que determinam a forma de armazenamento interna desses objetos.
+#Em R tudo são objetos. Esses objetos podem ser de diversas classes que determinam a forma de armazenamento interna desses objetos, bem como suas
+#propriedades, atributos, formas com que serão impressos etc. 
 
-#A forma básica de armazenamento interno de um objeto é o seu 'mode' que pode ser verificado com a função mode() ou com storage.mode()
+#A forma básica de armazenamento interno de um objeto é o seu 'mode' que pode ser verificado com a função mode(). O mode de um objeto pode ser dos 
+#seguintes tipos (classes atômicas): character, numeric, logical, complex.
 
-#O mode de um objeto pode ser dos tipos (classes atômicas): character, numeric, logical, complex.
-
-#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado. Pode ser verificado com a função typeof()
+#O tipo (type) de armazenamento de um objeto é a forma como esse objeto é representado. Pode ser verificado com a função typeof(). Para o mode
+#'numeric' nós temos dois 'types', o integer, que representa os inteiros, e o 'double' que repesenta os números em ponto flutuante. Para os outros
+#modes de classes atômicas, o type coincidirá com o mode pois eles possuem apenas um type para aquele mode.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,7 +28,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO CHARACTER
 
-#O mode character só temum type que é o próprio character
+#O mode character só tem um type que é o próprio character. Ele sempre é representado entre aspas e corresponde a frases, palavras, símbolos ou 
+#simples letras.
   
 #Representando caracteres com aspas duplas
 
@@ -57,7 +60,7 @@
  
 #O mode numeric possui dois types: integer (números inteiros) e double (ponto flutuante)
   
-#Por padrão, valores numéricos são armazenados com precisão dupla (double) 
+#Por padrão, caso não especificarmos que o número deve ser representado como inteiro, valores numéricos serão armazenados com precisão dupla (double) 
 
   5
   
@@ -79,7 +82,7 @@
   typeof(5L)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Números com o ponto decimal
+#Números com o ponto decimal sempre serão double
   
   4.4
   
@@ -95,11 +98,8 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #TIPO LOGICAL
   
-#O mode logical só possui o type logical
-  
-#Os tipos de dados logical servem para avaliar valores de afirmações lógicas
-  
-#Podemos representá-los pelas palavras-chave TRUE e FALSE
+#O mode logical só possui o type logical. Os tipos de dados logical servem para avaliar valores de afirmações lógicas sobre expressões e valores.
+#Podemos representá-los pelas palavras-chave TRUE e FALSE.
   
 #Para um valor verdadeiro, usamos TRUE
   
@@ -129,60 +129,6 @@
   
   F   #Equivale a FALSE
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Cuidados com a forma abreviada
-  
-#Recomenda-se evitar o uso das formas abreviadas, pois 'T' e 'F' podem ser utilizadas como variáveis. 
-  
-#Por exemplo, podemos fazer o seguinte:
-  
-  T <- 7
-  
-  F <- 0
-  
-#Assim, o vetor abaixo não equivale a c(TRUE, TRUE, TRUE, FALSE, FALSE), mas a c(7, 7, 7, 0, 0)
-  
-  c(T, T, T, F, F)  
-  
-#Já TRUE e FALSE são palavras reservadas e R não permitirá atribuições a elas.
-  
-#Por exemplo, as atribuições abaixo não são permitidas
-  
-  TRUE <- 7
-  
-  FALSE <- 0
-  
-#Portanto, o vetor abaixo produz o resultado desejado
-  
-  c(TRUE, TRUE, TRUE, FALSE, FALSE)
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Operações com o tipo lógico 
-  
-#Do ponto de vista numérico, TRUE representa 1 e FALSE representa 0
-  
-#Isto significa que podemos fazer cálculos com eles. Segue alguns exemplos:
-  
-#Operações aritméticas simples
-  
-  TRUE + FALSE
-  
-  TRUE + TRUE + TRUE
-  
-  TRUE/2
-  
-  TRUE - 5
-  
-#Comparações lógicas com os valores lógicos
-  
-  TRUE < FALSE
-  
-  FALSE < TRUE
-
-#Podemos até mesmo usá-los em argumentos de funções
-  
-  cos((TRUE + TRUE + TRUE)^(TRUE-FALSE))
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

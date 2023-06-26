@@ -218,4 +218,31 @@
     
   `numero bom` * `numero ruim`
   
-#-----------------------------------------------------------------------------------------------------------------------------------------------------  
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  #-----------------------------------------------------------------------------------------------------------------------------------------------------
+  #Cuidados com a forma abreviada
+  
+  #Recomenda-se evitar o uso das formas abreviadas, pois 'T' e 'F' podem ser utilizadas como variáveis. 
+  
+  #Por exemplo, podemos fazer o seguinte:
+  
+  T <- 7
+  
+  F <- 0
+  
+  #Assim, o vetor abaixo não equivale a c(TRUE, TRUE, TRUE, FALSE, FALSE), mas a c(7, 7, 7, 0, 0)
+  
+  c(T, T, T, F, F)  
+  
+  #Já TRUE e FALSE são palavras reservadas e R não permitirá atribuições a elas.
+  
+  #Por exemplo, as atribuições abaixo não são permitidas
+  
+  TRUE <- 7
+  
+  FALSE <- 0
+  
+  #Portanto, o vetor abaixo produz o resultado desejado
+  
+  c(TRUE, TRUE, TRUE, FALSE, FALSE)
