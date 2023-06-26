@@ -14,6 +14,11 @@
 
 #Impressão de dados
 
+#Para exibirmos os valores das variáveis, podemos utilizar dois métodos: 1-Digitar o nome da variável, o que é chamado de autoimpressão, e 2-utilizar
+#a função print() com a variável no argumento da função. No modo interativo, que é a impressão através do console, geralmente não utilizamos a função 
+#print() porque é mais fácil utilizar a autoimpressão. No entanto, ao criarmos scripts, funções e códigos mais longos, utilizaremos, necessariamente, 
+#a função print() porque o recurso da autoimpressão não funciona nestes casos.
+
 #Imprimindo constantes
 
 #Basta usar a função print() com a constante
@@ -145,3 +150,19 @@
   cat("O valor é:", 155, ", bocó!", file = "E:\\GITHUB\\RProject\\Arquivos\\Arquivos_criados_scripts\\frase1.txt", append = TRUE)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  
+  #-----------------------------------------------------------------------------------------------------------------------------------------------------
+  #Atribuir uma variável e já imprimir
+  
+  (x <- 15)
+  
+  #Que equivale a duas declarações separadas
+  
+  x <- 15
+  
+  print(x)
+  
+  #Ou equivalente a usar a forma diretamente no argumento da função
+  
+  print(x <- 15)
