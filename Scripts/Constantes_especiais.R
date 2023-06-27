@@ -13,6 +13,7 @@
 #ALGUMAS CONSTANTES ESPECIAIS
 
 #Valor nulo (NULL)
+
 #É um valor não inicializado como uma lista vazia, por exemplo (Objeto nulo)
 
   NULL

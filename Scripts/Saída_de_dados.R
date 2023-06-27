@@ -14,10 +14,11 @@
 
 #Impressão de dados
 
-#Para exibirmos os valores das variáveis, podemos utilizar dois métodos: 1-Digitar o nome da variável, o que é chamado de autoimpressão, e 2-utilizar
-#a função print() com a variável no argumento da função. No modo interativo, que é a impressão através do console, geralmente não utilizamos a função 
-#print() porque é mais fácil utilizar a autoimpressão. No entanto, ao criarmos scripts, funções e códigos mais longos, utilizaremos, necessariamente, 
-#a função print() porque o recurso da autoimpressão não funciona nestes casos.
+#Para exibirmos os valores das variáveis, podemos utilizar dois métodos: 1-Digitar o nome da variável no console pressionar ENTER (ou dar um 'run' no 
+#nome da variável no script), o que é chamado de autoimpressão, e 2-utilizar a função print() com a variável no argumento da função desta função. No 
+#modo interativo, que é a impressão através do console, geralmente não utilizamos a função print() porque é mais fácil utilizar a autoimpressão. No 
+#entanto, ao criarmos scripts, funções e códigos mais longos, utilizaremos, necessariamente, a função print() porque o recurso da autoimpressão não 
+#funciona nestes casos.
 
 #Imprimindo constantes
 

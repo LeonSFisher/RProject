@@ -10,7 +10,9 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#CRIAÇÃO DE SEQUÊNCIA COM O OPERADOR ':'
+#CRIAÇÃO DE SEQUÊNCIAS
+
+#Podemos criar sequências numéricas em R utilizando o operador ':' e informando o valor inicial e final
 
 #Sequência de valores crescentes
 
@@ -57,22 +59,8 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #criando uma sequência com um número de valores fixos
   
-#Com o parâmtero 'length.out' definimos o número de valores equidistantes que queremos entre os extremos definidos
+#Com o parâmtero 'length.out' definimos o número de valores equidistantes que queremos entre os extremos definidos (inclusive)
   
   seq(1, 30, length.out = 10) 
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Criando uama sequência do mesmo tamanho que um outro objeto
-  
-#Utilizando o parâmetro 'along.with' podemos criar, entre os extremos definidos, tantos valores quanto a quantidade de valores do objeto informado
-  
-  vetor <- c(2, 3, 5, -1)
-  
-  seq(1, 30, along.with = vetor) 
-  
-#Num dataframe, a dimensão referida aqui é a quantidade de colunas que ele possui. Assim, sabendo que o dataframe mtcars possui 11 colunas, podemos
-#obter 11 números numa sequência que corresponda a cada posição respectiva de cada coluna.
-  
-  seq(1, 30, along.with = mtcars) 
-  
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
