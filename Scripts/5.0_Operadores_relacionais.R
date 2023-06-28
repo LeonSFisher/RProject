@@ -12,19 +12,17 @@
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #OPERADORES RELACIONAIS USUAIS
 
-#Retornam um valor lógico TRUE ou FALSE conforme a expressão
+#Retornam um valor lógico TRUE ou FALSE conforme a expressão for avaliada como verdadeira ou falsa, respectivamente.
 
-#Igualdade
+#Igualdade entre números
 
   1 == 2
 
-#Números(integer) podem ser comparados com conteúdos de uma string numérica
-
-#Inteiro e string
+#Igualdade entre números inteiros e string numérica
 
   5L == "5"
   
-#Double e string
+#Igualdade entre números em ponto flutuante e string numérica
   
   5.0 == "5"
 
@@ -58,7 +56,8 @@
   1 >= 1
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Comparações lógicas com os valores lógicos
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#COMPARAÇÕES ENTRE VALORES LÓGICOS
   
 #Como os valores lógicos representam números, podemos efetuar operações de comparação entre eles.
   
@@ -67,12 +66,14 @@
   FALSE < TRUE
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Para comparar podemos usar a função identical()
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#COMPARAÇÃO COM A FUNÇÃO IDENTICAL
   
   identical(5, 7)
   
   identical(0, 0)
-  
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #O parâmetro num.eq define se os números devem ser comparados usando == (TRUE) ou bit-a-bit (FALSE)
   
 #Usando o operador de curto-circuito  
@@ -80,7 +81,8 @@
   identical(5, 7, num.eq = FALSE)
   
   identical(-0, +0, num.eq = FALSE)
-  
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Usando o operador bit-a-bit
   
   identical(5, 7, num.eq = TRUE)  

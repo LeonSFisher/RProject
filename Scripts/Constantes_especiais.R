@@ -14,32 +14,44 @@
 
 #Valor nulo (NULL)
 
-#É um valor não inicializado como uma lista vazia, por exemplo (Objeto nulo)
+#É um valor não inicializado; geralmente, um objeto vazio.
 
   NULL
 
-#Converter para objeto nulo
-
-  as.null(3)
-
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Verificar se é nulo
 
   is.null(3)
   
   is.null(NULL)
+  
+  valor <- 45
+  
+  is.null(valor)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Converter para objeto nulo
+
+  as.null(3)
+  
+  as.null(valor)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Valor não disponível ou perdido (Not available)
 
   NA
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Verificar se é NA
 
   is.na(2)
   
   is.na(NA)
-  
+ 
+#----------------------------------------------------------------------------------------------------------------------------------------------------- 
 #NA's também podem ser gerados quando tentamos inverter a hierarquia de coerção
+  
 #Por exemplo, podemos converter um dado numérico para character, mas não podemos converter um character não numérico para numeric
   
   palavra <- "casa"

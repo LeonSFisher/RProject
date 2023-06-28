@@ -55,7 +55,8 @@
   `^`(3, 2)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Operações com o tipo lógico 
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#OPERAÇÕES COM O TIPO LOGICAL
   
 #Do ponto de vista numérico, TRUE representa 1 e FALSE representa 0. Isto significa que podemos fazer cálculos com eles. Seguem alguns exemplos:
   
