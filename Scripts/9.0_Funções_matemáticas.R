@@ -83,10 +83,6 @@
   tan(2.5)
   
   tan(pi/4)
-  
-  #Podemos até mesmo usá-los em argumentos de funções
-  
-  cos((TRUE + TRUE + TRUE)^(TRUE-FALSE))
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Funçoes trigonométricas inversas
