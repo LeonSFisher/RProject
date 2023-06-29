@@ -63,6 +63,7 @@
   variavel <- as.double(palavra)
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Infinitos
   
 #Representar infinito positivo
@@ -105,7 +106,7 @@
   
   is.double(-Inf)
   
-#E não são inteiros
+#E não são considerados inteiros
   
   is.integer(Inf)
   
@@ -121,6 +122,7 @@
   (0:3)^Inf
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #Not-a-number
   
 #Representa um valor numérico não definido
@@ -141,32 +143,58 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #DISTINGUINDO NA, NaN e INF
   
-  valores <- c(NA, 0 / 0, Inf - Inf, Inf, 5)
+#Criando valores de exemplo
   
+  valor1 <- NA
+  valor2 <- NaN
+  valor3 <- 0/0
+  valor4 <- Inf - Inf
+  valor5 <- Inf
+  valor6 <- 5
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------  
 #Utilizando funções para verificar os NA's, os NaN's e os Inf's
  
 #Para verificar se são NA's 
-#Com a função is.na() os valores NA e NaN são identificados todos como NA, assim como INF - INF
+#Com a função is.na() os valores NA e NaN são identificados todos como NA, assim como INF - INF. Valores finitos e Inf não são NA's
   
-  is.na(valores)
+  is.na(valor1)
+  is.na(valor2)
+  is.na(valor3)
+  is.na(valor4)
+  is.na(valor5)
+  is.na(valor6)
  
 #Para verificar se são NaN's 
-#A função is.nan() distingue NA's de NaN's e interpreta INF - INF como NaN
+#A função is.nan() distingue NA's de NaN's e interpreta INF - INF como NaN. Inf é tratado como número bem como valores finitos.
   
-  is.nan(valores)
+  is.nan(valor1)
+  is.nan(valor2)
+  is.nan(valor3)
+  is.nan(valor4)
+  is.nan(valor5)
+  is.nan(valor6)
 
 #Para verificar se são valores finitos
 #INF - INF é identificado como infinito com a função is.finite()
   
-  is.finite(valores)
+  is.finite(valor1)
+  is.finite(valor2)
+  is.finite(valor3)
+  is.finite(valor4)
+  is.finite(valor5)
+  is.finite(valor6)
 
 #Para verificar se são valores infinitos  
-#Mas é identificado como finito com a função is.infinite()
+#INF - INF é identificado como finito com a função is.infinite()
   
-  is.infinite(valores)
+  is.infinite(valor1)
+  is.infinite(valor2)
+  is.infinite(valor3)
+  is.infinite(valor4)
+  is.infinite(valor5)
+  is.infinite(valor6)
   
 #-----------------------------------------------------------------------------------------------------------------------------------------------------  
