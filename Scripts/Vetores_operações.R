@@ -259,8 +259,102 @@
   
   #-----------------------------------------------------------------------------------------------------------------------------------------------------
   
+  #-----------------------------------------------------------------------------------------------------------------------------------------------------  
+  #Produtório
+  
+  #Usando o produtório com um vetor
+  
+  vetor <- c(2, 3, 8, 9, 4, 1, 2, 2)
+  
+  prod(vetor)
+  
+  #Ou diretamente
+  
+  prod(c(2, 3, 8, 9, 4, 1, 2, 2))
+  
+  #Usando o produtório com uma matriz
+  
+  matriz <- matrix(vetor, nrow = 2)
+  
+  prod(matriz)
+  
+  #Usando o produtório com um array
+  
+  array_novo <- array(vetor, dim = c(2, 2, 2))
+  
+  prod(array_novo)
+  
+  #Caso haja NA's no objeto no qual se deseja avaliar o produtório, podemos usar o parâmetro 'na.rm' para removê-los
+  
+  vetor <- c(NaN, 2, 3, 8, NA, 9, 4, NA, 1, 2, 2, NA, NA)
+  
+  prod(vetor)
+  
+  prod(vetor, na.rm = TRUE)
+  
+  #-----------------------------------------------------------------------------------------------------------------------------------------------------
+  #Somatório
+  
+  #Somatório usado com vetor
+  
+  sum(vetor)
+  
+  #Ou diretamente
+  
+  sum(c(2, 3, 8, 9, 4, 1, 2, 2))
+  
+  #Somatório usado com matriz
+  
+  sum(matriz)
+  
+  #Somatório usado como array
+  
+  sum(array_novo)
+  
+  #Caso haja NA's no objeto no qual se deseja avaliar o somatório, podemos usar o parâmetro 'na.rm' para removê-los
+  
+  vetor <- c(NaN, 2, 3, 8, NA, 9, 4, NA, 1, 2, 2, NA, NA)
+  
+  sum(vetor)
+  
+  sum(vetor, na.rm = TRUE)
   
   
+  #-----------------------------------------------------------------------------------------------------------------------------------------------------
+  #Valores máximos e mínimos
   
+  #Valor máximo de um conjunto de dados
   
+  max(vetor)
+  
+  #Valor mínimo de um conjunto de dados
+  
+  min(vetor)
+  
+  #Caso hajam NA's, podemos eliminá-los
+  
+  vetor <- c(NaN, 2, 3, 8, NA, 9, 4, NA, 1, 2, 2, NA, NA)
+  
+  max(vetor)
+  
+  max(vetor, na.rm = TRUE)
+  
+  min(vetor)
+  
+  min(vetor, na.rm = TRUE)
+  
+  #-----------------------------------------------------------------------------------------------------------------------------------------------------  
+  #Diferença consecultiva
+  
+  diff(vetor)
+  
+  #Diferença entre cada valor e outro valor duas casas depois de cada um deles (por padrão é 1)
+  
+  diff(vetor, lag = 2)
+  
+  #Podemos definir também quantas rodadas de diferença queremos
+  
+  diff(vetor, differences = 2)
+  
+  diff(vetor, differences = 3)
   
