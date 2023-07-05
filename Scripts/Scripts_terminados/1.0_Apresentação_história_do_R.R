@@ -35,7 +35,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Para citar a utilização do R em trabalhos publicados e dar o reconhecimento à equipe de desenvolvimento, podemos encontrar a forma de citar o core 
-#team no R com a ajuda do seguinte comando:
+#team (grupo de desenvolvedores do R) no R com a ajuda do seguinte comando:
 
   citation()
 

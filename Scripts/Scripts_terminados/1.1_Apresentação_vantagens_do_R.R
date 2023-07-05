@@ -21,7 +21,7 @@
 #Grande comunidade auxiliando o aprendizado de novos usuários.
 
 #Ao buscar informações com novos usuários na internet é bom informar dados elementares sobre o seu problema, entre eles, um exemplo de código que 
-#seja reproduzível, versão do R e do RStudio, sitema operacional e sua versão etc. Para obter informações importantes sobre o R, sistema operacional
+#seja reproduzível, versão do R e do RStudio, sistema operacional e sua versão etc. Para obter informações importantes sobre o R, sistema operacional
 #e outros aspectos, use o comando:
 
   R.version
@@ -43,12 +43,12 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Amplamente utilizado no meio acadêmico e se popularizando no mercado privado.
 
-#Embora python ainda seja a linguagem mais utilizada em ci6encia de dados, fato é que o R caiu nas graças dos estatísticos e a sua difuão para todos
+#Embora python ainda seja a linguagem mais utilizada em ciência de dados, fato é que o R caiu nas graças dos estatísticos e a sua difuão para todos
 #os setores que necessitem de análise de dados é irremediável. Isso não é de se espantar ao consideramos o fato de que o R nasce justamente como uma
 #linguagem voltada para análises estatísticas eficientes e documentáveis.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Possui uma vastidão de pacotes que facilitam as tarefas e dispões de ferramentas customizadas para quase todas as áreas de estudo.
+#Possui uma vastidão de pacotes que facilitam as tarefas e dispõe de ferramentas customizadas para quase todas as áreas de estudo.
 
 #A programação orientada a objetos introduziu a figura da reutilização efiente de código. Assim, bibliotecas e pacotes de funções que são amplamente 
 #utilizados tornaram-se confiáveis por terem passado pelo crivo de milhares de utilizadores de diversas áreas e resistido ao tempo como ferramental

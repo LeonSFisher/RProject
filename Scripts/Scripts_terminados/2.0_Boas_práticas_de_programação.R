@@ -36,8 +36,8 @@
 #Quase sempre, o console ficará lotado de saídas de códigos. Com isso, pode começar a ficar confusa a identificação e visualização de resultados que
 #foram obtidos anteriormente. Para lidar com isso, quando possível, podemos limpar o console para despoluir a visualização da saída com o atalho 
 #(ctrl + l). Muitas funções do R possuem um parâmetro chamado 'quietly' que evita que a função fique retornando dados desnecessários no console. 
-#Outras funçõesbpossui um parâmetro chamado 'echo' que permite determinar se os dados devem ser exibidos após o processamento dos dados. Utilizar 
-#esses parâmetrosbde forma inteligente pode fazer o processamento de nosso script retornar de forma limpa e sem muita confusão desnecessária.
+#Outras funções possuem um parâmetro chamado 'echo' que permite determinar se os dados devem ser exibidos após o processamento dos dados. Utilizar 
+#esses parâmetros de forma inteligente pode fazer o processamento de nosso script retornar de forma limpa e sem muita confusão desnecessária.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Nomeando objetos de forma inteligente
@@ -48,6 +48,25 @@
 #utilização frequente), com nomes significativos que transmitam sua utilidade.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Evitar atribuições da esquerda para a direita
+
+#É interessante padronizar a forma de atribuir valores a objetos e melhor ainda usando a opção que seja a mais natural que é a atribuição de valores
+#a objetos da direita para a esquerda.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Indicar a origem das funções (seus pacotes)
+
+#Apesar de ser um pouco menos eficiente, comvém indicar o pacote de onde vem a função que está sendo utilizada com '::' principalmente quando nós 
+#utilizamos muitos pacotes. Isto nos permite identificar de que pacote é a função, além de que evita conflitos pois podemos ter funções de mesmo nome 
+#em pacotes distintos, mas não funções com mesmo nome dentro de um mesmo pacote.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Evitar usar a função attach() para pacotes
+
+#Quando utilizada pode gerar muitas confusões. O ideal é sempre buscar o pacote quando ele for necessário. Neste aspecto, usar '::' para chamar a 
+#função diretamente de dentro do pacote pode vir a calhar.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Bom uso de recursos
 
 #Nunca deixar de descarregar pacotes de funções depois de utilizados para evitar conflitos com funções que tenham o mesmo nome, mas que pertençam a 
@@ -56,41 +75,22 @@
 #funções já aplicam o procedimento para todos os valores de um vetor ou de uma matriz, por exemplo.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Organização de arquivos
-
-#Separar scripts por projeto, não por tema. Dentro de um mesmo projeto podem residir vários scripts para fins diversos e que tenham relevância para
-#aquilo que se pretende com o projeto. Não esquecer de salvar o workspace para caso de precisar continuar o trabalho depois.
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
 #Nomear funções com camel-case
 
 #Funções nomeadas com camel case são melhores para claramente distinguir o que é uma função e o que é uma variável comum. Assim, basta bater os olhos
 #para sabermos do que se trata.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Indicar a origem das funções
-
-#Apesar de ser um pouco menos eficiente, comvém indicar o pacote de onde vem a função que está sendo utilizada com '::' principalmente quando nós 
-#utilizamos muitos pacotes. Isto nos permite identificar de que pacote é a função, além de que evita conflitos pois podemos ter funções de mesmo nome 
-#em pacotes distintos, mas não funções com mesmo nome dentro de um mesmo pacote.
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Evitar usar a função attach()
-
-#Quando utilizada pode gerar muitas confusões. O ideal é sempre buscar o pacote quando ele for necessário. Neste aspecto, usar '::' para chamar a 
-#função diretamente de dentro do pacote pode vir a calhar.
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Evitar atribuições da esquerda para a direita
-
-#É interessante padronizar a forma de atribuir valores a objetos e melhor ainda usando a opção que seja a mais natural que é a atribuição de valores
-#a objetos da direita para a esquerda.
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------
-#Gerar retornos explícitos
+#Gerar retornos explícitos de funções
 
 #Na criação de funções, R pode retornar os valores calculados automaticamente dentro das funções. Esse valores são aqueles que estiverem na última
-#linha do escopo da função. No entanto, é auspicioso retornar explicitamente o valor que se deseja retornar utilizando a função return(). Isto deixa
-#claro para todos que lerem o código, o que se pretende com ele.
+#linha do escopo da função. No entanto, é auspicioso retornar explicitamente o valor que se deseja utilizando a função return(). Isto deixa claro 
+#para todos que lerem o código, o que se pretende com ele.
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+#Organização de arquivos
+
+#Separar scripts por projeto, não por tema. Dentro de um mesmo projeto podem residir vários scripts para fins diversos e que tenham relevância para
+#aquilo que se pretende com o projeto. Não esquecer de salvar o workspace para caso de precisar continuar o trabalho depois.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
